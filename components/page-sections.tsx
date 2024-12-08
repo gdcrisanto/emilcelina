@@ -267,6 +267,7 @@ export const ColoredBgWrapper = ({
 		black: `bg-[#121212] text-white`,
 		gold: `bg-[#CAB569] `,
 		nata: `bg-[#F6E8DA] `,
+		white: `bg-white `,
 	};
 	return (
 		<div className={`flex flex-col w-full ${color[bgColor]} ${className} `}>

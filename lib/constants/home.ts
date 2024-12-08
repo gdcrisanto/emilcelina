@@ -1,28 +1,38 @@
-import homeHero from '../../public/assets/home_hero.png';
+import homeHero from '../../public/assets/placeholder_hero.jpg';
+import homePrenup from '../../public/assets/placeholder_prenup.jpg';
 import craftingImage from '../../public/assets/home_crafting_excellence.png';
 import homeImageBreaker from '../../public/assets/home_image_breaker.png';
 import farmToBottleImage from '../../public/assets/farm_to_bottle.png';
-import footerImage from '../../public/assets/home_footer_hero.png';
+import footerImage from '../../public/assets/placeholder_footer.jpg';
 import article1 from '../../public/assets/article1.png';
-import article2 from '../../public/assets/article2.png';
-import article3 from '../../public/assets/article3.png';
 import { Quote } from '../types/quotes';
 
 const HOME_HERO = {
 	image: homeHero,
-	title: 'The True Filipino Spirit',
-	subtitle: 'The Philippines’ highest awarded Lambanog',
-	button: 'Grab a bottle',
+	title: 'Loving is EC',
+	subtitle: 'May 10, 2025 · Saturday · Tagaytay City',
+	button: 'View Details',
 	href: '/lambanog',
 };
 
-const PRODUCTS_ROW = {
-	title: 'Tradition in every sip',
-	subtitle:
-		'Lakan Lambanog is a distinguished Filipino spirit, distilled from premium coconut nectar. This multi-awarded spirit blends tradition with modern expertise, offering a smooth, vibrant flavor that has earned global recognition.',
-	button: 'Discover Our spirits',
+const OUR_SPECIAL_DAY = {
+	title: `We're excited to celebrate our special day with you`,
+	subtitle: '',
+	button: 'View Details',
 	href: '/lambanog',
 };
+
+const HOME_PORTRAITS: Array<any> = [
+	{
+		image: homePrenup,
+	},
+	{
+		image: homePrenup,
+	},
+	{
+		image: homePrenup,
+	},
+];
 
 const ICON_ROW = {
 	tuba: 'Distilled from ‘tuba’ or coconut nectar',
@@ -52,8 +62,9 @@ const AWARDS_TITLE = 'Award-winning spirit';
 
 const FOOTER = {
 	image: footerImage,
-	title: 'Get your own bottle of Lakan',
-	button: 'Where to find us',
+	title: 'Emil & Celina',
+	subtitle: 'May 10, 2025 · Saturday · Tagaytay City',
+	button: 'View Details',
 	href: '/find-us',
 };
 
@@ -165,7 +176,8 @@ const FEATURED_STORIES = [
 
 export default {
 	HOME_HERO,
-	PRODUCTS_ROW,
+	OUR_SPECIAL_DAY,
+	HOME_PORTRAITS,
 	ICON_ROW,
 	CRAFTING,
 	homeImageBreaker,

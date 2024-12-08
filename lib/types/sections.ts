@@ -90,7 +90,7 @@ export type BottleProps = {
 
 export type ColoredBgWrapperType = {
 	children: ReactNode;
-	bgColor: 'black' | 'gold' | 'nata';
+	bgColor: 'black' | 'gold' | 'nata' | 'white';
 	className?: string;
 };
 
