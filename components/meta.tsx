@@ -58,12 +58,12 @@ export default function Meta() {
 			/>
 			<meta
 				name="description"
-				content={`The True Filipino Spirit — The Philippines’ highest awarded Lambanog`}
+				content={`We’re excited to celebrate our special day with you`}
 			/>
-			<meta
+			{/* <meta
 				property="og:image"
 				content={Constants.HOME_OG_IMAGE_URL}
-			/>
+			/> */}
 		</Head>
 	);
 }

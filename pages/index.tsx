@@ -33,13 +33,13 @@ export default function Home() {
 			<PageHero
 				image={HOME_HERO.image}
 				alt=""
-				size="xl"
+				size="sm"
 				bgGradient="none"
 				priority
 				className="justify-start bg-center bg-cover bg-no-repeat">
-				<div className="hidden lg:flex w-full max-w-[1920px] mx-auto">
+				<div className="flex w-full max-w-[1920px] mx-auto">
 					<div className="flex-col flex self-center text-white max-w-[624px] m-[80px] fade-up">
-						<h1 className="font-garamond lg:text-[6rem] leading-[100%]">
+						<h1 className="font-garamond text-7xl lg:text-8xl leading-[100%]">
 							{HOME_HERO.title}
 						</h1>
 						<h2 className="lg:text-lg my-[40px] font-thin">
@@ -55,22 +55,6 @@ export default function Home() {
 			</PageHero>
 
 			<ColoredBgWrapper bgColor="white">
-				<div className="flex lg:hidden w-full max-w-[721px] mx-auto">
-					<div className="flex-col w-full flex just text-white mx-6 my-10 text-center fade-up">
-						<h1 className="font-garamond text-5xl leading-[48px]">
-							{HOME_HERO.title}
-						</h1>
-						<h2 className="text-lg mt-4 mb-6 font-thin">
-							{HOME_HERO.subtitle}
-						</h2>
-						<Link
-							href={OUR_SPECIAL_DAY.href}
-							className="button py-4 px-6 mx-auto uppercase text-base font-thin border w-fit tracking-wider rounded hover:bg-white hover:text-[#121212]">
-							{HOME_HERO.button}
-						</Link>
-					</div>
-				</div>
-
 				<div className="flex flex-col lg:flex-row w-full py-14 px-6 lg:px-20 max-w-[1920px] justify-between mx-auto lg:gap-x-12">
 					<div className="flex-col text-center lg:text-left flex self-center max-w-[450px] mb-10 lg:mb-0 fade-up">
 						<h1 className="font-garamond text-4xl lg:text-[3rem] leading-[100%]">
@@ -108,12 +92,14 @@ export default function Home() {
 						</div>
 					</div>
 				</div>
+
+				<div className="flex flex-row max-w-[1920px] mx-auto"></div>
 			</ColoredBgWrapper>
 
 			<PageHero
 				image={FOOTER.image}
 				alt=""
-				size="md"
+				size="sm"
 				bgGradient="linear-gradient(180deg, rgba(0, 0, 0, 0.00) 53.92%, rgba(0, 0, 0, 0.80) 100%)">
 				<div className=" mx-auto flex-col md:flex-col flex items-center pb-6 lg:pb-16 justify-end text-white text-center">
 					<span className="mb-4 lg:mb-10 text-4xl lg:text-[3rem] leading-9 lg:leading-[64px] font-garamond max-w-[309px] lg:max-w-none">
