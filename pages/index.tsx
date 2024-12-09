@@ -8,13 +8,8 @@ import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
 export default function Home() {
-	const {
-		HOME_HERO,
-		OUR_SPECIAL_DAY,
-		HOME_PORTRAITS,
-		FOOTER,
-		ORDER_OF_EVENTS,
-	} = Constants;
+	const { HOME_HERO, OUR_SPECIAL_DAY, HOME_PORTRAITS, ORDER_OF_EVENTS } =
+		Constants;
 
 	return (
 		<Layout>
@@ -24,7 +19,7 @@ export default function Home() {
 			<PageHero
 				image={HOME_HERO.image}
 				alt=""
-				size="sm"
+				size="md"
 				bgGradient="none"
 				priority
 				className="justify-start bg-center bg-cover bg-no-repeat">
@@ -129,26 +124,6 @@ export default function Home() {
 					</div>
 				</div>
 			</ColoredBgWrapper>
-
-			<PageHero
-				image={FOOTER.image}
-				alt=""
-				size="sm"
-				bgGradient="linear-gradient(180deg, rgba(0, 0, 0, 0.00) 53.92%, rgba(0, 0, 0, 0.80) 100%)">
-				<div className=" mx-auto flex-col md:flex-col flex items-center pb-6 lg:pb-16 justify-end text-white text-center">
-					<span className="mb-4 lg:mb-10 text-4xl lg:text-[3rem] leading-9 lg:leading-[64px] font-garamond max-w-[309px] lg:max-w-none">
-						{FOOTER.title}
-					</span>
-					<h4 className="lg:text-lg my-[40px] font-thin">
-						{HOME_HERO.subtitle}
-					</h4>
-					<Link
-						href={FOOTER.href}
-						className=" px-6 py-4 font-light tracking-wide uppercase items-center border rounded button hover:bg-white hover:text-[#121212]">
-						{FOOTER.button}
-					</Link>
-				</div>
-			</PageHero>
 		</Layout>
 	);
 }

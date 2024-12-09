@@ -5,16 +5,10 @@ import PageHero from '../components/page-hero';
 import { ColoredBgWrapper } from '../components/page-sections';
 import Link from 'next/link';
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
 
 export default function TheWedding() {
-	const {
-		WEDDING_HERO,
-		OUR_SPECIAL_DAY,
-		HOME_PORTRAITS,
-		FOOTER,
-		ORDER_OF_EVENTS,
-	} = Constants;
+	const { WEDDING_HERO, OUR_SPECIAL_DAY, HOME_PORTRAITS, ORDER_OF_EVENTS } =
+		Constants;
 
 	return (
 		<Layout>
@@ -40,7 +34,6 @@ export default function TheWedding() {
 			<ColoredBgWrapper bgColor="white">
 				<div className="flex flex-col lg:flex-row w-full py-14 px-6 lg:px-20 max-w-[1920px] justify-between mx-auto lg:gap-x-12">
 					<div className="flex-col text-center lg:text-left flex self-center max-w-[450px] mb-10 lg:mb-0 fade-up">
-						<CountDownTimer />
 						<h1 className="font-garamond text-4xl lg:text-[3rem] leading-[100%]">
 							{OUR_SPECIAL_DAY.title}
 						</h1>
@@ -121,91 +114,6 @@ export default function TheWedding() {
 					</div>
 				</div>
 			</ColoredBgWrapper>
-
-			<PageHero
-				image={FOOTER.image}
-				alt=""
-				size="sm"
-				bgGradient="linear-gradient(180deg, rgba(0, 0, 0, 0.00) 53.92%, rgba(0, 0, 0, 0.80) 100%)">
-				<div className=" mx-auto flex-col md:flex-col flex items-center pb-6 lg:pb-16 justify-end text-white text-center">
-					<span className="mb-4 lg:mb-10 text-4xl lg:text-[3rem] leading-9 lg:leading-[64px] font-garamond max-w-[309px] lg:max-w-none">
-						{FOOTER.title}
-					</span>
-					{/* <h4 className="lg:text-lg my-[40px] font-thin">
-						{HOME_HERO.subtitle}
-					</h4> */}
-					<Link
-						href={FOOTER.href}
-						className=" px-6 py-4 font-light tracking-wide uppercase items-center border rounded button hover:bg-white hover:text-[#121212]">
-						{FOOTER.button}
-					</Link>
-				</div>
-			</PageHero>
 		</Layout>
 	);
 }
-
-const CountDownTimer = () => {
-	const [countDownTimer, setCountDownTimer] = useState<any>({
-		countdownDays: 0,
-		countdownHours: 0,
-		countdownMinutes: 0,
-		countdownSeconds: 0,
-	});
-
-	const weddingDate = '05/10/2025 3:00 PM';
-
-	useEffect(() => {
-		const timeInterval = setInterval(() => {
-			Timer({ weddingDate, setCountDownTimer });
-			if (countDownTimer < 0) {
-				clearInterval(timeInterval);
-			}
-		}, 1000);
-	}, []);
-	return (
-		<div className="flex flex-row gap-x-4 mt-4 mb-6 lg:my-10">
-			<h2 className="lg:text-[18px] font-thin">
-				days: {countDownTimer.countdownDays}
-			</h2>
-			<h2 className="lg:text-[18px] font-thin">
-				hours: {countDownTimer.countdownHours}
-			</h2>
-			<h2 className="lg:text-[18px] font-thin">
-				minutes: {countDownTimer.countdownMinutes}
-			</h2>
-			<h2 className="lg:text-[18px] font-thin">
-				seconds: {countDownTimer.countdownSeconds}
-			</h2>
-		</div>
-	);
-};
-
-const Timer = ({ weddingDate, setCountDownTimer }) => {
-	const countdownDateTime = new Date(weddingDate).getTime();
-	const currentTime = new Date().getTime();
-	const remainingDayTime = countdownDateTime - currentTime;
-	const totalDays = Math.floor(remainingDayTime / (1000 * 60 * 60 * 24));
-	const totalHours = Math.floor(
-		(remainingDayTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-	);
-	const totalMinutes = Math.floor(
-		(remainingDayTime % (1000 * 60 * 60)) / (1000 * 60)
-	);
-	const totalSeconds = Math.floor((remainingDayTime % (1000 * 60)) / 1000);
-
-	const runningCountdownTime = {
-		countdownDays: totalDays,
-		countdownHours: totalHours,
-		countdownMinutes: totalMinutes,
-		countdownSeconds: totalSeconds,
-	};
-
-	setCountDownTimer({
-		countdownDays: totalDays,
-		countdownHours: totalHours,
-		countdownMinutes: totalMinutes,
-		countdownSeconds: totalSeconds,
-	});
-	return runningCountdownTime;
-};

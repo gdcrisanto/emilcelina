@@ -1,6 +1,5 @@
 import homeHero from '../../public/assets/placeholder_hero.jpg';
 import homePrenup from '../../public/assets/placeholder_prenup.jpg';
-import homeImageBreaker from '../../public/assets/home_image_breaker.png';
 import footerImage from '../../public/assets/placeholder_footer.jpg';
 
 const HOME_HERO = {
@@ -73,7 +72,6 @@ export default {
 	HOME_HERO,
 	OUR_SPECIAL_DAY,
 	HOME_PORTRAITS,
-	homeImageBreaker,
 	FOOTER,
 	ORDER_OF_EVENTS,
 };
