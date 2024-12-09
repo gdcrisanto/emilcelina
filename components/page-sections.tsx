@@ -4,7 +4,6 @@ import Link from 'next/link';
 import Vectors from './vectors';
 import home_bottle from '../public/assets/home_bottle.png';
 import {
-	AwardsSectionProps,
 	BottleProps,
 	BreadcrumbsProps,
 	CocktailCardProps,
@@ -272,41 +271,6 @@ export const ColoredBgWrapper = ({
 	return (
 		<div className={`flex flex-col w-full ${color[bgColor]} ${className} `}>
 			{children}
-		</div>
-	);
-};
-
-export const AwardsSection = ({ title, subtitle }: AwardsSectionProps) => {
-	return (
-		<div className="flex flex-col w-full px-6 pt-10 pb-20 lg:px-[60px] xl:px-[239px] lg:py-[120px] max-w-[1920px] justify-center space-y-6 lg:space-y-16 mx-auto">
-			{!title && (
-				<h1 className="font-garamond text-4xl lg:text-[3rem] leading-9 lg:leading-[100%] text-white w-full text-center fade-up">
-					{Constants.AWARDS_TITLE}
-				</h1>
-			)}
-			{subtitle && title && (
-				<div className="flex flex-col w-full">
-					<DividerHeader>{title}</DividerHeader>
-					<div className="mx-auto text-4xl font-garamond leading-9 text-center mb-3 lg:hidden">
-						{title}
-					</div>
-					<div className="max-w-[868px] mt-0 text-[18px] leading-[140%] mx-auto text-center font-thin">
-						{subtitle}
-					</div>
-				</div>
-			)}
-			<div className="flex flex-row flex-wrap w-full justify-center gap-y-4 lg:gap-y-10 lg:gap-x-14">
-				{Constants.AWARDS.map((award, i) => {
-					return (
-						<Award
-							key={i}
-							award={award.award}
-							title={award.title}
-							year={award.year}
-						/>
-					);
-				})}
-			</div>
 		</div>
 	);
 };

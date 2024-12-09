@@ -2,11 +2,7 @@ import Head from 'next/head';
 import Layout from '../components/layout';
 import Constants from '../lib/constants';
 import PageHero from '../components/page-hero';
-import {
-	AwardsSection,
-	ColoredBgWrapper,
-	OrnateHeader,
-} from '../components/page-sections';
+import { ColoredBgWrapper, OrnateHeader } from '../components/page-sections';
 import Image from 'next/image';
 import Sections from '../components/sections';
 import Vectors from '../components/vectors';
@@ -62,11 +58,6 @@ export default function About() {
 						reverse
 					/>
 				</div>
-
-				<AwardsSection
-					title={GOLD_STANDARD.title}
-					subtitle={GOLD_STANDARD.subtitle}
-				/>
 
 				<div className="flex flex-col lg:flex-row pt-10 lg:pt-20 pb-20 lg:pb-[120px] px-6 lg:px-0 gap-x-[120px] justify-center max-w-[1300px] w-full mx-auto fade-up gap-y-10 text-center lg:text-left">
 					<Vectors.LakanMan className="max-w-[211px] h-[280px] lg:h-auto mx-auto lg:mx-0 lg:max-w-none fill-[#FFF8F1]" />

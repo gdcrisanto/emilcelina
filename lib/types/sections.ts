@@ -94,11 +94,6 @@ export type ColoredBgWrapperType = {
 	className?: string;
 };
 
-export type AwardsSectionProps = {
-	title?: string;
-	subtitle?: string;
-};
-
 export type BreadcrumbsProps = {
 	breadcrumbs: Array<string>;
 	light?: boolean;
