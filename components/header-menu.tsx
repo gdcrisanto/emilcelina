@@ -14,20 +14,13 @@ export default function HeaderMenu({
 	return (
 		<>
 			{/* DESKTOP HEADER */}
-			<div
-				className={`tracking-wide hidden lg:flex header-menu w-full justify-between flex-row text-left mt-auto h-full uppercase items-center`}>
+			<div className="tracking-wide hidden lg:flex header-menu gap-x-8 flex-row text-left mt-auto h-full capitalize items-center">
 				{Constants.MENU_ITEMS.map((item) => {
 					return (
 						<Link
 							className={`${
-								item.title === 'Find Us'
-									? `button ${
-											textBlack
-												? navBg
-													? 'border-[#121212] hover:bg-white hover:text-[#121212]'
-													: 'border-white hover:bg-[#121212] hover:text-[#B99D37]'
-												: 'border-[#121212] hover:bg-white hover:text-[#121212]'
-									  } px-6 py-3 `
+								item.title === 'RSVP'
+									? `button text-black !border-white hover:!border-gray-300 hover:bg-gray-300 bg-white px-6 py-3`
 									: 'py-1 '
 							} ${
 								pathname === item.href ||

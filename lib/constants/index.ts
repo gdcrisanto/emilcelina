@@ -1,5 +1,6 @@
 import Common from './common';
 import Home from './home';
+import TheWedding from './theWedding';
 import About from './about';
 import Lambanog from './lambanog';
 import LambanogSlugs from './lambanogSlug';
@@ -18,4 +19,5 @@ export default {
 	...CocktailSlug,
 	...HouseOfLakan,
 	...FindUs,
+	...TheWedding,
 };

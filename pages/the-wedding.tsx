@@ -2,24 +2,18 @@ import Head from 'next/head';
 import Layout from '../components/layout';
 import Constants from '../lib/constants';
 import PageHero from '../components/page-hero';
-import { ColoredBgWrapper, OrnateHeader } from '../components/page-sections';
-import Image from 'next/image';
-import Sections from '../components/sections';
-import Vectors from '../components/vectors';
+import { ColoredBgWrapper } from '../components/page-sections';
 import Link from 'next/link';
+import Image from 'next/image';
+import { useEffect, useState } from 'react';
 
-export default function About() {
+export default function TheWedding() {
 	const {
-		COCONUTS_TO_BOTTLE_INFO,
-		CRAFTING_A_LEGACY,
-		FILIPINO_HERITAGE_INFO,
-		GOLD_STANDARD,
-		ABOUT_HEADER,
-		IMAGE_BREAKERS,
-		ABOUT_PROCESS_ITEMS,
-		QUALITY_YOU_CAN_TRUST,
-		SYMBOL_OF_STRENGTH,
-		TRADITION_IMAGE_INFO,
+		WEDDING_HERO,
+		OUR_SPECIAL_DAY,
+		HOME_PORTRAITS,
+		FOOTER,
+		ORDER_OF_EVENTS,
 	} = Constants;
 
 	return (
@@ -28,191 +22,190 @@ export default function About() {
 				<title>{`${Constants.CMS_NAME}`}</title>
 			</Head>
 			<PageHero
-				image={ABOUT_HEADER.image}
-				priority
+				image={WEDDING_HERO.image}
 				alt=""
-				className="justify-center"
-				bgGradient="linear-gradient(0deg, rgba(0, 0, 0, 0.00) 80.36%, rgba(0, 0, 0, 0.40) 100%), linear-gradient(180deg, rgba(0, 0, 0, 0.00) 62.2%, rgba(0, 0, 0, 0.40) 100%)">
-				<div className="mx-auto font-garamond flex-col flex  text-white text-6xl lg:text-[3rem] text-center self-end pb-10 lg:pb-16 leading-[100%] whitespace-pre-wrap">
-					{ABOUT_HEADER.title}
+				size="sm"
+				bgGradient="none"
+				priority
+				className="justify-start bg-center bg-cover bg-no-repeat">
+				<div className="flex w-full max-w-[1920px] mx-auto">
+					<div className="flex-col flex self-center w-full text-white mx-auto lg:m-20 fade-up">
+						<h1 className="font-garamond text-7xl lg:text-8xl leading-[100%] text-center">
+							{WEDDING_HERO.title}
+						</h1>
+					</div>
 				</div>
 			</PageHero>
 
-			<ColoredBgWrapper bgColor="black">
-				<div className="flex w-full lg:py-[120px] lg:px-20">
-					<Sections.ImageInformation
-						image={
-							<div className="w-full lg:max-w-[869px] fade-up">
-								<PageHero
-									image={TRADITION_IMAGE_INFO.image}
-									alt=""
-									size="custom"
-									customSize=" h-[250px] lg:h-[518px]"
-									width={869}
-									height={518}
-								/>
-							</div>
-						}
-						data={TRADITION_IMAGE_INFO}
-						textWhite
-						reverse
-					/>
+			<ColoredBgWrapper bgColor="white">
+				<div className="flex flex-col lg:flex-row w-full py-14 px-6 lg:px-20 max-w-[1920px] justify-between mx-auto lg:gap-x-12">
+					<div className="flex-col text-center lg:text-left flex self-center max-w-[450px] mb-10 lg:mb-0 fade-up">
+						<CountDownTimer />
+						<h1 className="font-garamond text-4xl lg:text-[3rem] leading-[100%]">
+							{OUR_SPECIAL_DAY.title}
+						</h1>
+						<h2 className="lg:text-[18px] mt-4 mb-6 lg:my-[40px] font-thin">
+							{OUR_SPECIAL_DAY.subtitle}
+						</h2>
+						<Link
+							href={OUR_SPECIAL_DAY.href}
+							className="button py-4 px-6 uppercase mx-auto lg:mx-0 text-base font-thin border w-fit tracking-wider rounded hover:bg-black hover:text-white hover:">
+							{OUR_SPECIAL_DAY.button}
+						</Link>
+					</div>
+
+					<div className="flex flex-col lg:max-w-[950px] lg:min-w-[450px] w-full mx-auto lg:mx-none ">
+						<div className="flex flex-row sm:justify-center lg:justify-start gap-x-6 lg:gap-x-16 fade-up">
+							{HOME_PORTRAITS.map((portrait) => {
+								return (
+									<div
+										className={`flex-col items-center w-full relative fade-up flex-grow max-w-[156px] xl:max-w-[422px]`}>
+										<div className="relative w-full h-[287px] lg:h-[400px] ">
+											<Image
+												src={portrait.image}
+												alt=""
+												width={422}
+												height={492}
+												placeholder="blur"
+												className="absolute object-cover object-bottom w-full h-[287px] lg:h-[400px]"
+											/>
+										</div>
+									</div>
+								);
+							})}
+						</div>
+					</div>
 				</div>
 
-				<div className="flex flex-col lg:flex-row pt-10 lg:pt-20 pb-20 lg:pb-[120px] px-6 lg:px-0 gap-x-[120px] justify-center max-w-[1300px] w-full mx-auto fade-up gap-y-10 text-center lg:text-left">
-					<Vectors.LakanMan className="max-w-[211px] h-[280px] lg:h-auto mx-auto lg:mx-0 lg:max-w-none fill-[#FFF8F1]" />
-					<div
-						className="flex flex-col lg:max-w-[590px] w-full
-					space-y-4 lg:space-y-10 justify-center">
-						<h1 className="font-garamond text-4xl lg:text-[3rem] leading-9 lg:leading-[100%]">
-							{SYMBOL_OF_STRENGTH.title}
-						</h1>
-						<h2 className="text-[18px] font-thin leading-[140%]">
-							{SYMBOL_OF_STRENGTH.subtitle}
-						</h2>
+				<div className="flex flex-col lg:flex-row w-full max-w-[1920px] mx-auto gap-x-20 px-10 lg:px-32 py-10">
+					<div className="flex flex-col w-full lg:w-[48%] mb-20 lg:mb-0">
+						<div className="flex flex-col">
+							<h3 className="text-3xl">
+								Our Lady of Lourdes Parish
+							</h3>
+							<h4 className="text-xl font-thin">
+								Tagaytay, Cavite
+							</h4>
+						</div>
+						<hr className="w-full border-t self-center max-w-full border-black my-10" />
+						<div className="flex flex-col">
+							<h3 className="text-3xl">Arocarrìa</h3>
+							<h4 className="text-xl font-thin">
+								Alfonso, Cavite
+							</h4>
+						</div>
+					</div>
+					<div className="flex flex-col lg:max-w-[400px] w-full">
+						<h3 className="text-4xl mb-8">
+							{ORDER_OF_EVENTS.title}
+						</h3>
+						{ORDER_OF_EVENTS?.events.map((item) => {
+							return (
+								<div className="flex flex-row mb-6 justify-between">
+									<div className="flex flex-col">
+										<h3 className="text-3xl">
+											{item.event}
+										</h3>
+										<span className="text-sm italic font-thin">
+											{item.description}
+										</span>
+									</div>
+									<div>
+										<span className="font-thin">
+											{item.time}
+										</span>
+									</div>
+								</div>
+							);
+						})}
 					</div>
 				</div>
 			</ColoredBgWrapper>
 
 			<PageHero
-				image={IMAGE_BREAKERS[0]}
+				image={FOOTER.image}
 				alt=""
-				className="justify-center"
-				customSize=" h-[280px] lg:h-[790px]"
-				size="custom"
-				bgGradient="linear-gradient(0deg, rgba(0, 0, 0, 0.00) 80.36%, rgba(0, 0, 0, 0.40) 100%), linear-gradient(180deg, rgba(0, 0, 0, 0.00) 62.2%, rgba(0, 0, 0, 0.40) 100%)"
-			/>
-
-			<Sections.ImageInformation
-				image={
-					<div className="w-full lg:max-w-[960px] fade-up">
-						<PageHero
-							image={FILIPINO_HERITAGE_INFO.image}
-							alt=""
-							size="custom"
-							customSize=" h-[250px] lg:h-[640px]"
-							width={960}
-							height={640}
-						/>
-					</div>
-				}
-				data={FILIPINO_HERITAGE_INFO}
-				hasDivider
-			/>
-
-			<div className="flex flex-col max-w-[1920px] w-full mx-auto lg:px-[79px] lg:pt-[120px] lg:pb-20 gap-y-10 px-6 py-10">
-				<div className="flex flex-col mx-auto max-w-[721px] w-full text-center gap-y-4">
-					<span className="text-4xl lg:text-[3rem] leading-[100%] font-garamond">
-						{COCONUTS_TO_BOTTLE_INFO.title}
+				size="sm"
+				bgGradient="linear-gradient(180deg, rgba(0, 0, 0, 0.00) 53.92%, rgba(0, 0, 0, 0.80) 100%)">
+				<div className=" mx-auto flex-col md:flex-col flex items-center pb-6 lg:pb-16 justify-end text-white text-center">
+					<span className="mb-4 lg:mb-10 text-4xl lg:text-[3rem] leading-9 lg:leading-[64px] font-garamond max-w-[309px] lg:max-w-none">
+						{FOOTER.title}
 					</span>
-					<span className="text-[18px] leading-[140%] font-thin">
-						{COCONUTS_TO_BOTTLE_INFO.subtitle}
-					</span>
+					{/* <h4 className="lg:text-lg my-[40px] font-thin">
+						{HOME_HERO.subtitle}
+					</h4> */}
+					<Link
+						href={FOOTER.href}
+						className=" px-6 py-4 font-light tracking-wide uppercase items-center border rounded button hover:bg-white hover:text-[#121212]">
+						{FOOTER.button}
+					</Link>
 				</div>
-
-				<div className="flex flex-col lg:flex-row mx-auto w-full justify-between lg:gap-x-4 gap-y-4 lg:gap-y-0">
-					<Image
-						src={COCONUTS_TO_BOTTLE_INFO.image1}
-						alt=""
-						placeholder="blur"
-						width={869}
-						height={518}
-						className="lg:mx-0 mx-auto fade-up "
-					/>
-					<Image
-						src={COCONUTS_TO_BOTTLE_INFO.image2}
-						alt=""
-						placeholder="blur"
-						width={869}
-						height={518}
-						className="lg:mx-0 mx-auto fade-up "
-					/>
-				</div>
-			</div>
-
-			<div className="flex flex-col max-w-[1920px] w-full mx-auto lg:pb-[120px] lg:pt-20 lg:px-20 px-6 pt-10 pb-20 fade-up">
-				<OrnateHeader title={QUALITY_YOU_CAN_TRUST.title} />
-				<div className="flex flex-col lg:mx-auto max-w-[721px] w-full text-center mt-4">
-					<span className="text-[18px] leading-[140%] font-thin">
-						{QUALITY_YOU_CAN_TRUST.subtitle}
-					</span>
-				</div>
-
-				<div className="flex flex-col lg:flex-row py-10 lg:py-20 justify-center fade-up">
-					{ABOUT_PROCESS_ITEMS.map((item, index) => {
-						return (
-							<>
-								<ProcessItem
-									key={item.title}
-									image={item.image}
-									title={item.title}
-									subtitle={item.subtitle}
-									index={index}
-								/>
-							</>
-						);
-					})}
-				</div>
-
-				<Link
-					href={QUALITY_YOU_CAN_TRUST.href}
-					className="button border border-[#121212] rounded py-4 px-6 w-fit mx-auto tracking-[1.28px] uppercase hover:bg-[#121212] hover:text-[#B99D37]">
-					{QUALITY_YOU_CAN_TRUST.button}
-				</Link>
-			</div>
-
-			<PageHero
-				image={IMAGE_BREAKERS[1]}
-				alt=""
-				className="justify-center"
-				customSize=" h-[450px] lg:h-[790px]"
-				size="custom"
-				bgGradient="linear-gradient(0deg, rgba(0, 0, 0, 0.00) 80.36%, rgba(0, 0, 0, 0.40) 100%), linear-gradient(180deg, rgba(0, 0, 0, 0.00) 62.2%, rgba(0, 0, 0, 0.40) 100%)"
-			/>
-
-			<ColoredBgWrapper bgColor="gold">
-				<div className="flex flex-col lg:flex-row lg:pt-20 lg:pb-[120px] gap-x-[120px] justify-center max-w-[1300px] w-full mx-auto fade-up px-6 py-16 text-center lg:text-left fade-up">
-					<Vectors.PDCILogo className="max-w-[120px] lg:max-w-none max-h-[120px] lg:max-h-none mx-auto mb-10" />
-					<div className="flex flex-col lg:max-w-[811px] w-full space-y-10 justify-center whitespace-pre-line">
-						<h1 className="font-garamond text-4xl lg:text-[3rem] leading-9 lg:leading-[100%]">
-							{CRAFTING_A_LEGACY.title}
-						</h1>
-						<h2 className="lg:text-[18px] font-thin">
-							{CRAFTING_A_LEGACY.subtitle}
-						</h2>
-					</div>
-				</div>
-			</ColoredBgWrapper>
+			</PageHero>
 		</Layout>
 	);
 }
 
-const ProcessItem = ({ image, title, subtitle, index }) => {
+const CountDownTimer = () => {
+	const [countDownTimer, setCountDownTimer] = useState<any>({
+		countdownDays: 0,
+		countdownHours: 0,
+		countdownMinutes: 0,
+		countdownSeconds: 0,
+	});
+
+	const weddingDate = '05/10/2025 3:00 PM';
+
+	useEffect(() => {
+		const timeInterval = setInterval(() => {
+			Timer({ weddingDate, setCountDownTimer });
+			if (countDownTimer < 0) {
+				clearInterval(timeInterval);
+			}
+		}, 1000);
+	}, []);
 	return (
-		<>
-			<div className="flex flex-row lg:flex-col w-full max-w-[327px] lg:max-w-[264px] justify-center gap-x-4 gap-y-10 mx-auto">
-				{image}
-				<div className="flex flex-col text-start lg:text-center w-full max-w-max lg:gap-y-10">
-					<span className="w-full font-garamond text-[32px] leading-[100%]">
-						{title}
-					</span>
-					<span className="w-full text-[18px] leading-[140%] font-thin">
-						{subtitle}
-					</span>
-				</div>
-			</div>
-			{index < Constants.ABOUT_PROCESS_ITEMS.length - 1 && (
-				<>
-					<Vectors.ChevronRight
-						key={`right ${index}`}
-						className="hidden lg:block my-4 lg:my-0  self-center flex-shrink-0"
-					/>
-					<Vectors.ChevronDown
-						key={`down ${index}`}
-						className="lg:hidden my-4 lg:my-0  self-center flex-shrink-0"
-					/>
-				</>
-			)}
-		</>
+		<div className="flex flex-row gap-x-4 mt-4 mb-6 lg:my-10">
+			<h2 className="lg:text-[18px] font-thin">
+				days: {countDownTimer.countdownDays}
+			</h2>
+			<h2 className="lg:text-[18px] font-thin">
+				hours: {countDownTimer.countdownHours}
+			</h2>
+			<h2 className="lg:text-[18px] font-thin">
+				minutes: {countDownTimer.countdownMinutes}
+			</h2>
+			<h2 className="lg:text-[18px] font-thin">
+				seconds: {countDownTimer.countdownSeconds}
+			</h2>
+		</div>
 	);
+};
+
+const Timer = ({ weddingDate, setCountDownTimer }) => {
+	const countdownDateTime = new Date(weddingDate).getTime();
+	const currentTime = new Date().getTime();
+	const remainingDayTime = countdownDateTime - currentTime;
+	const totalDays = Math.floor(remainingDayTime / (1000 * 60 * 60 * 24));
+	const totalHours = Math.floor(
+		(remainingDayTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+	);
+	const totalMinutes = Math.floor(
+		(remainingDayTime % (1000 * 60 * 60)) / (1000 * 60)
+	);
+	const totalSeconds = Math.floor((remainingDayTime % (1000 * 60)) / 1000);
+
+	const runningCountdownTime = {
+		countdownDays: totalDays,
+		countdownHours: totalHours,
+		countdownMinutes: totalMinutes,
+		countdownSeconds: totalSeconds,
+	};
+
+	setCountDownTimer({
+		countdownDays: totalDays,
+		countdownHours: totalHours,
+		countdownMinutes: totalMinutes,
+		countdownSeconds: totalSeconds,
+	});
+	return runningCountdownTime;
 };
