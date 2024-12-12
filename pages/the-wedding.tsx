@@ -5,7 +5,22 @@ import PageHero from '../components/page-hero';
 import { ColoredBgWrapper } from '../components/page-sections';
 
 export default function TheWedding() {
-	const { WEDDING_HERO, WEDDING_ANCHORS, SCHEDULE_OF_EVENTS } = Constants;
+	const {
+		WEDDING_HERO,
+		WEDDING_ANCHORS,
+		SCHEDULE_OF_EVENTS,
+		ATTIRE_FOR_GUESTS,
+		ENTOURAGE,
+	} = Constants;
+
+	const scrolltoHash = function (element_id: string) {
+		const element = document.getElementById(element_id);
+		element?.scrollIntoView({
+			behavior: 'smooth',
+			block: 'start',
+			inline: 'nearest',
+		});
+	};
 
 	return (
 		<Layout>
@@ -28,18 +43,24 @@ export default function TheWedding() {
 				</div>
 			</PageHero>
 
-			<ColoredBgWrapper bgColor="white">
+			<ColoredBgWrapper bgColor="nata">
 				<div className="flex flex-row my-6 w-full">
 					{WEDDING_ANCHORS.map((anchor) => {
 						return (
-							<div className="w-1/3 text-center text-2xl">
+							<a
+								className="w-1/3 text-center text-2xl cursor-pointer"
+								onClick={() => {
+									scrolltoHash(anchor.id);
+								}}>
 								{anchor.title}
-							</div>
+							</a>
 						);
 					})}
 				</div>
 
-				<div className="flex flex-col lg:flex-row w-full max-w-[1920px] mx-auto gap-x-20 px-10 lg:px-32 py-10">
+				<div
+					id="schedule"
+					className="flex flex-col lg:flex-row w-full max-w-[1920px] mx-auto gap-x-20 px-10 lg:px-32 py-10">
 					<div className="flex flex-col w-full lg:w-[48%] mb-20 lg:mb-0 justify-center ">
 						<h1 className="font-garamond text-7xl lg:text-7xl leading-[100%] text-center">
 							{SCHEDULE_OF_EVENTS.title}
@@ -61,6 +82,118 @@ export default function TheWedding() {
 										<span className="font-thin">
 											{item.time}
 										</span>
+									</div>
+								</div>
+							);
+						})}
+					</div>
+				</div>
+			</ColoredBgWrapper>
+
+			<ColoredBgWrapper bgColor="white">
+				<div
+					id="attire"
+					className="flex flex-col lg:flex-row w-full max-w-[1920px] mx-auto gap-x-20 px-10 lg:px-32 py-10 lg:py-20">
+					<div className="flex flex-col w-full lg:w-1/2 mb-20 lg:mb-0 justify-center ">
+						<div className="flex flex-row w-full">
+							<div className="flex flex-col w-full lg:w-1/2 mb-20 lg:mb-0 justify-center ">
+								<h1 className="font-garamond text-4xl lg:text-4xl leading-[100%] text-center mb-6">
+									{ATTIRE_FOR_GUESTS.ladies.title}
+								</h1>
+								<span className="text-lg  font-thin text-center">
+									{ATTIRE_FOR_GUESTS.ladies.description}
+								</span>
+							</div>
+							<div className="flex flex-col w-full lg:w-1/2 mb-20 lg:mb-0 justify-center ">
+								<h1 className="font-garamond text-4xl lg:text-4xl leading-[100%] text-center mb-6">
+									{ATTIRE_FOR_GUESTS.gentlemen.title}
+								</h1>
+								<span className="text-lg  font-thin text-center">
+									{ATTIRE_FOR_GUESTS.gentlemen.description}
+								</span>
+							</div>
+						</div>
+						<div className="flex flex-row w-full justify-around my-6">
+							{ATTIRE_FOR_GUESTS.colors.map((color, i) => {
+								const colors = [
+									'bg-[#F0E8DB]',
+									'bg-[#E2D4C5]',
+									'bg-[#D8C9BA]',
+								];
+								const className = `${colors[i]} w-1/4 h-[100px]`;
+								return <div className={className} />;
+							})}
+						</div>
+						<span className="text-sm italic font-thin text-center">
+							{ATTIRE_FOR_GUESTS.note}
+						</span>
+					</div>
+					<div className="flex flex-col w-full lg:w-1/2 mb-20 lg:mb-0 justify-center ">
+						<h1 className="font-garamond text-7xl lg:text-7xl leading-[100%] text-center">
+							{ATTIRE_FOR_GUESTS.title}
+						</h1>
+					</div>
+				</div>
+			</ColoredBgWrapper>
+
+			<ColoredBgWrapper bgColor="nata">
+				<div
+					id="entourage"
+					className="flex flex-col lg:flex-row w-full max-w-[1920px] mx-auto gap-x-20 px-10 lg:px-32 py-10 lg:py-10">
+					<div className="flex flex-col w-full lg:w-[48%] mb-20 lg:mb-0 justify-center relative">
+						<h1 className="sticky top-0 font-garamond text-7xl lg:text-7xl leading-[100%] text-center">
+							{ENTOURAGE.title}
+						</h1>
+					</div>
+					<div className="flex flex-col w-full">
+						{ENTOURAGE?.sections.map((section) => {
+							return (
+								<div className="flex flex-row mb-6 justify-center text-center">
+									<div className="flex flex-col w-full gap-y-4 mb-6">
+										{typeof section.title === 'string' ? (
+											<h3 className="text-3xl">
+												{section.title}
+											</h3>
+										) : (
+											<>
+												<div className="flex flex-row gap-x-6">
+													<h3 className="text-3xl w-1/2 text-right self-end">
+														{section.title.left}
+													</h3>
+													<h3 className="text-3xl w-1/2 text-left self-end">
+														{section.title.right}
+													</h3>
+												</div>
+											</>
+										)}
+
+										{typeof section.names === 'string' ? (
+											<span className="text-lg font-thin">
+												{section.names}
+											</span>
+										) : (
+											section.names.map((name) => {
+												return (
+													<div className="flex flex-row gap-x-6 justify-center ">
+														{typeof name ===
+														'string' ? (
+															<span className="text-lg font-thin">
+																{name}
+															</span>
+														) : (
+															<>
+																<span className="text-lg font-thin w-1/2 text-right">
+																	{name.left}
+																</span>
+																<span className="text-lg font-thin w-1/2 text-left">
+																	{name.right}
+																</span>
+															</>
+														)}
+													</div>
+												);
+											})
+										)}
 									</div>
 								</div>
 							);

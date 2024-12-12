@@ -4,7 +4,6 @@ import SiteFooter from './siteFooter';
 import CocktailCarousel from './cocktailCarousel';
 import Slider from './slider';
 import ContactForm from './contactForm';
-import FindUsAddresses from './findUsAddresses';
 
 export default {
 	...ImageInformation,
@@ -13,5 +12,4 @@ export default {
 	...CocktailCarousel,
 	...Slider,
 	...ContactForm,
-	...FindUsAddresses,
 };

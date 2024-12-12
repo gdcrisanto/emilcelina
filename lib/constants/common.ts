@@ -1,8 +1,3 @@
-import tanaw_ng_paraw from '../../public/assets/tanaw_ng_paraw.png';
-import aplaya_muni_munia from '../../public/assets/aplaya_muni_munia.png';
-import musik_ni_maestro from '../../public/assets/musik_ni_maestro.png';
-import clara from '../../public/assets/clara.png';
-import dalampasigan from '../../public/assets/dalampasigan.png';
 import { Products } from '../types/products';
 
 const EXAMPLE_PATH = 'cms-wordpress';
@@ -14,7 +9,7 @@ const HOME_OG_IMAGE_URL =
 const MENU_ITEMS = [
 	{ title: 'home', href: '/' },
 	{ title: 'the wedding', href: '/the-wedding' },
-	// { title: 'venue', href: '/' },
+	{ title: 'venue', href: '/venue' },
 	// { title: 'registry', href: '/' },
 	// { title: 'FAQs', href: '/' },
 	{ title: 'RSVP', href: '/' },
@@ -44,39 +39,6 @@ const PRODUCTS: Array<Products> = [
 	},
 ];
 
-const FEATURED_COCKTAILS = [
-	{
-		name: 'Tanaw ng Paraw',
-		description: 'Boozy • sweet',
-		image: tanaw_ng_paraw,
-		href: '/cocktails/tanaw-ng-paraw',
-	},
-	{
-		name: 'Aplaya Muni Munia',
-		description: 'Fruity • Fresh',
-		image: aplaya_muni_munia,
-		href: '/cocktails/aplaya-muni-munia',
-	},
-	{
-		name: 'Musik ni Maestro',
-		description: 'Bitter',
-		image: musik_ni_maestro,
-		href: '/cocktails/musik-ni-maestro',
-	},
-	{
-		name: 'Clara',
-		description: 'Fruity • Sweet',
-		image: clara,
-		href: '/cocktails/clara',
-	},
-	{
-		name: 'Dalampasigan',
-		description: 'Bitter • Astringent',
-		image: dalampasigan,
-		href: '/cocktails/dalampasigan',
-	},
-];
-
 export default {
 	EXAMPLE_PATH,
 	CMS_NAME,
@@ -84,5 +46,4 @@ export default {
 	HOME_OG_IMAGE_URL,
 	MENU_ITEMS,
 	PRODUCTS,
-	FEATURED_COCKTAILS,
 };

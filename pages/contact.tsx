@@ -7,7 +7,7 @@ import Sections from '../components/sections';
 import Vectors from '../components/vectors';
 import { useState } from 'react';
 import { sendContactForm } from '../lib/api';
-import contactHero from '../public/assets/contact.png';
+// import contactHero from '../public/assets/contact.png';
 import { Form } from '../lib/types/form';
 
 export default function Contact() {
@@ -71,17 +71,17 @@ export default function Contact() {
 			<Head>
 				<title>{`${Constants.CMS_NAME}`}</title>
 			</Head>
-
+			{/* 
 			<PageHero
 				bgGradient={HERO_BG}
-				image={contactHero}
+				// image={contactHero}
 				alt=""
 				priority
 				className="justify-center flex-row pb-10 lg:pb-16">
 				<div className="mt-auto font-garamond flex-col md:flex-col flex text-white text-6xl lg:text-[3rem] text-center mx-auto leading-[100%]">
 					Leave us a message
 				</div>
-			</PageHero>
+			</PageHero> */}
 
 			<Container>
 				<section className="flex-col 2xl:px-40 lg:flex-row flex items-center lg:justify-between pt-16 pb-24 relative w-full h-full">

@@ -2,7 +2,6 @@ import Constants from '../lib/constants';
 import Image from 'next/image';
 import Link from 'next/link';
 import Vectors from './vectors';
-import home_bottle from '../public/assets/home_bottle.png';
 import {
 	BottleProps,
 	BreadcrumbsProps,
@@ -132,81 +131,6 @@ export const DividerHeader = ({ children }) => {
 				{children}
 			</h1>
 			<Divider type="right" />
-		</div>
-	);
-};
-
-export const Bottle = ({
-	name,
-	description,
-	button,
-	imageIndex,
-	hoverColor = 'neutral',
-	size = 'normal',
-	href,
-}: BottleProps) => {
-	const bottleMaxWidths = {
-		normal: {
-			container:
-				'bottle flex flex-col items-center w-full max-w-[172px] lg:max-w-[274px] shrink-0 lg:shrink text-white',
-			bottle: 'w-full h-full max-w-[91px] lg:max-w-[150px] object-cover z-10 pb-4',
-			leaves: `bottle-leaves-${hoverColor} absolute bottom-0 z-0 max-h-[315px] lg:max-h-none max-w-[172px] lg:max-w-[272px] w-full shrink-0 lg:shrink fill-[#2D2D2D]`,
-		},
-		lg: {
-			container:
-				'bottle flex flex-col items-center w-full max-w-[327px] lg:max-w-[430px] shrink-0 lg:shrink text-white',
-			bottle: 'w-full h-full max-w-[91px] lg:max-w-[177px] object-cover z-10 pb-4',
-			leaves: `bottle-leaves-${hoverColor} absolute bottom-0 z-0 max-h-[315px] lg:max-h-[620px] max-w-[172px] lg:max-w-[320px] w-full shrink-0 lg:shrink fill-[#2D2D2D]`,
-		},
-		xl: {
-			container:
-				'bottle flex flex-col items-center w-full max-w-[327px] lg:max-w-[518px] shrink-0 lg:shrink text-white',
-			bottle: 'w-full h-full max-w-[91px] lg:max-w-[214px] object-cover z-10 pb-4',
-			leaves: `bottle-leaves-${hoverColor} absolute bottom-0 z-0 max-h-[315px] lg:max-h-[910px] max-w-[172px] lg:max-w-[387px] w-full shrink-0 lg:shrink fill-[#2D2D2D]`,
-		},
-	};
-	return (
-		<div
-			className={bottleMaxWidths[size].container}
-			style={{
-				translate: `${imageIndex ? -100 * imageIndex : 0}%`,
-				transition: 'translate 300ms ease-in-out',
-			}}>
-			<Link
-				href={href}
-				className="relative flex flex-col items-center w-full ">
-				<Image
-					placeholder="blur"
-					src={home_bottle}
-					alt=""
-					className={bottleMaxWidths[size].bottle}
-					height={508}
-					width={150}
-				/>
-				<Vectors.BottleLeaves
-					width={size === 'lg' ? '387' : '272'}
-					height={size === 'lg' ? '740' : '491'}
-					className={bottleMaxWidths[size].leaves}
-				/>
-			</Link>
-			<span
-				className={`mt-6 lg:mt-10  font-garamond ${
-					size === 'lg'
-						? 'text-2xl lg:text-6xl leading-[100%]'
-						: 'text-2xl'
-				} text-center`}>
-				{name}
-			</span>
-			{description && (
-				<span className="mt-2 lg:mt-10 lg:text-lg leading-[140%] text-center font-thin">
-					{description}
-				</span>
-			)}
-			{button && (
-				<Link
-					href={href}
-					className="button mt-6 lg:mt-10 border text-base border-white rounded text-center uppercase tracking-[1.28px] py-4 px-6 hover:bg-white hover:text-[#121212]">{`discover ${hoverColor}`}</Link>
-			)}
 		</div>
 	);
 };
