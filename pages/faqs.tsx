@@ -3,10 +3,9 @@ import Layout from '../components/layout';
 import Constants from '../lib/constants';
 import PageHero from '../components/page-hero';
 import { ColoredBgWrapper } from '../components/page-sections';
-import Link from 'next/link';
 
 export default function FAQs() {
-	const { REGISTRY_HERO } = Constants;
+	const { FAQS_HERO, FAQS_INFO } = Constants;
 
 	return (
 		<Layout>
@@ -14,32 +13,39 @@ export default function FAQs() {
 				<title>{`${Constants.CMS_NAME}`}</title>
 			</Head>
 
-			<ColoredBgWrapper bgColor="nata">
-				<div className="flex flex-col lg:flex-row w-full max-w-[1920px] mx-auto gap-x-20 px-10 lg:px-0 py-0 gap-y-10 lg:gap-y-12 pt-[127px]">
-					<div className="flex flex-col w-1/2">
-						<div className="flex-col flex px-10 w-full my-auto fade-up">
-							<h1 className="font-garamond text-6xl lg:text-7xl leading-[100%]">
-								{REGISTRY_HERO.title}
-							</h1>
-							<h4 className="lg:text-lg my-10 font-thin">
-								{REGISTRY_HERO.subtitle}
-							</h4>
-							<Link
-								href={REGISTRY_HERO.href}
-								className="button py-4 px-6 text-base font-thin border border-white w-fit tracking-wider rounded hover:bg-white hover:text-black hover:border-white">
-								{REGISTRY_HERO.button}
-							</Link>
-						</div>
+			<PageHero
+				image={FAQS_HERO.image}
+				alt=""
+				size="sm"
+				bgGradient="none"
+				priority
+				className="justify-start bg-center bg-cover bg-no-repeat">
+				<div className="flex w-full max-w-[1920px] mx-auto">
+					<div className="flex-col flex self-center w-full text-white mx-auto lg:m-20 fade-up">
+						<h1 className="font-garamond text-7xl lg:text-8xl leading-[100%] text-center">
+							{FAQS_HERO.title}
+						</h1>
 					</div>
-					<PageHero
-						image={REGISTRY_HERO.image}
-						alt=""
-						size="custom"
-						customSize=" h-[590px] lg:h-[570px]"
-						bgGradient="none"
-						priority
-						className="justify-start bg-center bg-cover bg-no-repeat w-1/2"
-					/>
+				</div>
+			</PageHero>
+
+			<ColoredBgWrapper bgColor="nata">
+				<div className="flex flex-col w-full max-w-[1920px] mx-auto px-32 py-20">
+					{FAQS_INFO.map((faq, i) => {
+						return (
+							<div
+								className={`flex flex-col w-full border-black ${
+									i > 0 ? 'border-b' : 'border-y'
+								}`}>
+								<div className="flex flex-row w-full text-3xl justify-between py-8">
+									{faq.question}
+								</div>
+								<p className="w-4/5 mb-6 whitespace-pre-wrap">
+									{faq.answer}
+								</p>
+							</div>
+						);
+					})}
 				</div>
 			</ColoredBgWrapper>
 		</Layout>

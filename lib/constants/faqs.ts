@@ -1,4 +1,4 @@
-import faqsHero from '../../public/assets/placeholder_registry_hero.jpg';
+import faqsHero from '../../public/assets/placeholder_faqs_hero.jpg';
 
 const FAQS_HERO = {
 	image: faqsHero,
