@@ -2,24 +2,12 @@ import Common from './common';
 import Home from './home';
 import TheWedding from './theWedding';
 import Venue from './venue';
-// import About from './about';
-// import Lambanog from './lambanog';
-// import LambanogSlugs from './lambanogSlug';
-// import Cocktails from './cocktails';
-// import CocktailSlug from './cocktailSlug';
-// import HouseOfLakan from './houseOfLakan';
-// import FindUs from './findUs';
+import Registry from './registry';
 
 export default {
 	...Common,
 	...Home,
-	// ...About,
-	// ...Lambanog,
-	// ...LambanogSlugs,
-	// ...Cocktails,
-	// ...CocktailSlug,
-	// ...HouseOfLakan,
-	// ...FindUs,
 	...TheWedding,
 	...Venue,
+	...Registry,
 };
