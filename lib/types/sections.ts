@@ -12,6 +12,7 @@ export type ImageInformationProps = {
 	hasDivider?: Boolean;
 	textWhite?: Boolean;
 	reverse?: Boolean;
+	textCenter?: Boolean;
 	size?: 'sm' | 'normal';
 };
 
@@ -39,7 +40,7 @@ export type HeroProps = {
 	children?: ReactNode;
 	image: StaticImageData;
 	alt: string;
-	size?: 'sm' | 'md' | 'lg' | 'xl' | 'custom';
+	size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'custom';
 	customSize?: string;
 	bgGradient?: string;
 	className?: string;

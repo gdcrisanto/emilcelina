@@ -105,10 +105,10 @@ const ENTOURAGE = {
 			names: [
 				{
 					left: 'Emilio Cano IV',
-					right: 'Gerald Lumba',
+					right: 'Janine Marie Crisanto',
 				},
 				{
-					left: 'Janine Marie Crisanto',
+					left: 'Gerald Lumba',
 					right: 'Christine Anne Crisanto',
 				},
 			],

@@ -15,6 +15,7 @@ export default function PageHero({
 	priority,
 }: HeroProps) {
 	const heroBreakpoints = {
+		xs: ' h-[350px] lg:h-[400px]',
 		sm: ' h-[590px] lg:h-[600px]',
 		md: ' h-[590px] lg:h-[680px]',
 		lg: ' h-[667px] lg:h-[840px]',

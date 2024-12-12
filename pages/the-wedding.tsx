@@ -139,7 +139,7 @@ export default function TheWedding() {
 			<ColoredBgWrapper bgColor="nata">
 				<div
 					id="entourage"
-					className="flex flex-col lg:flex-row w-full max-w-[1920px] mx-auto gap-x-20 px-10 lg:px-32 py-10 lg:py-10">
+					className="flex flex-col lg:flex-row w-full max-w-[1920px] mx-auto gap-x-20 px-4 lg:px-32 py-10 lg:py-10">
 					<div className="flex flex-col w-full lg:w-[48%] mb-20 lg:mb-0 justify-center relative">
 						<h1 className="sticky top-0 font-garamond text-7xl lg:text-7xl leading-[100%] text-center">
 							{ENTOURAGE.title}
@@ -151,16 +151,16 @@ export default function TheWedding() {
 								<div className="flex flex-row mb-6 justify-center text-center">
 									<div className="flex flex-col w-full gap-y-4 mb-6">
 										{typeof section.title === 'string' ? (
-											<h3 className="text-3xl">
+											<h3 className="text-2xl lg:text-3xl">
 												{section.title}
 											</h3>
 										) : (
 											<>
 												<div className="flex flex-row gap-x-6">
-													<h3 className="text-3xl w-1/2 text-right self-end">
+													<h3 className="text-2xl lg:text-3xl w-1/2 text-right self-end">
 														{section.title.left}
 													</h3>
-													<h3 className="text-3xl w-1/2 text-left self-end">
+													<h3 className="text-2xl lg:text-3xl w-1/2 text-left self-end">
 														{section.title.right}
 													</h3>
 												</div>

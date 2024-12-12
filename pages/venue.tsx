@@ -3,9 +3,10 @@ import Layout from '../components/layout';
 import Constants from '../lib/constants';
 import PageHero from '../components/page-hero';
 import { ColoredBgWrapper } from '../components/page-sections';
+import Sections from '../components/sections';
 
 export default function TheWedding() {
-	const { VENUE_HERO, VENUE_ANCHORS } = Constants;
+	const { VENUE_HERO, VENUE_ANCHORS, VENUE_MAPS, WHERE_TO_STAY } = Constants;
 
 	const scrolltoHash = function (element_id: string) {
 		const element = document.getElementById(element_id);
@@ -43,7 +44,6 @@ export default function TheWedding() {
 						return (
 							<a
 								className="w-1/3 text-center text-2xl cursor-pointer"
-								// href={`#${anchor.id}`}
 								onClick={() => {
 									scrolltoHash(anchor.id);
 								}}>
@@ -53,142 +53,77 @@ export default function TheWedding() {
 					})}
 				</div>
 
-				<div
-					id="church"
-					className="flex flex-col lg:flex-row w-full max-w-[1920px] mx-auto gap-x-20 px-10 lg:px-32 py-10">
-					{/* <div className="flex flex-col w-full lg:w-[48%] mb-20 lg:mb-0 justify-center ">
-						<h1 className="font-garamond text-7xl lg:text-7xl leading-[100%] text-center">
-							{SCHEDULE_OF_EVENTS.title}
-						</h1>
-					</div>
-					<div className="flex flex-col lg:max-w-[400px] w-full">
-						{SCHEDULE_OF_EVENTS?.events.map((item) => {
-							return (
-								<div className="flex flex-row mb-6 justify-between">
-									<div className="flex flex-col">
-										<h3 className="text-3xl">
-											{item.event}
-										</h3>
-										<span className="text-sm italic font-thin">
-											{item.description}
-										</span>
+				<div className="flex flex-col w-full max-w-[1920px] mx-auto gap-x-20 px-10 lg:px-32 py-10 gap-y-10 lg:gap-y-12">
+					{VENUE_MAPS.map((venue, i) => {
+						return (
+							<Sections.ImageInformation
+								image={
+									<div
+										className="w-full lg:w-1/2"
+										id={i % 2 ? 'reception' : 'church'}>
+										<div className="w-full lg:max-w-[300px] mx-auto fade-up">
+											<PageHero
+												image={venue.image}
+												alt=""
+												size="custom"
+												customSize=" h-[180px] lg:h-[180px]"
+												width={869}
+												height={518}
+											/>
+										</div>
 									</div>
-									<div>
-										<span className="font-thin">
-											{item.time}
-										</span>
-									</div>
-								</div>
-							);
-						})}
-					</div> */}
+								}
+								data={venue}
+								textCenter
+								reverse={i % 2 ? false : true}
+							/>
+						);
+					})}
 				</div>
 			</ColoredBgWrapper>
+
+			<PageHero
+				image={WHERE_TO_STAY.image}
+				alt=""
+				size="xs"
+				bgGradient="none"
+				priority
+				className="justify-start bg-center bg-cover bg-no-repeat">
+				<div className="flex w-full max-w-[1920px] mx-auto">
+					<div className="flex-col flex self-center w-full text-white mx-auto lg:m-20 fade-up">
+						<h1 className="font-garamond text-5xl lg:text-7xl leading-[100%] text-center mb-6">
+							{WHERE_TO_STAY.title}
+						</h1>
+						<h5 className="font-garamond text-2xl lg:text-2xl leading-[100%] text-center">
+							{WHERE_TO_STAY.subtitle}
+						</h5>
+					</div>
+				</div>
+			</PageHero>
 
 			<ColoredBgWrapper bgColor="white">
 				<div
 					id="reception"
-					className="flex flex-col lg:flex-row w-full max-w-[1920px] mx-auto gap-x-20 px-10 lg:px-32 py-10 lg:py-20">
-					{/* <div className="flex flex-col w-full lg:w-1/2 mb-20 lg:mb-0 justify-center ">
-						<div className="flex flex-row w-full">
-							<div className="flex flex-col w-full lg:w-1/2 mb-20 lg:mb-0 justify-center ">
-								<h1 className="font-garamond text-4xl lg:text-4xl leading-[100%] text-center mb-6">
-									{ATTIRE_FOR_GUESTS.ladies.title}
-								</h1>
-								<span className="text-lg  font-thin text-center">
-									{ATTIRE_FOR_GUESTS.ladies.description}
-								</span>
-							</div>
-							<div className="flex flex-col w-full lg:w-1/2 mb-20 lg:mb-0 justify-center ">
-								<h1 className="font-garamond text-4xl lg:text-4xl leading-[100%] text-center mb-6">
-									{ATTIRE_FOR_GUESTS.gentlemen.title}
-								</h1>
-								<span className="text-lg  font-thin text-center">
-									{ATTIRE_FOR_GUESTS.gentlemen.description}
-								</span>
-							</div>
-						</div>
-						<div className="flex flex-row w-full justify-around my-6">
-							{ATTIRE_FOR_GUESTS.colors.map((color) => {
-								const className = `bg-[${color}] w-1/4 h-[100px]`;
-								return <div className={className} />;
-							})}
-						</div>
-						<span className="text-sm italic font-thin text-center">
-							{ATTIRE_FOR_GUESTS.note}
-						</span>
-					</div>
-					<div className="flex flex-col w-full lg:w-1/2 mb-20 lg:mb-0 justify-center ">
-						<h1 className="font-garamond text-7xl lg:text-7xl leading-[100%] text-center">
-							{ATTIRE_FOR_GUESTS.title}
-						</h1>
-					</div> */}
-				</div>
-			</ColoredBgWrapper>
+					className="flex flex-col w-full max-w-[1920px] mx-auto gap-x-20 px-10 lg:px-32 py-10 lg:py-20">
+					<h5 className="font-garamond text-2xl lg:text-2xl leading-[100%] text-center mx-auto max-w-[640px] mb-10">
+						{WHERE_TO_STAY.body}
+					</h5>
 
-			<ColoredBgWrapper bgColor="nata">
-				<div
-					id="hotels"
-					className="flex flex-col lg:flex-row w-full max-w-[1920px] mx-auto gap-x-20 px-10 lg:px-32 py-10 lg:py-10">
-					<div className="flex flex-col w-full lg:w-[48%] mb-20 lg:mb-0 justify-center relative">
-						{/* <h1 className="sticky top-0 font-garamond text-7xl lg:text-7xl leading-[100%] text-center">
-							{ENTOURAGE.title}
-						</h1> */}
-					</div>
-					{/* <div className="flex flex-col w-full">
-						{ENTOURAGE?.sections.map((section) => {
+					<div className="flex flex-row w-full max-w-1/4 justify-around">
+						{WHERE_TO_STAY.hotels.map((hotel) => {
 							return (
-								<div className="flex flex-row mb-6 justify-center text-center">
-									<div className="flex flex-col w-full gap-y-4 mb-6">
-										{typeof section.title === 'string' ? (
-											<h3 className="text-3xl">
-												{section.title}
-											</h3>
-										) : (
-											<>
-												<div className="flex flex-row gap-x-6">
-													<h3 className="text-3xl w-1/2 text-right self-end">
-														{section.title.left}
-													</h3>
-													<h3 className="text-3xl w-1/2 text-left self-end">
-														{section.title.right}
-													</h3>
-												</div>
-											</>
-										)}
+								<div className="flex flex-col w-1/4">
+									<h4 className="font-garamond text-2xl lg:text-2xl leading-[100%] text-center mb-4">
+										{hotel.name}
+									</h4>
 
-										{typeof section.names === 'string' ? (
-											<span className="text-lg font-thin">
-												{section.names}
-											</span>
-										) : (
-											section.names.map((name) => {
-												return (
-													<div className="flex flex-row gap-x-6 justify-center ">
-														{typeof name ===
-														'string' ? (
-															<span className="text-lg font-thin">
-																{name}
-															</span>
-														) : (
-															<>
-																<span className="text-lg font-thin w-1/2 text-right">
-																	{name.left}
-																</span>
-																<span className="text-lg font-thin w-1/2 text-left">
-																	{name.right}
-																</span>
-															</>
-														)}
-													</div>
-												);
-											})
-										)}
-									</div>
+									<h5 className="font-garamond text-lg lg:text-lg leading-[100%] text-center mx-auto max-w-[640px] whitespace-pre-wrap">
+										{hotel.info}
+									</h5>
 								</div>
 							);
 						})}
-					</div> */}
+					</div>
 				</div>
 			</ColoredBgWrapper>
 		</Layout>
