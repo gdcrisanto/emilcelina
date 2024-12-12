@@ -5,7 +5,7 @@ import PageHero from '../components/page-hero';
 import { ColoredBgWrapper } from '../components/page-sections';
 import Sections from '../components/sections';
 
-export default function TheWedding() {
+export default function Venue() {
 	const { VENUE_HERO, VENUE_ANCHORS, VENUE_MAPS, WHERE_TO_STAY } = Constants;
 
 	const scrolltoHash = function (element_id: string) {

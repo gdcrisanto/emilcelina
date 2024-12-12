@@ -5,7 +5,7 @@ import PageHero from '../components/page-hero';
 import { ColoredBgWrapper } from '../components/page-sections';
 import Link from 'next/link';
 
-export default function Registry() {
+export default function FAQs() {
 	const { REGISTRY_HERO } = Constants;
 
 	return (

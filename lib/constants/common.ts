@@ -11,7 +11,7 @@ const MENU_ITEMS = [
 	{ title: 'the wedding', href: '/the-wedding' },
 	{ title: 'venue', href: '/venue' },
 	{ title: 'registry', href: '/registry' },
-	// { title: 'FAQs', href: '/' },
+	{ title: 'FAQs', href: '/faqs' },
 	{ title: 'RSVP', href: '/' },
 ];
 
