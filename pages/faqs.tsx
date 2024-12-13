@@ -3,9 +3,14 @@ import Layout from '../components/layout';
 import Constants from '../lib/constants';
 import PageHero from '../components/page-hero';
 import { ColoredBgWrapper } from '../components/page-sections';
+import Collapsible from 'react-collapsible';
 
 export default function FAQs() {
 	const { FAQS_HERO, FAQS_INFO } = Constants;
+
+	const toggle = (e) => {
+		console.log('testing', e.target.classList);
+	};
 
 	return (
 		<Layout>
@@ -32,17 +37,25 @@ export default function FAQs() {
 			<ColoredBgWrapper bgColor="nata">
 				<div className="flex flex-col w-full max-w-[1920px] mx-auto px-32 py-20">
 					{FAQS_INFO.map((faq, i) => {
+						const className =
+							'flex flex-row w-full text-3xl justify-between py-8 cursor-pointer';
 						return (
 							<div
-								className={`flex flex-col w-full border-black ${
+								id="collapse"
+								className={`w-full border-black ${
 									i > 0 ? 'border-b' : 'border-y'
 								}`}>
-								<div className="flex flex-row w-full text-3xl justify-between py-8">
-									{faq.question}
-								</div>
-								<p className="w-4/5 mb-6 whitespace-pre-wrap">
-									{faq.answer}
-								</p>
+								<Collapsible
+									trigger={faq.question}
+									triggerClassName={className}
+									triggerOpenedClassName={className}
+									transitionTime={200}
+									easing="ease-in-out">
+									<p
+										className={`w-4/5 pb-6 whitespace-pre-wrap`}>
+										{faq.answer}
+									</p>
+								</Collapsible>
 							</div>
 						);
 					})}

@@ -28,9 +28,9 @@ We appreciate your understanding and hope you can make arrangements to celebrate
 		question: 'Is there a dress code?',
 		answer: `Yes, we’d love to see our family and friends dressed up for our special day. The dress code is strictly formal in cream, ecru or light taupe.
 
-Ladies: Long dress or evening gown
+			\u2022		Ladies: Long dress or evening gown
 
-Gentlemen: Long-sleeved Barong Tagalog with black slacks
+			\u2022		Gentlemen: Long-sleeved Barong Tagalog with black slacks
 
 For more details, please visit The Wedding page.`,
 	},
