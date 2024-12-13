@@ -29,7 +29,7 @@ const ImageInformation = ({
 					}`}>
 					{hasDivider && <Divider type={'top'} />}
 					<h1
-						className={`font-newsreader text-4xl ${
+						className={`text-[#5F6F52] font-newsreader text-4xl ${
 							size === 'normal' ? 'lg:text-4xl' : 'lg:text-6xl'
 						} leading-9 lg:leading-[100%] ${
 							textCenter ? 'text-center' : ''
@@ -37,7 +37,7 @@ const ImageInformation = ({
 						{data?.title}
 					</h1>
 					<h2
-						className={`text-lg font-thin ${
+						className={`text-[#BF8F67] text-lg font-light ${
 							textCenter ? 'text-center' : ''
 						}`}>
 						{data?.subtitle}
@@ -45,12 +45,14 @@ const ImageInformation = ({
 					{data?.button && (
 						<Link
 							href={data?.href}
-							className={`button py-2 px-10 text-xs font-thin border w-fit tracking-wider rounded ${
-								textWhite ? 'border-white' : 'border-[#121212]'
+							className={`button py-2 px-10 text-xs font-light border w-fit tracking-wider rounded ${
+								textWhite
+									? 'border-[#BF8F67]'
+									: 'border-[#121212]'
 							} ${
 								textWhite
-									? 'hover:bg-white hover:text-[#121212]'
-									: 'hover:bg-[#121212] hover:text-[#B99D37]'
+									? 'hover:text-white text-[#BF8F67]  hover:bg-[#BF8F67]'
+									: 'text-white bg-[#BF8F67] hover:bg-[#5F6F52]'
 							} mx-auto`}>
 							{data?.button}
 						</Link>

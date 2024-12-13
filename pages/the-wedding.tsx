@@ -74,12 +74,12 @@ export default function TheWedding() {
 										<h3 className="text-3xl">
 											{item.event}
 										</h3>
-										<span className="text-sm italic font-thin">
+										<span className="text-sm italic font-light">
 											{item.description}
 										</span>
 									</div>
 									<div>
-										<span className="font-thin">
+										<span className="font-light">
 											{item.time}
 										</span>
 									</div>
@@ -100,7 +100,7 @@ export default function TheWedding() {
 								<h1 className="font-newsreader text-4xl lg:text-4xl leading-[100%] text-center mb-6">
 									{ATTIRE_FOR_GUESTS.ladies.title}
 								</h1>
-								<span className="text-lg  font-thin text-center">
+								<span className="text-lg  font-light text-center">
 									{ATTIRE_FOR_GUESTS.ladies.description}
 								</span>
 							</div>
@@ -108,7 +108,7 @@ export default function TheWedding() {
 								<h1 className="font-newsreader text-4xl lg:text-4xl leading-[100%] text-center mb-6">
 									{ATTIRE_FOR_GUESTS.gentlemen.title}
 								</h1>
-								<span className="text-lg  font-thin text-center">
+								<span className="text-lg  font-light text-center">
 									{ATTIRE_FOR_GUESTS.gentlemen.description}
 								</span>
 							</div>
@@ -124,7 +124,7 @@ export default function TheWedding() {
 								return <div className={className} />;
 							})}
 						</div>
-						<span className="text-sm italic font-thin text-center">
+						<span className="text-sm italic font-light text-center">
 							{ATTIRE_FOR_GUESTS.note}
 						</span>
 					</div>
@@ -168,7 +168,7 @@ export default function TheWedding() {
 										)}
 
 										{typeof section.names === 'string' ? (
-											<span className="text-lg font-thin">
+											<span className="text-lg font-light">
 												{section.names}
 											</span>
 										) : (
@@ -177,15 +177,15 @@ export default function TheWedding() {
 													<div className="flex flex-row gap-x-6 justify-center ">
 														{typeof name ===
 														'string' ? (
-															<span className="text-lg font-thin">
+															<span className="text-lg font-light">
 																{name}
 															</span>
 														) : (
 															<>
-																<span className="text-lg font-thin w-1/2 text-right">
+																<span className="text-lg font-light w-1/2 text-right">
 																	{name.left}
 																</span>
-																<span className="text-lg font-thin w-1/2 text-left">
+																<span className="text-lg font-light w-1/2 text-left">
 																	{name.right}
 																</span>
 															</>

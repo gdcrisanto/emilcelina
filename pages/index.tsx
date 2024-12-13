@@ -25,15 +25,15 @@ export default function Home() {
 				className="justify-start bg-center bg-cover bg-no-repeat">
 				<div className="flex w-full max-w-[1920px] mx-auto">
 					<div className="flex-col flex self-center w-full text-white max-w-[624px] mx-10 lg:m-20 fade-up">
-						<h1 className="font-newsreader text-7xl lg:text-8xl leading-[100%]">
+						<h1 className="text-[#5F6F52] font-newsreader text-7xl lg:text-8xl leading-[100%]">
 							{HOME_HERO.title}
 						</h1>
-						<h4 className="lg:text-lg my-10 font-thin">
+						<h4 className="lg:text-lg my-10 font-light">
 							{HOME_HERO.subtitle}
 						</h4>
 						<Link
 							href={HOME_HERO.href}
-							className="button py-4 px-6 uppercase text-base font-thin border border-white w-fit tracking-wider rounded hover:bg-white hover:text-black hover:border-white">
+							className="button py-4 px-6 uppercase text-base font-light border border-white w-fit tracking-wider rounded hover:bg-white hover:text-black hover:border-white">
 							{HOME_HERO.button}
 						</Link>
 					</div>
@@ -44,15 +44,15 @@ export default function Home() {
 				<div className="flex flex-col lg:flex-row w-full py-14 px-6 lg:px-20 max-w-[1920px] justify-between mx-auto lg:gap-x-12">
 					<div className="flex-col text-center lg:text-left flex self-center max-w-[450px] mb-10 lg:mb-0 fade-up">
 						<CountDownTimer />
-						<h1 className="font-newsreader text-4xl lg:text-[3rem] leading-[100%]">
+						<h1 className="text-[#5F6F52] font-newsreader text-4xl lg:text-[3rem] leading-[100%]">
 							{OUR_SPECIAL_DAY.title}
 						</h1>
-						<h2 className="lg:text-[18px] mt-4 mb-6 lg:my-[40px] font-thin">
+						<h2 className="lg:text-[18px] mt-4 mb-6 lg:my-[40px] font-light">
 							{OUR_SPECIAL_DAY.subtitle}
 						</h2>
 						<Link
 							href={OUR_SPECIAL_DAY.href}
-							className="button py-4 px-6 uppercase mx-auto lg:mx-0 text-base font-thin border w-fit tracking-wider rounded hover:bg-black hover:text-white hover:">
+							className="button py-4 px-6 uppercase mx-auto lg:mx-0 text-base font-light border w-fit tracking-wider rounded hover:bg-black hover:text-white hover:">
 							{OUR_SPECIAL_DAY.button}
 						</Link>
 					</div>
@@ -86,14 +86,14 @@ export default function Home() {
 							<h3 className="text-3xl">
 								Our Lady of Lourdes Parish
 							</h3>
-							<h4 className="text-xl font-thin">
+							<h4 className="text-xl font-light">
 								Tagaytay, Cavite
 							</h4>
 						</div>
 						<hr className="w-full border-t self-center max-w-full border-black my-10" />
 						<div className="flex flex-col">
 							<h3 className="text-3xl">Arocarrìa</h3>
-							<h4 className="text-xl font-thin">
+							<h4 className="text-xl font-light">
 								Alfonso, Cavite
 							</h4>
 						</div>
@@ -109,12 +109,12 @@ export default function Home() {
 										<h3 className="text-3xl">
 											{item.event}
 										</h3>
-										<span className="text-sm italic font-thin">
+										<span className="text-sm italic font-light">
 											{item.description}
 										</span>
 									</div>
 									<div>
-										<span className="font-thin">
+										<span className="font-light">
 											{item.time}
 										</span>
 									</div>
@@ -148,17 +148,21 @@ const CountDownTimer = () => {
 	}, []);
 	return (
 		<div className="flex flex-row gap-x-4 mt-4 mb-6 lg:my-10 uppercase">
-			<h2 className="lg:text-[18px] font-thin">
-				days: {countDownTimer.countdownDays}
+			<h2 className="lg:text-[18px] font-light">
+				<p className="font-semibold">days:</p>{' '}
+				{countDownTimer.countdownDays}
 			</h2>
-			<h2 className="lg:text-[18px] font-thin">
-				hours: {countDownTimer.countdownHours}
+			<h2 className="lg:text-[18px] font-light">
+				<p className="font-semibold">hours:</p>{' '}
+				{countDownTimer.countdownHours}
 			</h2>
-			<h2 className="lg:text-[18px] font-thin">
-				minutes: {countDownTimer.countdownMinutes}
+			<h2 className="lg:text-[18px] font-light">
+				<p className="font-semibold">minutes:</p>{' '}
+				{countDownTimer.countdownMinutes}
 			</h2>
-			<h2 className="lg:text-[18px] font-thin">
-				seconds: {countDownTimer.countdownSeconds}
+			<h2 className="lg:text-[18px] font-light">
+				<p className="font-semibold">seconds:</p>{' '}
+				{countDownTimer.countdownSeconds}
 			</h2>
 		</div>
 	);

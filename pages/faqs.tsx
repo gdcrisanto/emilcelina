@@ -8,10 +8,6 @@ import Collapsible from 'react-collapsible';
 export default function FAQs() {
 	const { FAQS_HERO, FAQS_INFO } = Constants;
 
-	const toggle = (e) => {
-		console.log('testing', e.target.classList);
-	};
-
 	return (
 		<Layout>
 			<Head>
@@ -27,7 +23,7 @@ export default function FAQs() {
 				className="justify-start bg-center bg-cover bg-no-repeat">
 				<div className="flex w-full max-w-[1920px] mx-auto">
 					<div className="flex-col flex self-center w-full text-white mx-auto lg:m-20 fade-up">
-						<h1 className="font-newsreader text-7xl lg:text-8xl leading-[100%] text-center">
+						<h1 className="text-[#5F6F52] font-newsreader text-7xl lg:text-8xl leading-[100%] text-center">
 							{FAQS_HERO.title}
 						</h1>
 					</div>
@@ -35,7 +31,7 @@ export default function FAQs() {
 			</PageHero>
 
 			<ColoredBgWrapper bgColor="nata">
-				<div className="flex flex-col w-full max-w-[1920px] mx-auto px-32 py-20">
+				<div className="flex flex-col w-full max-w-[1920px] mx-auto px-4 lg:px-32 py-20">
 					{FAQS_INFO.map((faq, i) => {
 						const className =
 							'font-newsreader flex flex-row w-full text-3xl justify-between py-8 cursor-pointer';

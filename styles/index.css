@@ -190,7 +190,6 @@ body {
 
 .header-menu {
 	line-height: 19.04px;
-	font-weight: 100;
 	max-width: 800px;
 }
 
@@ -221,7 +220,7 @@ main {
 }
 
 .button {
-	border: 1px solid;
+	/* border: 1px solid; */
 	border-radius: 4px;
 	transition: all 0.3s;
 }

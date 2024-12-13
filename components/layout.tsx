@@ -85,10 +85,10 @@ export default function Layout({
 						size="sm"
 						bgGradient="linear-gradient(180deg, rgba(0, 0, 0, 0.00) 53.92%, rgba(0, 0, 0, 0.80) 100%)">
 						<div className=" mx-auto flex-col md:flex-col flex items-center pb-6 lg:pb-16 justify-end text-white text-center">
-							<span className="mb-4 lg:mb-10 text-4xl lg:text-[3rem] leading-9 lg:leading-[64px] font-newsreader max-w-[309px] lg:max-w-none">
+							<span className="mb-4 lg:mb-10 text-4xl lg:text-[3rem] leading-9 lg:leading-[64px] font-newsreader max-w-[309px] lg:max-w-none text-[#5F6F52]">
 								{constants.FOOTER.title}
 							</span>
-							<h4 className="lg:text-lg my-[40px] font-thin">
+							<h4 className="lg:text-lg my-[40px] font-light">
 								{constants.HOME_HERO.subtitle}
 							</h4>
 							<Link
@@ -167,7 +167,7 @@ export default function Layout({
 // 	const errorClassName =
 // 		!isError || isError == undefined
 // 			? 'hidden '
-// 			: 'text-[#FF7171] normal-case text-[14px] font-thin';
+// 			: 'text-[#FF7171] normal-case text-[14px] font-light';
 
 // 	return (
 // 		<div className="flex flex-col w-full">

@@ -53,7 +53,7 @@ export default function Venue() {
 					})}
 				</div>
 
-				<div className="flex flex-col w-full max-w-[1920px] mx-auto gap-x-20 px-10 lg:px-32 py-10 gap-y-10 lg:gap-y-12">
+				<div className="flex flex-col w-full max-w-[1920px] mx-auto gap-x-20 px-4 lg:px-32 py-10 gap-y-10 lg:gap-y-12">
 					{VENUE_MAPS.map((venue, i) => {
 						return (
 							<Sections.ImageInformation
@@ -75,6 +75,7 @@ export default function Venue() {
 								}
 								data={venue}
 								textCenter
+								textWhite
 								reverse={i % 2 ? false : true}
 							/>
 						);
@@ -104,7 +105,7 @@ export default function Venue() {
 			<ColoredBgWrapper bgColor="white">
 				<div
 					id="reception"
-					className="flex flex-col w-full max-w-[1920px] mx-auto gap-x-20 px-10 lg:px-32 py-10 lg:py-20">
+					className="flex flex-col w-full max-w-[1920px] mx-auto gap-x-20 px-4 lg:px-32 py-10 lg:py-20">
 					<h5 className="font-newsreader text-2xl lg:text-2xl leading-[100%] text-center mx-auto max-w-[640px] mb-10">
 						{WHERE_TO_STAY.body}
 					</h5>

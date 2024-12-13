@@ -67,10 +67,10 @@ export const Award = ({ award, title, year }) => {
 				<span className="text-base lg:text-[1.375rem] tracking-[2.24px] leading-4 lg:leading-7">
 					{award}
 				</span>
-				<span className="text-[0.625rem] lg:text-sm tracking-[0.8px] lg:tracking-[1.12px] leading-[100%] font-thin">
+				<span className="text-[0.625rem] lg:text-sm tracking-[0.8px] lg:tracking-[1.12px] leading-[100%] font-light">
 					{title}
 				</span>
-				<span className="font-thin text-[0.625rem] lg:text-sm tracking-[0.8px] leading-[100%]">
+				<span className="font-light text-[0.625rem] lg:text-sm tracking-[0.8px] leading-[100%]">
 					{year}
 				</span>
 			</div>
@@ -83,46 +83,6 @@ export const Award = ({ award, title, year }) => {
 	);
 };
 
-export const CocktailCard = ({
-	image,
-	name,
-	description,
-	size = 'normal',
-	hidden = false,
-	href,
-}: CocktailCardProps) => {
-	const cardSize = {
-		sm: 'max-w-[156px] lg:max-w-[332px]',
-		normal: 'max-w-[156px] xl:max-w-[422px]',
-		catalog:
-			'max-w-[calc((100%-(24px))/2)] md:max-w-[calc((100%-(24px*2))/3)] xl:max-w-[calc((100%-(24px*3))/4)]',
-	};
-	return (
-		<Link
-			href={href}
-			className={`flex-col items-center w-full relative fade-up flex-grow ${
-				cardSize[size]
-			} ${hidden ? ' hidden lg:flex' : ' flex'}`}>
-			<div className="relative w-full h-[287px] lg:h-[492px] ">
-				<Image
-					src={image}
-					alt=""
-					width={422}
-					height={492}
-					placeholder="blur"
-					className="absolute object-cover object-bottom w-full h-[287px] lg:h-[492px]"
-				/>
-			</div>
-			<span className="mt-4 lg:mt-6 font-newsreader text-lg lg:text-2xl text-left w-full">
-				{name}
-			</span>
-			<span className="lg:mt-2 text-xs text-[#93867A] uppercase lg:text-base text-left w-full ">
-				{description}
-			</span>
-		</Link>
-	);
-};
-
 export const DividerHeader = ({ children }) => {
 	return (
 		<div className="hidden lg:flex flex-row w-full">
@@ -132,52 +92,6 @@ export const DividerHeader = ({ children }) => {
 			</h1>
 			<Divider type="right" />
 		</div>
-	);
-};
-
-export const StoryCard = ({ image, title, publisher }) => {
-	return (
-		<div className="flex flex-col items-center relative max-w-[571px] mx-auto">
-			<Image
-				placeholder="blur"
-				src={image}
-				alt=""
-				width={571}
-				height={321}
-				className="z-10"
-			/>
-			<span className="mt-6 font-newsreader text-[18px] lg:text-2xl leading-[18px] lg:leading-6 text-left w-full">
-				<img
-					src={publisher}
-					className="min-h-[18px] self-start pb-2"
-				/>
-				{title}
-			</span>
-			<div className="flex flex-row w-full">
-				<span className="mt-2 text-[#121212] self-center uppercase text-base text-left pr-2">
-					Read Article
-				</span>
-				<Vectors.LinkOut className="self-center" />
-			</div>
-		</div>
-	);
-};
-
-export const OrnateHeader = ({ title, button = undefined }) => {
-	return (
-		<>
-			<DividerHeader>{title}</DividerHeader>
-			<div className="mx-auto text-4xl font-newsreader leading-9 text-center lg:hidden">
-				{title}
-			</div>
-			{button && (
-				<Link
-					href="/cocktails"
-					className="mx-auto uppercase px-6 py-4 rounded border mt-6 border-solid border-[#121212] hover:bg-[#121212] hover:text-[#B99D37]">
-					{button}
-				</Link>
-			)}
-		</>
 	);
 };
 
@@ -214,7 +128,7 @@ export const HeaderDescription = ({
 				{data.title}
 			</span>
 			<span
-				className={`text-[18px] leading-[140%] font-thin ${
+				className={`text-[18px] leading-[140%] font-light ${
 					hasDivider && 'mb-10'
 				}`}>
 				{data.subtitle}
