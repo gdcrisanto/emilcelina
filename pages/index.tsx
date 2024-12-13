@@ -25,7 +25,7 @@ export default function Home() {
 				className="justify-start bg-center bg-cover bg-no-repeat">
 				<div className="flex w-full max-w-[1920px] mx-auto">
 					<div className="flex-col flex self-center w-full text-white max-w-[624px] mx-10 lg:m-20 fade-up">
-						<h1 className="font-garamond text-7xl lg:text-8xl leading-[100%]">
+						<h1 className="font-newsreader text-7xl lg:text-8xl leading-[100%]">
 							{HOME_HERO.title}
 						</h1>
 						<h4 className="lg:text-lg my-10 font-thin">
@@ -44,7 +44,7 @@ export default function Home() {
 				<div className="flex flex-col lg:flex-row w-full py-14 px-6 lg:px-20 max-w-[1920px] justify-between mx-auto lg:gap-x-12">
 					<div className="flex-col text-center lg:text-left flex self-center max-w-[450px] mb-10 lg:mb-0 fade-up">
 						<CountDownTimer />
-						<h1 className="font-garamond text-4xl lg:text-[3rem] leading-[100%]">
+						<h1 className="font-newsreader text-4xl lg:text-[3rem] leading-[100%]">
 							{OUR_SPECIAL_DAY.title}
 						</h1>
 						<h2 className="lg:text-[18px] mt-4 mb-6 lg:my-[40px] font-thin">

@@ -78,7 +78,7 @@ export default function Contact() {
 				alt=""
 				priority
 				className="justify-center flex-row pb-10 lg:pb-16">
-				<div className="mt-auto font-garamond flex-col md:flex-col flex text-white text-6xl lg:text-[3rem] text-center mx-auto leading-[100%]">
+				<div className="mt-auto font-newsreader flex-col md:flex-col flex text-white text-6xl lg:text-[3rem] text-center mx-auto leading-[100%]">
 					Leave us a message
 				</div>
 			</PageHero> */}
@@ -86,7 +86,7 @@ export default function Contact() {
 			<Container>
 				<section className="flex-col 2xl:px-40 lg:flex-row flex items-center lg:justify-between pt-16 pb-24 relative w-full h-full">
 					<div className="flex flex-col lg:mr-10 w-full mb-10 lg:mb-auto z-10">
-						<span className="font-garamond text-4xl lg:text-6xl font-semi tracking-tighter leading-tight mb-6">
+						<span className="font-newsreader text-4xl lg:text-6xl font-semi tracking-tighter leading-tight mb-6">
 							Philippine Craft Distillers, Inc.
 						</span>
 						<ListItem children={'(043) 774-5422'} />

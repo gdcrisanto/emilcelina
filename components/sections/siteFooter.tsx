@@ -7,7 +7,7 @@ const Footer = () => {
 		<div className="site-footer flex flex-col pb-auto z-50">
 			<div className="w-full flex flex-col mt-10 mx-auto py-10 items-center">
 				<Vectors.LogoLong />
-				<div className="font-garamond text-xl mt-6 font-thin tracking-wide">
+				<div className="font-newsreader text-xl mt-6 font-thin tracking-wide">
 					The True Filipino Spirit
 				</div>
 			</div>

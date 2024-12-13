@@ -29,7 +29,7 @@ const ImageInformation = ({
 					}`}>
 					{hasDivider && <Divider type={'top'} />}
 					<h1
-						className={`font-garamond text-4xl ${
+						className={`font-newsreader text-4xl ${
 							size === 'normal' ? 'lg:text-4xl' : 'lg:text-6xl'
 						} leading-9 lg:leading-[100%] ${
 							textCenter ? 'text-center' : ''

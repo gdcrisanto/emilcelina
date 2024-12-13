@@ -42,7 +42,7 @@ const Slider = ({ quotes, images, textWhite }: SliderProps) => {
 										className="self-center hidden lg:block max-w-[55px]"
 										onClick={prevQuote}
 									/>
-									<div className="font-garamond max-w-[868px] mx-auto text-[28px] lg:text-[48px] leading-[28px] lg:leading-[48px] text-center ">
+									<div className="font-newsreader max-w-[868px] mx-auto text-[28px] lg:text-[48px] leading-[28px] lg:leading-[48px] text-center ">
 										{quote.quote}
 									</div>
 									<Vectors.ArrowRight

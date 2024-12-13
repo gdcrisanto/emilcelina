@@ -36,7 +36,7 @@ export default function TheWedding() {
 				className="justify-start bg-center bg-cover bg-no-repeat">
 				<div className="flex w-full max-w-[1920px] mx-auto">
 					<div className="flex-col flex self-center w-full text-white mx-auto lg:m-20 fade-up">
-						<h1 className="font-garamond text-7xl lg:text-8xl leading-[100%] text-center">
+						<h1 className="font-newsreader text-7xl lg:text-8xl leading-[100%] text-center">
 							{WEDDING_HERO.title}
 						</h1>
 					</div>
@@ -62,7 +62,7 @@ export default function TheWedding() {
 					id="schedule"
 					className="flex flex-col lg:flex-row w-full max-w-[1920px] mx-auto gap-x-20 px-10 lg:px-32 py-10">
 					<div className="flex flex-col w-full lg:w-[48%] mb-20 lg:mb-0 justify-center ">
-						<h1 className="font-garamond text-7xl lg:text-7xl leading-[100%] text-center">
+						<h1 className="font-newsreader text-7xl lg:text-7xl leading-[100%] text-center">
 							{SCHEDULE_OF_EVENTS.title}
 						</h1>
 					</div>
@@ -97,7 +97,7 @@ export default function TheWedding() {
 					<div className="flex flex-col w-full lg:w-1/2 mb-20 lg:mb-0 justify-center ">
 						<div className="flex flex-row w-full">
 							<div className="flex flex-col w-full lg:w-1/2 mb-20 lg:mb-0 justify-center ">
-								<h1 className="font-garamond text-4xl lg:text-4xl leading-[100%] text-center mb-6">
+								<h1 className="font-newsreader text-4xl lg:text-4xl leading-[100%] text-center mb-6">
 									{ATTIRE_FOR_GUESTS.ladies.title}
 								</h1>
 								<span className="text-lg  font-thin text-center">
@@ -105,7 +105,7 @@ export default function TheWedding() {
 								</span>
 							</div>
 							<div className="flex flex-col w-full lg:w-1/2 mb-20 lg:mb-0 justify-center ">
-								<h1 className="font-garamond text-4xl lg:text-4xl leading-[100%] text-center mb-6">
+								<h1 className="font-newsreader text-4xl lg:text-4xl leading-[100%] text-center mb-6">
 									{ATTIRE_FOR_GUESTS.gentlemen.title}
 								</h1>
 								<span className="text-lg  font-thin text-center">
@@ -129,7 +129,7 @@ export default function TheWedding() {
 						</span>
 					</div>
 					<div className="flex flex-col w-full lg:w-1/2 mb-20 lg:mb-0 justify-center ">
-						<h1 className="font-garamond text-7xl lg:text-7xl leading-[100%] text-center">
+						<h1 className="font-newsreader text-7xl lg:text-7xl leading-[100%] text-center">
 							{ATTIRE_FOR_GUESTS.title}
 						</h1>
 					</div>
@@ -141,7 +141,7 @@ export default function TheWedding() {
 					id="entourage"
 					className="flex flex-col lg:flex-row w-full max-w-[1920px] mx-auto gap-x-20 px-4 lg:px-32 py-10 lg:py-10">
 					<div className="flex flex-col w-full lg:w-[48%] mb-20 lg:mb-0 justify-center relative">
-						<h1 className="sticky top-0 font-garamond text-7xl lg:text-7xl leading-[100%] text-center">
+						<h1 className="sticky top-0 font-newsreader text-7xl lg:text-7xl leading-[100%] text-center">
 							{ENTOURAGE.title}
 						</h1>
 					</div>

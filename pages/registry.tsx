@@ -18,7 +18,7 @@ export default function Registry() {
 				<div className="flex flex-col lg:flex-row w-full max-w-[1920px] mx-auto gap-x-20 px-10 lg:px-0 py-0 gap-y-10 lg:gap-y-12 pt-[127px]">
 					<div className="flex flex-col w-1/2">
 						<div className="flex-col flex px-10 w-full my-auto fade-up">
-							<h1 className="font-garamond text-6xl lg:text-7xl leading-[100%]">
+							<h1 className="font-newsreader text-6xl lg:text-7xl leading-[100%]">
 								{REGISTRY_HERO.title}
 							</h1>
 							<h4 className="lg:text-lg my-10 font-thin">

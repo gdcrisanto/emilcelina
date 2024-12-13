@@ -27,7 +27,7 @@ export default function FAQs() {
 				className="justify-start bg-center bg-cover bg-no-repeat">
 				<div className="flex w-full max-w-[1920px] mx-auto">
 					<div className="flex-col flex self-center w-full text-white mx-auto lg:m-20 fade-up">
-						<h1 className="font-garamond text-7xl lg:text-8xl leading-[100%] text-center">
+						<h1 className="font-newsreader text-7xl lg:text-8xl leading-[100%] text-center">
 							{FAQS_HERO.title}
 						</h1>
 					</div>
@@ -38,7 +38,7 @@ export default function FAQs() {
 				<div className="flex flex-col w-full max-w-[1920px] mx-auto px-32 py-20">
 					{FAQS_INFO.map((faq, i) => {
 						const className =
-							'flex flex-row w-full text-3xl justify-between py-8 cursor-pointer';
+							'font-newsreader flex flex-row w-full text-3xl justify-between py-8 cursor-pointer';
 						return (
 							<div
 								id="collapse"

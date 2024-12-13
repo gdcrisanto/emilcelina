@@ -12,7 +12,7 @@ const CocktailCarousel = ({
 		<div className="flex flex-col w-full py-20 lg:py-[120px] px-6 lg:px-[80px] max-w-[1920px] justify-between mx-auto fade-up">
 			{secondaryHeader ? (
 				<div className="flex flex-col w-full text-left">
-					<h1 className="font-garamond text-[36px] lg:text-[3rem] color-[#121212] w-full text-nowrap ">
+					<h1 className="font-newsreader text-[36px] lg:text-[3rem] color-[#121212] w-full text-nowrap ">
 						{'Explore more cocktails'}
 					</h1>
 					<Link

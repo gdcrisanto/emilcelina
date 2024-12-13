@@ -12,7 +12,7 @@ export default function notFound() {
 				<div className="flex flex-row mx-auto w-full h-screen px-6">
 					<div className="flex flex-col mx-auto w-full my-auto relative max-w-[1920px] z-[1]">
 						<div className="flex flex-col mx-auto">
-							<span className="text-center text-[36px] lg:text-[48px] font-garamond leading-[100%]">
+							<span className="text-center text-[36px] lg:text-[48px] font-newsreader leading-[100%]">
 								Sorry, we can’t find that page
 							</span>
 							<Link

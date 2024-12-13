@@ -85,7 +85,7 @@ export default function Layout({
 						size="sm"
 						bgGradient="linear-gradient(180deg, rgba(0, 0, 0, 0.00) 53.92%, rgba(0, 0, 0, 0.80) 100%)">
 						<div className=" mx-auto flex-col md:flex-col flex items-center pb-6 lg:pb-16 justify-end text-white text-center">
-							<span className="mb-4 lg:mb-10 text-4xl lg:text-[3rem] leading-9 lg:leading-[64px] font-garamond max-w-[309px] lg:max-w-none">
+							<span className="mb-4 lg:mb-10 text-4xl lg:text-[3rem] leading-9 lg:leading-[64px] font-newsreader max-w-[309px] lg:max-w-none">
 								{constants.FOOTER.title}
 							</span>
 							<h4 className="lg:text-lg my-[40px] font-thin">
@@ -107,7 +107,7 @@ export default function Layout({
 								fill={'#B99D37'}
 								className="mx-auto mb-[120px]"
 							/>
-							<span className="leading-[100%] text-3xl font-garamond mb-2">
+							<span className="leading-[100%] text-3xl font-newsreader mb-2">
 								Welcome
 							</span>
 

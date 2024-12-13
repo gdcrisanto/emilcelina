@@ -113,7 +113,7 @@ export const CocktailCard = ({
 					className="absolute object-cover object-bottom w-full h-[287px] lg:h-[492px]"
 				/>
 			</div>
-			<span className="mt-4 lg:mt-6 font-garamond text-lg lg:text-2xl text-left w-full">
+			<span className="mt-4 lg:mt-6 font-newsreader text-lg lg:text-2xl text-left w-full">
 				{name}
 			</span>
 			<span className="lg:mt-2 text-xs text-[#93867A] uppercase lg:text-base text-left w-full ">
@@ -127,7 +127,7 @@ export const DividerHeader = ({ children }) => {
 	return (
 		<div className="hidden lg:flex flex-row w-full">
 			<Divider type="left" />
-			<h1 className="font-garamond lg:text-[3rem] color-[#121212] w-full text-nowrap text-center px-10">
+			<h1 className="font-newsreader lg:text-[3rem] color-[#121212] w-full text-nowrap text-center px-10">
 				{children}
 			</h1>
 			<Divider type="right" />
@@ -146,7 +146,7 @@ export const StoryCard = ({ image, title, publisher }) => {
 				height={321}
 				className="z-10"
 			/>
-			<span className="mt-6 font-garamond text-[18px] lg:text-2xl leading-[18px] lg:leading-6 text-left w-full">
+			<span className="mt-6 font-newsreader text-[18px] lg:text-2xl leading-[18px] lg:leading-6 text-left w-full">
 				<img
 					src={publisher}
 					className="min-h-[18px] self-start pb-2"
@@ -167,7 +167,7 @@ export const OrnateHeader = ({ title, button = undefined }) => {
 	return (
 		<>
 			<DividerHeader>{title}</DividerHeader>
-			<div className="mx-auto text-4xl font-garamond leading-9 text-center lg:hidden">
+			<div className="mx-auto text-4xl font-newsreader leading-9 text-center lg:hidden">
 				{title}
 			</div>
 			{button && (
@@ -189,7 +189,7 @@ export const ColoredBgWrapper = ({
 	const color = {
 		black: `bg-[#121212] text-white`,
 		gold: `bg-[#CAB569] `,
-		nata: `bg-[#F6E8DA] `,
+		nata: `bg-[#FCF4EA] `,
 		white: `bg-white `,
 	};
 	return (
@@ -208,7 +208,7 @@ export const HeaderDescription = ({
 		<div className={`flex flex-col gap-y-4 ${className}`}>
 			{hasDivider && <Divider type={'top'} />}
 			<span
-				className={`text-4xl lg:text-[3rem] leading-[100%] font-garamond ${
+				className={`text-4xl lg:text-[3rem] leading-[100%] font-newsreader ${
 					hasDivider && 'mt-10'
 				}`}>
 				{data.title}
@@ -292,7 +292,7 @@ export const FooterProductLinks = ({ links = [] }: FooterProductLinksProps) => {
 							'linear-gradient(180deg, rgba(0, 0, 0, 0.00) 62.2%, rgba(0, 0, 0, 0.40) 100%)',
 					}}
 				/>
-				<div className="flex flex-row z-[2] text-white justify-start w-full mb-10 items-end ml-6 lg:ml-20 font-garamond">
+				<div className="flex flex-row z-[2] text-white justify-start w-full mb-10 items-end ml-6 lg:ml-20 font-newsreader">
 					<div className="flex flex-row gap-x-4 text-[24px] lg:text-[32px] leading-[100%] items-center">
 						<Vectors.ArrowLeft
 							className="max-h-[12px] lg:max-h-[28px] max-w-[24px] lg:max-w-[55px] self-center"
@@ -320,7 +320,7 @@ export const FooterProductLinks = ({ links = [] }: FooterProductLinksProps) => {
 							'linear-gradient(180deg, rgba(0, 0, 0, 0.00) 62.2%, rgba(0, 0, 0, 0.40) 100%)',
 					}}
 				/>
-				<div className="flex flex-row z-[2] text-white justify-end w-full mb-10 items-end mr-6 lg:mr-20  font-garamond">
+				<div className="flex flex-row z-[2] text-white justify-end w-full mb-10 items-end mr-6 lg:mr-20  font-newsreader">
 					<div className="flex flex-row gap-x-4 text-[24px] lg:text-[32px] leading-[100%] items-center">
 						Discover {links[1]?.title}
 						<Vectors.ArrowRight

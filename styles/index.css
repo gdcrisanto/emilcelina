@@ -110,7 +110,7 @@
 }
 
 body {
-	font-family: 'Chivo', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 }
 
 .hero-title {
@@ -198,8 +198,8 @@ body {
 	border-bottom: 2px solid #121212;
 }
 
-.font-garamond {
-	font-family: 'EB Garamond', serif;
+.font-newsreader {
+	font-family: 'Newsreader', serif;
 }
 
 .address-container {
