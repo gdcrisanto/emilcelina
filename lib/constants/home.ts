@@ -34,7 +34,7 @@ const FOOTER = {
 	title: 'Emil & Celina',
 	subtitle: 'May 10, 2025 · Saturday · Tagaytay City',
 	button: 'View Details',
-	href: '/',
+	href: '/the-wedding',
 	button2: 'Send RSVP',
 	href2: 'https://withjoy.com/ourloveisEC/rsvp',
 };

@@ -156,22 +156,22 @@ const CountDownTimer = () => {
 		}, 1000);
 	}, []);
 	return (
-		<div className="flex flex-row gap-x-4 mt-4 mb-6 lg:my-10 uppercase">
-			<h2 className="lg:text-[18px] font-light">
-				<p className="font-semibold">days:</p>{' '}
+		<div className="flex flex-row gap-x-4 mt-4 mb-6 lg:my-10 capitalize text-[#BF8F67]">
+			<h2 className="flex flex-row lg:text-[18px] font-normal gap-x-2">
 				{countDownTimer.countdownDays}
+				<p className="font-semibold ">days</p>
 			</h2>
-			<h2 className="lg:text-[18px] font-light">
-				<p className="font-semibold">hours:</p>{' '}
+			<h2 className="flex flex-row lg:text-[18px] font-normal gap-x-2">
 				{countDownTimer.countdownHours}
+				<p className="font-semibold">hours</p>{' '}
 			</h2>
-			<h2 className="lg:text-[18px] font-light">
-				<p className="font-semibold">minutes:</p>{' '}
+			<h2 className="flex flex-row lg:text-[18px] font-normal gap-x-2">
 				{countDownTimer.countdownMinutes}
+				<p className="font-semibold">minutes</p>{' '}
 			</h2>
-			<h2 className="lg:text-[18px] font-light">
-				<p className="font-semibold">seconds:</p>{' '}
+			<h2 className="flex flex-row lg:text-[18px] font-normal gap-x-2">
 				{countDownTimer.countdownSeconds}
+				<p className="font-semibold">seconds</p>{' '}
 			</h2>
 		</div>
 	);

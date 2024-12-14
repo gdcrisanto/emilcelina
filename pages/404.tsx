@@ -22,15 +22,6 @@ export default function notFound() {
 							</Link>
 						</div>
 					</div>
-					<Vectors.LeavesLg className="absolute z-0 left-0 self-center hidden lg:block" />
-					<Vectors.LeavesLg
-						side="right"
-						className="absolute z-0 right-0 self-center  hidden lg:block"
-					/>
-					<Vectors.LeavesLg
-						side="bottom"
-						className="absolute z-[0] bottom-0 left-[calc(50%-calc(327px*0.5))] lg:hidden"
-					/>
 				</div>
 			</ColoredBgWrapper>
 		</Layout>

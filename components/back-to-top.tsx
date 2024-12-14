@@ -24,7 +24,7 @@ export default function BackToTop() {
 		<>
 			{isVisible && (
 				<div
-					className="z-30 fixed bottom-8 right-8 p-2 bg-[#2D2D2D] md:flex items-center hidden"
+					className="z-30 fixed bottom-8 right-8 p-2 bg-[#BF8F67] md:flex items-center rounded hidden cursor-pointer"
 					onClick={scrollUp}>
 					<ChevronUp className="mx-auto" />
 				</div>
@@ -44,7 +44,7 @@ const ChevronUp = ({ ...props }) => {
 			{...props}>
 			<path
 				d="M14 29L24 19L34 29"
-				stroke="#B99D37"
+				stroke="white"
 				strokeWidth="2"
 				strokeLinecap="square"
 				strokeLinejoin="round"
