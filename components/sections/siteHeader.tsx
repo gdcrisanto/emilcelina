@@ -28,7 +28,7 @@ const SiteHeader = ({ textBlack }: SiteHeaderProps) => {
 					  } `) +
 				(!isOpen ? (navBg ? '' : 'fade-out ') : '')
 			}>
-			<div className="flex z-50 flex-row container mx-auto h-full px-6 justify-between uppercase font-normal items-center">
+			<div className="flex z-50 flex-row container mx-auto h-full px-6 justify-between capitalize font-normal items-center">
 				<Link
 					href="/"
 					className="w-80 text-2xl md:text-4xl font-bold ">

@@ -140,7 +140,7 @@ export default function TheWedding() {
 				<div
 					id="entourage"
 					className="flex flex-col lg:flex-row w-full max-w-[1920px] mx-auto gap-x-20 px-4 lg:px-32 py-10 lg:py-10">
-					<div className="flex flex-col w-full lg:w-[48%] mb-20 lg:mb-0 justify-start lg:mt-40 relative">
+					<div className="flex flex-col w-full lg:w-[48%] mb-20 justify-start lg:my-40 relative">
 						<h1 className="sticky top-[40vh] font-newsreader text-5xl lg:text-6xl leading-[100%] text-center text-[#5F6F52]">
 							{ENTOURAGE.title}
 						</h1>

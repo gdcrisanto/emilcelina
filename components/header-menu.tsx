@@ -39,18 +39,18 @@ export default function HeaderMenu({
 
 			{/* MOBILE HEADER */}
 			<div
-				className="tracking-wide flex lg:hidden justify-between flex-row text-left mt-auto h-full uppercase items-center"
+				className="tracking-wide flex lg:hidden justify-between flex-row text-left mt-auto h-full capitalize items-center"
 				onClick={() => {
 					setIsOpen(!isOpen);
 				}}>
 				{isOpen ? (
 					<Vectors.Exit />
 				) : (
-					<Vectors.Burger stroke={textBlack ? 'white' : 'black'} />
+					<Vectors.Burger stroke={'white'} />
 				)}
 			</div>
 			{isOpen && (
-				<div className="site-header-dropdown w-full flex flex-col tracking-widest just pt-10 lg:hidden">
+				<div className="site-header-dropdown w-full flex flex-col tracking-widest just py-20 lg:hidden">
 					<div className="flex flex-col items-center justify-between h-full w-full">
 						{Constants.MENU_ITEMS.map((item) => {
 							return (
@@ -69,12 +69,6 @@ export default function HeaderMenu({
 								</Link>
 							);
 						})}
-					</div>
-					<div className="w-full">
-						<div className="dropdown-logos flex flex-row w-full mt-10 mx-auto py-10 space-x-10 justify-center">
-							<Vectors.FbLogo />
-							<Vectors.IgLogo />
-						</div>
 					</div>
 				</div>
 			)}
