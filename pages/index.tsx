@@ -8,8 +8,13 @@ import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
 export default function Home() {
-	const { HOME_HERO, OUR_SPECIAL_DAY, HOME_PORTRAITS, ORDER_OF_EVENTS } =
-		Constants;
+	const {
+		HOME_HERO,
+		OUR_SPECIAL_DAY,
+		HOME_PORTRAITS,
+		ORDER_OF_EVENTS,
+		FOOTER,
+	} = Constants;
 
 	return (
 		<Layout>
@@ -25,34 +30,38 @@ export default function Home() {
 				className="justify-start bg-center bg-cover bg-no-repeat">
 				<div className="flex w-full max-w-[1920px] mx-auto">
 					<div className="flex-col flex self-center w-full text-white max-w-[624px] mx-10 lg:m-20 fade-up">
-						<h1 className="text-[#5F6F52] font-newsreader text-7xl lg:text-8xl leading-[100%]">
+						<h1 className="text-[#5F6F52] font-newsreader text-6xl lg:text-6xl leading-[100%]">
 							{HOME_HERO.title}
 						</h1>
-						<h4 className="lg:text-lg my-10 font-light">
+						<h4 className="lg:text-xl my-10 font-light text-[#BF8F67]">
 							{HOME_HERO.subtitle}
 						</h4>
-						<Link
-							href={HOME_HERO.href}
-							className="button py-4 px-6 uppercase text-base font-light border border-white w-fit tracking-wider rounded hover:bg-white hover:text-black hover:border-white">
-							{HOME_HERO.button}
-						</Link>
+						<div className="flex flex-row gap-x-10">
+							<Link
+								className="button text-white bg-[#BF8F67] hover:bg-[#5F6F52] px-6 py-3"
+								href={FOOTER.href2}>
+								{FOOTER.button2}
+							</Link>
+							<Link
+								href={HOME_HERO.href}
+								className="button mx-auto lg:mx-0 button py-3 px-6 text-base font-light border w-fit tracking-wider rounded hover:text-white text-[#BF8F67]  hover:bg-[#BF8F67] border-[#BF8F67]">
+								{HOME_HERO.button}
+							</Link>
+						</div>
 					</div>
 				</div>
 			</PageHero>
 
-			<ColoredBgWrapper bgColor="white">
+			<ColoredBgWrapper bgColor="nata">
 				<div className="flex flex-col lg:flex-row w-full py-14 px-6 lg:px-20 max-w-[1920px] justify-between mx-auto lg:gap-x-12">
 					<div className="flex-col text-center lg:text-left flex self-center max-w-[450px] mb-10 lg:mb-0 fade-up">
 						<CountDownTimer />
-						<h1 className="text-[#5F6F52] font-newsreader text-4xl lg:text-[3rem] leading-[100%]">
+						<h1 className="text-[#5F6F52] font-newsreader text-4xl lg:text-6xl leading-[100%] mb-10">
 							{OUR_SPECIAL_DAY.title}
 						</h1>
-						<h2 className="lg:text-[18px] mt-4 mb-6 lg:my-[40px] font-light">
-							{OUR_SPECIAL_DAY.subtitle}
-						</h2>
 						<Link
 							href={OUR_SPECIAL_DAY.href}
-							className="button py-4 px-6 uppercase mx-auto lg:mx-0 text-base font-light border w-fit tracking-wider rounded hover:bg-black hover:text-white hover:">
+							className="button mx-auto lg:mx-0 button py-3 px-6 text-base font-light border w-fit tracking-wider rounded hover:text-white text-[#BF8F67]  hover:bg-[#BF8F67] border-[#BF8F67]">
 							{OUR_SPECIAL_DAY.button}
 						</Link>
 					</div>
@@ -86,14 +95,14 @@ export default function Home() {
 							<h3 className="text-3xl">
 								Our Lady of Lourdes Parish
 							</h3>
-							<h4 className="text-xl font-light">
+							<h4 className="text-xl font-light text-[#BF8F67]">
 								Tagaytay, Cavite
 							</h4>
 						</div>
 						<hr className="w-full border-t self-center max-w-full border-black my-10" />
 						<div className="flex flex-col">
 							<h3 className="text-3xl">Arocarrìa</h3>
-							<h4 className="text-xl font-light">
+							<h4 className="text-xl font-light text-[#BF8F67]">
 								Alfonso, Cavite
 							</h4>
 						</div>
@@ -109,7 +118,7 @@ export default function Home() {
 										<h3 className="text-3xl">
 											{item.event}
 										</h3>
-										<span className="text-sm italic font-light">
+										<span className="text-sm italic font-light text-[#BF8F67]">
 											{item.description}
 										</span>
 									</div>

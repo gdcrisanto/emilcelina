@@ -83,19 +83,28 @@ export default function Layout({
 						image={constants.FOOTER.image}
 						alt=""
 						size="sm"
-						bgGradient="linear-gradient(180deg, rgba(0, 0, 0, 0.00) 53.92%, rgba(0, 0, 0, 0.80) 100%)">
-						<div className=" mx-auto flex-col md:flex-col flex items-center pb-6 lg:pb-16 justify-end text-white text-center">
-							<span className="mb-4 lg:mb-10 text-4xl lg:text-[3rem] leading-9 lg:leading-[64px] font-newsreader max-w-[309px] lg:max-w-none text-[#5F6F52]">
+						// bgGradient="linear-gradient(180deg, rgba(0, 0, 0, 0.00) 53.92%, rgba(0, 0, 0, 0.80) 100%)"
+					>
+						<div className=" mx-auto flex-col md:flex-col flex items-center justify-center text-white text-center">
+							<span className=" text-4xl lg:text-[3rem] leading-9 lg:leading-[64px] font-newsreader max-w-[309px] lg:max-w-none text-[#5F6F52]">
 								{constants.FOOTER.title}
 							</span>
-							<h4 className="lg:text-lg my-[40px] font-light">
+							<h4 className="lg:text-lg mt-10 mb-4 font-light text-[#BF8F67]">
 								{constants.HOME_HERO.subtitle}
 							</h4>
-							<Link
-								href={constants.FOOTER.href}
-								className=" px-6 py-4 font-light tracking-wide uppercase items-center border rounded button hover:bg-white hover:text-[#121212]">
-								{constants.FOOTER.button}
-							</Link>
+							<div className="flex flex-row gap-x-10">
+								<Link
+									className="button text-white bg-[#BF8F67] hover:bg-[#5F6F52] px-6 py-3"
+									href={constants.FOOTER.href2}>
+									{constants.FOOTER.button2}
+								</Link>
+
+								<Link
+									href={constants.FOOTER.href}
+									className=" button mx-auto lg:mx-0 button py-3 px-6 text-base font-light border w-fit tracking-wider rounded hover:text-white text-[#BF8F67]  hover:bg-[#BF8F67] border-[#BF8F67]">
+									{constants.FOOTER.button}
+								</Link>
+							</div>
 						</div>
 					</PageHero>
 					<BackToTop />

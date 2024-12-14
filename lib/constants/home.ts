@@ -7,14 +7,14 @@ const HOME_HERO = {
 	title: 'Loving is EC',
 	subtitle: 'May 10, 2025 · Saturday · Tagaytay City',
 	button: 'View Details',
-	href: '/',
+	href: '/the-wedding',
 };
 
 const OUR_SPECIAL_DAY = {
 	title: `We're excited to celebrate our special day with you`,
 	subtitle: '',
 	button: 'View Details',
-	href: '/',
+	href: '/the-wedding',
 };
 
 const HOME_PORTRAITS: Array<any> = [
@@ -35,6 +35,8 @@ const FOOTER = {
 	subtitle: 'May 10, 2025 · Saturday · Tagaytay City',
 	button: 'View Details',
 	href: '/',
+	button2: 'Send RSVP',
+	href2: 'https://withjoy.com/ourloveisEC/rsvp',
 };
 
 const ORDER_OF_EVENTS = {

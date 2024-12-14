@@ -55,34 +55,6 @@ export const Divider = ({ type, dark }: DividerProps) => {
 	);
 };
 
-export const Award = ({ award, title, year }) => {
-	return (
-		<div className="flex flex-row w-full max-w-[163px] md:max-w-[313px] fade-up">
-			<Vectors.LaurelLeft
-				className="self-center max-w-[33px] md:max-w-[75px]"
-				width="auto"
-				height="auto"
-			/>
-			<div className="flex flex-col uppercase max-w-[96px] md:max-w-[181px] w-full text-white text-center self-center">
-				<span className="text-base lg:text-[1.375rem] tracking-[2.24px] leading-4 lg:leading-7">
-					{award}
-				</span>
-				<span className="text-[0.625rem] lg:text-sm tracking-[0.8px] lg:tracking-[1.12px] leading-[100%] font-light">
-					{title}
-				</span>
-				<span className="font-light text-[0.625rem] lg:text-sm tracking-[0.8px] leading-[100%]">
-					{year}
-				</span>
-			</div>
-			<Vectors.LaurelRight
-				className="self-center max-w-[33px] md:max-w-[75px]"
-				width="auto"
-				height="auto"
-			/>
-		</div>
-	);
-};
-
 export const DividerHeader = ({ children }) => {
 	return (
 		<div className="hidden lg:flex flex-row w-full">
@@ -182,68 +154,5 @@ const BreadcrumbsComponent = ({ path, isEndPath, light }) => {
 				</span>
 			)}
 		</>
-	);
-};
-
-export const FooterProductLinks = ({ links = [] }: FooterProductLinksProps) => {
-	return (
-		<div className="flex flex-col lg:flex-row w-full">
-			<Link
-				href={links[0]?.href ?? ''}
-				className="flex flex-row w-full lg:w-1/2 h-[174px] lg:h-[445px] relative mx-auto lg:mx-0">
-				<Image
-					placeholder="blur"
-					src={links[0]?.image}
-					alt=""
-					width={600}
-					height={1069}
-					className="absolute object-center object-cover w-full h-[174px] lg:h-[445px]"
-				/>
-				<div
-					className="absolute w-full h-full z-[1]"
-					style={{
-						background:
-							'linear-gradient(180deg, rgba(0, 0, 0, 0.00) 62.2%, rgba(0, 0, 0, 0.40) 100%)',
-					}}
-				/>
-				<div className="flex flex-row z-[2] text-white justify-start w-full mb-10 items-end ml-6 lg:ml-20 font-newsreader">
-					<div className="flex flex-row gap-x-4 text-[24px] lg:text-[32px] leading-[100%] items-center">
-						<Vectors.ArrowLeft
-							className="max-h-[12px] lg:max-h-[28px] max-w-[24px] lg:max-w-[55px] self-center"
-							color="white"
-						/>
-						Discover {links[0]?.title}
-					</div>
-				</div>
-			</Link>
-			<Link
-				href={links[1]?.href ?? ''}
-				className="flex flex-row w-full lg:w-1/2 h-[174px] lg:h-[445px] relative mx-auto lg:mx-0">
-				<Image
-					placeholder="blur"
-					src={links[1]?.image}
-					alt=""
-					width={600}
-					height={1069}
-					className="absolute object-center object-cover w-full h-[174px] lg:h-[445px]"
-				/>
-				<div
-					className="absolute w-full h-full z-[1]"
-					style={{
-						background:
-							'linear-gradient(180deg, rgba(0, 0, 0, 0.00) 62.2%, rgba(0, 0, 0, 0.40) 100%)',
-					}}
-				/>
-				<div className="flex flex-row z-[2] text-white justify-end w-full mb-10 items-end mr-6 lg:mr-20  font-newsreader">
-					<div className="flex flex-row gap-x-4 text-[24px] lg:text-[32px] leading-[100%] items-center">
-						Discover {links[1]?.title}
-						<Vectors.ArrowRight
-							className="max-h-[12px] lg:max-h-[28px] max-w-[24px] lg:max-w-[55px] self-center"
-							color="white"
-						/>
-					</div>
-				</div>
-			</Link>
-		</div>
 	);
 };

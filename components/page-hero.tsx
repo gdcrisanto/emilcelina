@@ -26,11 +26,11 @@ export default function PageHero({
 		<div className={`flex relative ${className} ${heroBreakpoints[size]}`}>
 			<div
 				className="absolute w-full h-full z-[1]"
-				style={{
-					background: bgGradient
-						? bgGradient
-						: 'linear-gradient(0deg, rgba(0, 0, 0, 0.00) 74.51%, rgba(0, 0, 0, 0.40) 100%), linear-gradient(180deg, rgba(0, 0, 0, 0.00) 62.2%, rgba(0, 0, 0, 0.40) 100%)',
-				}}
+				// style={{
+				// 	background: bgGradient
+				// 		? bgGradient
+				// 		: 'linear-gradient(0deg, rgba(0, 0, 0, 0.00) 74.51%, rgba(0, 0, 0, 0.40) 100%), linear-gradient(180deg, rgba(0, 0, 0, 0.00) 62.2%, rgba(0, 0, 0, 0.40) 100%)',
+				// }}
 			/>
 			<Image
 				src={image}

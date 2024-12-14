@@ -12,7 +12,7 @@ const MENU_ITEMS = [
 	{ title: 'venue', href: '/venue' },
 	{ title: 'registry', href: '/registry' },
 	{ title: 'FAQs', href: '/faqs' },
-	{ title: 'RSVP', href: '/' },
+	{ title: 'RSVP', href: 'https://withjoy.com/ourloveisEC/rsvp' },
 ];
 
 const PRODUCTS: Array<Products> = [
