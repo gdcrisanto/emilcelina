@@ -91,7 +91,7 @@ export default function Home() {
 
 				<div className="flex flex-col lg:flex-row w-full max-w-[1920px] mx-auto gap-x-20 px-10 lg:px-32 py-10">
 					<div className="flex flex-col w-full lg:w-[48%] mb-20 lg:mb-0 lg:justify-center lg:pr-36 text-[#5F6F52]">
-						<div className="flex flex-col">
+						<div className="flex flex-col fade-up">
 							<h3 className="text-3xl">
 								Our Lady of Lourdes Parish
 							</h3>
@@ -100,14 +100,14 @@ export default function Home() {
 							</h4>
 						</div>
 						<hr className="w-full border-t self-center max-w-full border-[#5F6F52] my-10" />
-						<div className="flex flex-col">
+						<div className="flex flex-col fade-up">
 							<h3 className="text-3xl">Arocarrìa</h3>
 							<h4 className="text-xl font-light text-[#BF8F67]">
 								Alfonso, Cavite
 							</h4>
 						</div>
 					</div>
-					<div className="flex flex-col lg:max-w-[400px] w-full text-[#5F6F52]">
+					<div className="flex flex-col lg:max-w-[400px] w-full text-[#5F6F52] fade-up">
 						<h3 className="text-4xl mb-8">
 							{ORDER_OF_EVENTS.title}
 						</h3>

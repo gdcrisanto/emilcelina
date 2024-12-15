@@ -39,7 +39,7 @@ export default function Venue() {
 			</PageHero>
 
 			<ColoredBgWrapper bgColor="nata">
-				<div className="flex flex-row my-6 w-full">
+				<div className="flex flex-row my-6 w-full fade-up">
 					{VENUE_ANCHORS.map((anchor) => {
 						return (
 							<a
@@ -90,7 +90,7 @@ export default function Venue() {
 				bgGradient="none"
 				priority
 				className="justify-start bg-center bg-cover bg-no-repeat">
-				<div className="flex w-full max-w-[1920px] mx-auto">
+				<div className="flex w-full max-w-[1920px] mx-auto fade-up">
 					<div className="flex-col flex self-center w-full text-white mx-auto lg:m-20 fade-up">
 						<h1 className="font-newsreader text-[#5F6F52] text-5xl lg:text-6xl leading-[100%] text-center mb-6">
 							{WHERE_TO_STAY.title}
@@ -106,11 +106,11 @@ export default function Venue() {
 				<div
 					id="reception"
 					className="flex flex-col w-full max-w-[1920px] mx-auto gap-x-20 px-4 lg:px-32 py-10 lg:py-20">
-					<h5 className="font-newsreader text-[#BF8F67] text-2xl lg:text-2xl leading-[100%] text-center mx-auto max-w-[640px] mb-10">
+					<h5 className="font-newsreader text-[#BF8F67] text-2xl lg:text-2xl leading-[100%] text-center mx-auto max-w-[640px] mb-10 fade-up">
 						{WHERE_TO_STAY.body}
 					</h5>
 
-					<div className="flex flex-row w-full max-w-1/4 justify-around text-[#BF8F67]">
+					<div className="flex flex-row w-full max-w-1/4 justify-around text-[#BF8F67] fade-up">
 						{WHERE_TO_STAY.hotels.map((hotel) => {
 							return (
 								<div className="flex flex-col w-1/4">

@@ -29,14 +29,14 @@ const VENUE_MAPS = [
 		title: 'Our Lady of Lourdes Parish',
 		subtitle: 'Tagaytay, Cavite',
 		button: 'View on Maps',
-		href: '/',
+		href: 'https://www.google.com/maps?q=4X64+FXR+Our+Lady+of+Lourdes+Parish+Church+-+Silang+Junction+North,+Tagaytay+City,+Cavite+(Diocese+of+Imus),+Tagaytay+-+Nasugbu+Hwy,+Tagaytay,+Cavite&ftid=0x33bd7764459f8ce3:0xe729ecd446058e72&entry=gps&lucs=,94203325,47075489,94216425,94216401,94249913,94244543,94246480,94242616,47071704,94206167,47069508,94218641,94228354,94233079,94203019,47084304&g_ep=CAISEjI0LjUwLjAuNzA0NDI3ODkxMBgAIJ6dCiqQASw5NDIwMzMyNSw0NzA3NTQ4OSw5NDIxNjQyNSw5NDIxNjQwMSw5NDI0OTkxMyw5NDI0NDU0Myw5NDI0NjQ4MCw5NDI0MjYxNiw0NzA3MTcwNCw5NDIwNjE2Nyw0NzA2OTUwOCw5NDIxODY0MSw5NDIyODM1NCw5NDIzMzA3OSw5NDIwMzAxOSw0NzA4NDMwNEICUEg%3D&g_st=ifm',
 	},
 	{
 		image: venueReception,
 		title: 'Arocarría',
 		subtitle: 'Alfonso, Cavite',
 		button: 'View on Maps',
-		href: '/',
+		href: 'https://www.google.com/maps?q=Arocarr%C3%ADa,+Luksuhin,+Sikat+Rd,+Alfonso,+Cavite&ftid=0x33bd9dcfd06599d3:0xccbe8442a6c3b478&entry=gps&lucs=,94203325,47075489,94216425,94216401,94249913,94244543,94246480,94242616,47071704,94206167,47069508,94218641,94228354,94233079,94203019,47084304&g_ep=CAISEjI0LjUwLjAuNzA0NDI3ODkxMBgAIJ6dCiqQASw5NDIwMzMyNSw0NzA3NTQ4OSw5NDIxNjQyNSw5NDIxNjQwMSw5NDI0OTkxMyw5NDI0NDU0Myw5NDI0NjQ4MCw5NDI0MjYxNiw0NzA3MTcwNCw5NDIwNjE2Nyw0NzA2OTUwOCw5NDIxODY0MSw5NDIyODM1NCw5NDIzMzA3OSw5NDIwMzAxOSw0NzA4NDMwNEICUEg%3D&g_st=ifm',
 	},
 ];
 

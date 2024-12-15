@@ -44,7 +44,7 @@ export default function TheWedding() {
 			</PageHero>
 
 			<ColoredBgWrapper bgColor="nata">
-				<div className="flex flex-row my-6 w-full text-[#5F6F52]">
+				<div className="flex flex-row my-6 w-full text-[#5F6F52] fade-up">
 					{WEDDING_ANCHORS.map((anchor) => {
 						return (
 							<a
@@ -62,11 +62,11 @@ export default function TheWedding() {
 					id="schedule"
 					className="flex flex-col lg:flex-row w-full max-w-[1920px] mx-auto gap-x-20 px-10 lg:px-32 py-10">
 					<div className="flex flex-col w-full lg:w-[48%] mb-20 lg:mb-0 justify-center ">
-						<h1 className="font-newsreader text-5xl lg:text-6xl leading-[100%] text-center text-[#5F6F52]">
+						<h1 className="font-newsreader text-5xl lg:text-6xl leading-[100%] text-center text-[#5F6F52] fade-up">
 							{SCHEDULE_OF_EVENTS.title}
 						</h1>
 					</div>
-					<div className="flex flex-col lg:max-w-[400px] w-full text-[#5F6F52]">
+					<div className="flex flex-col lg:max-w-[400px] w-full text-[#5F6F52] fade-up">
 						{SCHEDULE_OF_EVENTS?.events.map((item) => {
 							return (
 								<div className="flex flex-row mb-6 justify-between">
@@ -93,7 +93,7 @@ export default function TheWedding() {
 			<ColoredBgWrapper bgColor="white">
 				<div
 					id="attire"
-					className="flex flex-col lg:flex-row w-full max-w-[1920px] mx-auto gap-x-20 px-10 lg:px-32 py-10 lg:py-20">
+					className="flex flex-col lg:flex-row w-full max-w-[1920px] mx-auto gap-x-20 px-10 lg:px-32 py-10 lg:py-20 fade-up">
 					<div className="flex flex-col w-full lg:w-1/2 mb-20 lg:mb-0 justify-center ">
 						<div className="flex flex-row w-full">
 							<div className="flex flex-col w-full lg:w-1/2 mb-20 lg:mb-0 justify-center ">
@@ -139,7 +139,7 @@ export default function TheWedding() {
 			<ColoredBgWrapper bgColor="nata">
 				<div
 					id="entourage"
-					className="flex flex-col lg:flex-row w-full max-w-[1920px] mx-auto gap-x-20 px-4 lg:px-32 py-10 lg:py-10">
+					className="flex flex-col lg:flex-row w-full max-w-[1920px] mx-auto gap-x-20 px-4 lg:px-32 py-10 lg:py-10 fade-up">
 					<div className="flex flex-col w-full lg:w-[48%] mb-20 justify-start lg:my-40 relative">
 						<h1 className="sticky top-[40vh] font-newsreader text-5xl lg:text-6xl leading-[100%] text-center text-[#5F6F52]">
 							{ENTOURAGE.title}

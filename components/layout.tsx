@@ -85,7 +85,7 @@ export default function Layout({
 						size="sm"
 						// bgGradient="linear-gradient(180deg, rgba(0, 0, 0, 0.00) 53.92%, rgba(0, 0, 0, 0.80) 100%)"
 					>
-						<div className=" mx-auto flex-col md:flex-col flex items-center justify-center text-white text-center">
+						<div className=" mx-auto flex-col md:flex-col flex items-center justify-center text-white text-center fade-up">
 							<span className=" text-4xl lg:text-[3rem] leading-9 lg:leading-[64px] font-newsreader max-w-[309px] lg:max-w-none text-[#5F6F52]">
 								{constants.FOOTER.title}
 							</span>

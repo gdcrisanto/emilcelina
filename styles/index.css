@@ -298,7 +298,7 @@ main {
 }
 
 .fade-up.in-view {
-	animation: fade-up 0.4s ease-in-out;
+	animation: fade-up 0.6s ease-in-out;
 }
 
 .bottle:hover .bottle-leaves-gold {
