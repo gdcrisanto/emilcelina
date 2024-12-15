@@ -31,7 +31,7 @@ export default function Venue() {
 				className="justify-start bg-center bg-cover bg-no-repeat">
 				<div className="flex w-full max-w-[1920px] mx-auto">
 					<div className="flex-col flex self-center w-full text-white mx-auto lg:m-20 fade-up">
-						<h1 className="font-newsreader text-7xl lg:text-8xl leading-[100%] text-center">
+						<h1 className="font-newsreader text-[#5F6F52] text-5xl lg:text-6xl leading-[100%] text-center">
 							{VENUE_HERO.title}
 						</h1>
 					</div>
@@ -43,7 +43,7 @@ export default function Venue() {
 					{VENUE_ANCHORS.map((anchor) => {
 						return (
 							<a
-								className="w-1/3 text-center text-2xl cursor-pointer"
+								className="w-1/3 text-center text-2xl cursor-pointer text-[#5F6F52]"
 								onClick={() => {
 									scrolltoHash(anchor.id);
 								}}>
@@ -92,10 +92,10 @@ export default function Venue() {
 				className="justify-start bg-center bg-cover bg-no-repeat">
 				<div className="flex w-full max-w-[1920px] mx-auto">
 					<div className="flex-col flex self-center w-full text-white mx-auto lg:m-20 fade-up">
-						<h1 className="font-newsreader text-5xl lg:text-7xl leading-[100%] text-center mb-6">
+						<h1 className="font-newsreader text-[#5F6F52] text-5xl lg:text-6xl leading-[100%] text-center mb-6">
 							{WHERE_TO_STAY.title}
 						</h1>
-						<h5 className="font-newsreader text-2xl lg:text-2xl leading-[100%] text-center">
+						<h5 className="font-newsreader text-[#BF8F67] text-2xl lg:text-2xl leading-[100%] text-center">
 							{WHERE_TO_STAY.subtitle}
 						</h5>
 					</div>
@@ -106,11 +106,11 @@ export default function Venue() {
 				<div
 					id="reception"
 					className="flex flex-col w-full max-w-[1920px] mx-auto gap-x-20 px-4 lg:px-32 py-10 lg:py-20">
-					<h5 className="font-newsreader text-2xl lg:text-2xl leading-[100%] text-center mx-auto max-w-[640px] mb-10">
+					<h5 className="font-newsreader text-[#BF8F67] text-2xl lg:text-2xl leading-[100%] text-center mx-auto max-w-[640px] mb-10">
 						{WHERE_TO_STAY.body}
 					</h5>
 
-					<div className="flex flex-row w-full max-w-1/4 justify-around">
+					<div className="flex flex-row w-full max-w-1/4 justify-around text-[#BF8F67]">
 						{WHERE_TO_STAY.hotels.map((hotel) => {
 							return (
 								<div className="flex flex-col w-1/4">

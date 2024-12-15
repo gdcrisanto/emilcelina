@@ -23,7 +23,7 @@ export default function FAQs() {
 				className="justify-start bg-center bg-cover bg-no-repeat">
 				<div className="flex w-full max-w-[1920px] mx-auto">
 					<div className="flex-col flex self-center w-full text-white mx-auto lg:m-20 fade-up">
-						<h1 className="text-[#5F6F52] font-newsreader text-7xl lg:text-8xl leading-[100%] text-center">
+						<h1 className="text-[#5F6F52] font-newsreader text-5xl lg:text-6xl leading-[100%] text-center">
 							{FAQS_HERO.title}
 						</h1>
 					</div>
@@ -34,11 +34,11 @@ export default function FAQs() {
 				<div className="flex flex-col w-full max-w-[1920px] mx-auto px-4 lg:px-32 py-20">
 					{FAQS_INFO.map((faq, i) => {
 						const className =
-							'font-newsreader flex flex-row w-full text-3xl justify-between py-8 cursor-pointer';
+							'font-newsreader flex flex-row w-full text-3xl justify-between py-8 cursor-pointer text-[#5F6F52] ';
 						return (
 							<div
 								id="collapse"
-								className={`w-full border-black ${
+								className={`w-full border-[#BF8F67] ${
 									i > 0 ? 'border-b' : 'border-y'
 								}`}>
 								<Collapsible
@@ -48,7 +48,7 @@ export default function FAQs() {
 									transitionTime={200}
 									easing="ease-in-out">
 									<p
-										className={`w-4/5 pb-6 whitespace-pre-wrap`}>
+										className={`w-4/5 pb-6 whitespace-pre-wrap text-[#BF8F67]`}>
 										{faq.answer}
 									</p>
 								</Collapsible>
