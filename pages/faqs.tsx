@@ -20,17 +20,16 @@ export default function FAQs() {
 				size="sm"
 				bgGradient="none"
 				priority
-				className="justify-start bg-center bg-cover bg-no-repeat">
-				<div className="flex w-full max-w-[1920px] mx-auto">
-					<div className="flex-col flex self-center w-full text-white mx-auto lg:m-20 fade-up">
+				className="justify-start bg-center bg-cover bg-no-repeat"></PageHero>
+
+			<ColoredBgWrapper bgColor="nata">
+				<div className="flex w-full max-w-[1920px] mx-auto my-8">
+					<div className="flex-col flex self-center w-full text-white mx-auto lg:m-4 fade-up">
 						<h1 className="text-[#5F6F52] font-newsreader text-5xl lg:text-6xl leading-[100%] text-center">
 							{FAQS_HERO.title}
 						</h1>
 					</div>
 				</div>
-			</PageHero>
-
-			<ColoredBgWrapper bgColor="nata">
 				<div className="flex flex-col w-full max-w-[1920px] mx-auto px-4 lg:px-32 py-20">
 					{FAQS_INFO.map((faq, i) => {
 						const className =

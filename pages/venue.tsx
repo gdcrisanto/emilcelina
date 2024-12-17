@@ -110,10 +110,10 @@ export default function Venue() {
 						{WHERE_TO_STAY.body}
 					</h5>
 
-					<div className="flex flex-row w-full max-w-1/4 justify-around text-[#BF8F67] fade-up">
+					<div className="flex flex-col lg:flex-row w-full max-w-full lg:max-w-1/4 justify-around text-[#BF8F67] fade-up gap-y-6">
 						{WHERE_TO_STAY.hotels.map((hotel) => {
 							return (
-								<div className="flex flex-col w-1/4">
+								<div className="flex flex-col  w-full lg:w-1/4">
 									<h4 className="font-newsreader text-2xl lg:text-2xl leading-[100%] text-center mb-4">
 										{hotel.name}
 									</h4>

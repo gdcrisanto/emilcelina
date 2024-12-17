@@ -14,10 +14,10 @@ const WEDDING_ANCHORS = [
 		title: 'Attire',
 		id: 'attire',
 	},
-	{
-		title: 'Entourage',
-		id: 'entourage',
-	},
+	// {
+	// 	title: 'Entourage',
+	// 	id: 'entourage',
+	// },
 ];
 
 const SCHEDULE_OF_EVENTS = {

@@ -44,7 +44,7 @@ export default function TheWedding() {
 			</PageHero>
 
 			<ColoredBgWrapper bgColor="nata">
-				<div className="flex flex-row my-6 w-full text-[#5F6F52] fade-up">
+				<div className="flex flex-row my-6 w-full text-[#5F6F52] fade-up px-4 justify-around">
 					{WEDDING_ANCHORS.map((anchor) => {
 						return (
 							<a
@@ -93,10 +93,10 @@ export default function TheWedding() {
 			<ColoredBgWrapper bgColor="white">
 				<div
 					id="attire"
-					className="flex flex-col lg:flex-row w-full max-w-[1920px] mx-auto gap-x-20 px-10 lg:px-32 py-10 lg:py-20 fade-up">
+					className="flex flex-col-reverse lg:flex-row w-full max-w-[1920px] mx-auto gap-x-20 px-10 lg:px-32 py-10 lg:py-20 fade-up">
 					<div className="flex flex-col w-full lg:w-1/2 mb-20 lg:mb-0 justify-center ">
-						<div className="flex flex-row w-full">
-							<div className="flex flex-col w-full lg:w-1/2 mb-20 lg:mb-0 justify-center ">
+						<div className="flex flex-col-reverse lg:flex-row w-full">
+							<div className="flex flex-col w-full lg:w-1/2 mb-10 lg:mb-0 justify-center ">
 								<h1 className="font-newsreader text-4xl lg:text-4xl leading-[100%] text-center mb-6 text-[#5F6F52]">
 									{ATTIRE_FOR_GUESTS.ladies.title}
 								</h1>
@@ -104,7 +104,7 @@ export default function TheWedding() {
 									{ATTIRE_FOR_GUESTS.ladies.description}
 								</span>
 							</div>
-							<div className="flex flex-col w-full lg:w-1/2 mb-20 lg:mb-0 justify-center ">
+							<div className="flex flex-col w-full lg:w-1/2 mb-10 lg:mb-0 justify-center ">
 								<h1 className="font-newsreader text-4xl lg:text-4xl leading-[100%] text-center mb-6 text-[#5F6F52]">
 									{ATTIRE_FOR_GUESTS.gentlemen.title}
 								</h1>
@@ -136,7 +136,7 @@ export default function TheWedding() {
 				</div>
 			</ColoredBgWrapper>
 
-			<ColoredBgWrapper bgColor="nata">
+			{/* <ColoredBgWrapper bgColor="nata">
 				<div
 					id="entourage"
 					className="flex flex-col lg:flex-row w-full max-w-[1920px] mx-auto gap-x-20 px-4 lg:px-32 py-10 lg:py-10 fade-up">
@@ -200,7 +200,7 @@ export default function TheWedding() {
 						})}
 					</div>
 				</div>
-			</ColoredBgWrapper>
+			</ColoredBgWrapper> */}
 		</Layout>
 	);
 }
