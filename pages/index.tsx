@@ -28,15 +28,15 @@ export default function Home() {
 				bgGradient="none"
 				priority
 				className="justify-start bg-center bg-cover bg-no-repeat">
-				<div className="flex w-full max-w-[1920px] mx-auto">
-					<div className="flex-col flex self-center w-full text-white max-w-[624px] mx-10 lg:m-20 fade-up">
+				<div className="flex w-full max-w-[1920px] mx-auto justify-end">
+					<div className="flex-col flex self-center w-full text-white max-w-[624px] mx-10 lg:m-20 fade-up text-right">
 						<h1 className="text-[#5F6F52] font-newsreader text-6xl lg:text-6xl leading-[100%]">
 							{HOME_HERO.title}
 						</h1>
 						<h4 className="lg:text-xl my-10 font-light text-[#BF8F67]">
 							{HOME_HERO.subtitle}
 						</h4>
-						<div className="flex flex-row gap-x-10">
+						<div className="flex flex-row gap-x-10 justify-end">
 							<Link
 								className="button text-white bg-[#BF8F67] hover:bg-[#5F6F52] px-6 py-3"
 								href={FOOTER.href2}

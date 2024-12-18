@@ -1,4 +1,4 @@
-import registryHero from '../../public/assets/placeholder_registry_hero.jpg';
+import registryHero from '../../public/assets/registry_hero.jpeg';
 
 const REGISTRY_HERO = {
 	image: registryHero,

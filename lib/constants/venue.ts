@@ -1,4 +1,4 @@
-import venueHero from '../../public/assets/placeholder_venue_hero.jpg';
+import venueHero from '../../public/assets/venue_hero.jpeg';
 import venueChurch from '../../public/assets/placeholder_church.jpg';
 import venueReception from '../../public/assets/placeholder_reception.jpg';
 import venueWhereTo from '../../public/assets/placeholder_venue_where_to_stay.jpg';

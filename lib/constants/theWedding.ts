@@ -1,4 +1,4 @@
-import weddingHero from '../../public/assets/placeholder_wedding_hero.jpg';
+import weddingHero from '../../public/assets/wedding_hero.jpeg';
 
 const WEDDING_HERO = {
 	image: weddingHero,

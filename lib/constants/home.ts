@@ -1,6 +1,8 @@
-import homeHero from '../../public/assets/placeholder_hero.jpg';
-import homePrenup from '../../public/assets/placeholder_prenup.jpg';
-import footerImage from '../../public/assets/placeholder_footer.jpg';
+import homeHero from '../../public/assets/home_hero.jpeg';
+import homeSegment1 from '../../public/assets/segment1.jpeg';
+import homeSegment2 from '../../public/assets/segment2.jpeg';
+import homeSegment3 from '../../public/assets/segment3.jpeg';
+import footerImage from '../../public/assets/footer_banner.jpeg';
 
 const HOME_HERO = {
 	image: homeHero,
@@ -19,13 +21,13 @@ const OUR_SPECIAL_DAY = {
 
 const HOME_PORTRAITS: Array<any> = [
 	{
-		image: homePrenup,
+		image: homeSegment1,
 	},
 	{
-		image: homePrenup,
+		image: homeSegment2,
 	},
 	{
-		image: homePrenup,
+		image: homeSegment3,
 	},
 ];
 
