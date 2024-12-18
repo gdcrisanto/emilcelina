@@ -42,6 +42,7 @@ export type HeroProps = {
 	alt: string;
 	size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'custom';
 	customSize?: string;
+	customPosition?: string;
 	bgGradient?: string;
 	className?: string;
 	flip?: boolean;

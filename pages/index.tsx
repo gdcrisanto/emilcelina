@@ -26,10 +26,11 @@ export default function Home() {
 				alt=""
 				size="md"
 				bgGradient="none"
+				customPosition=" object-[left_-5rem_top_0rem] lg:object-center"
 				priority
-				className="justify-start bg-center bg-cover bg-no-repeat">
+				className="justify-start bg-left bg-cover bg-no-repeat">
 				<div className="flex w-full max-w-[1920px] mx-auto justify-end">
-					<div className="flex-col flex self-center w-full text-white max-w-[700px] mx-10 lg:mr-20 fade-up text-right">
+					<div className="flex-col flex self-end lg:self-center w-full text-white max-w-[700px] m-10 lg:mr-20 fade-up lg:text-right">
 						<h1 className="text-[#573319] font-playfair font-semibold text-5xl lg:text-7xl leading-[100%]">
 							{HOME_HERO.title}
 						</h1>
@@ -154,7 +155,7 @@ const CountDownTimer = () => {
 		}, 1000);
 	}, []);
 	return (
-		<div className="flex flex-row gap-x-4 mt-4 mb-6 lg:my-10 capitalize text-4xl lg:text-[2.125rem] my-10 text-[#46542f] flex-wrap">
+		<div className="flex flex-row gap-x-4 mt-4 mb-6 lg:my-10 capitalize text-3xl lg:text-[2.125rem] my-10 text-[#46542f] flex-wrap justify-evenly">
 			<h2 className="flex flex-row font-normal gap-x-2">
 				<p className="font-semibold ">{countDownTimer.countdownDays}</p>
 				days

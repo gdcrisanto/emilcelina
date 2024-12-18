@@ -28,6 +28,7 @@ export default function Venue() {
 				size="sm"
 				bgGradient="none"
 				priority
+				customPosition=" object-[right_-22rem_top_0rem] lg:object-center "
 				className="justify-start bg-center bg-cover bg-no-repeat">
 				<div className="flex w-full max-w-[1920px] mx-auto">
 					<div className="flex-col flex self-center w-full text-white mx-auto lg:m-20 fade-up">

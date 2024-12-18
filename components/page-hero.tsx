@@ -7,6 +7,7 @@ export default function PageHero({
 	image,
 	bgGradient,
 	customSize,
+	customPosition,
 	alt,
 	size = 'lg',
 	width = 1920,
@@ -40,8 +41,9 @@ export default function PageHero({
 				height={height}
 				priority={priority}
 				className={
-					'absolute z-[0] object-cover object-center w-full bg-[#121212] ' +
+					'absolute z-[0] object-cover w-full bg-[#121212] ' +
 					heroBreakpoints[size] +
+					(customPosition ? customPosition : ' object-center ') +
 					(flip ? ' scale-x-[-1]' : '')
 				}
 			/>
