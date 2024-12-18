@@ -30,7 +30,8 @@ export default function HeaderMenu({
 									: ''
 							}`}
 							key={item.href}
-							href={item.href}>
+							href={item.href}
+							target={item.title === 'RSVP' ? '_blank' : '_self'}>
 							{item.title}
 						</Link>
 					);

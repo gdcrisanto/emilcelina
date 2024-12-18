@@ -95,7 +95,8 @@ export default function Layout({
 							<div className="flex flex-row gap-x-10">
 								<Link
 									className="button text-white bg-[#BF8F67] hover:bg-[#5F6F52] px-6 py-3"
-									href={constants.FOOTER.href2}>
+									href={constants.FOOTER.href2}
+									target="_blank">
 									{constants.FOOTER.button2}
 								</Link>
 
