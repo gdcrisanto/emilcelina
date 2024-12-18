@@ -24,7 +24,7 @@ const SiteHeader = ({ textBlack }: SiteHeaderProps) => {
 				(navBg || isOpen
 					? `site-header-scroll fixed text-white `
 					: `site-header-top absolute ${
-							textBlack ? 'text-black' : 'text-[#5F6F52]'
+							textBlack ? 'text-black' : 'text-[#46542f]'
 					  } `) +
 				(!isOpen ? (navBg ? '' : 'fade-out ') : '')
 			}>

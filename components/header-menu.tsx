@@ -14,19 +14,19 @@ export default function HeaderMenu({
 	return (
 		<>
 			{/* DESKTOP HEADER */}
-			<div className="tracking-wide hidden lg:flex header-menu gap-x-8 flex-row text-left mt-auto h-full capitalize items-center font-normal">
+			<div className="tracking-wide hidden lg:flex header-menu gap-x-8 flex-row text-left mt-auto h-full capitalize items-center text-xl font-semibold">
 				{Constants.MENU_ITEMS.map((item) => {
 					return (
 						<Link
 							className={`${
 								item.title === 'RSVP'
-									? `button text-white bg-[#BF8F67] hover:bg-[#5F6F52] px-6 py-3`
-									: 'py-1 hover:border-b hover:border-[#5F6F52] hover:border-solid'
+									? `button text-white bg-[#46542f] hover:bg-[#FCF4EA] hover:text-[#46542f] px-6 py-3`
+									: 'py-1 hover:border-b-2 hover:border-[#46542f] hover:border-solid'
 							} ${
 								pathname === item.href ||
 								(pathname === '/registry' &&
 									item.href === '/registry')
-									? 'text-[#BF8F67]'
+									? 'text-[#573319]'
 									: ''
 							}`}
 							key={item.href}

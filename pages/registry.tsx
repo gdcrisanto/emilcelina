@@ -18,15 +18,15 @@ export default function Registry() {
 				<div className="flex flex-col-reverse lg:flex-row w-full max-w-[1920px] mx-auto gap-x-20 px-4 lg:px-0 py-0 gap-y-10 lg:gap-y-12 pt-[72px] lg:pt-[127px] pb-8 lg:pb-0">
 					<div className="flex flex-col w-full lg:w-1/2">
 						<div className="flex-col flex px-10 w-full my-auto fade-up">
-							<h1 className="font-newsreader text-5xl lg:text-6xl leading-[100%] text-[#5F6F52]">
+							<h1 className="font-playfair leading-[100%] text-[#573319] font-playfair font-semibold text-5xl lg:text-7xl ">
 								{REGISTRY_HERO.title}
 							</h1>
-							<h4 className="lg:text-lg my-10 font-light text-[#5F6F52]">
+							<h3 className=" my-10 text-2xl lg:text-[2.125rem] text-[#46542f]">
 								{REGISTRY_HERO.subtitle}
-							</h4>
+							</h3>
 							<Link
 								href={REGISTRY_HERO.href}
-								className="button py-4 px-6 text-base font-light border border-white w-fit tracking-wider rounded hover:border-white button text-white bg-[#BF8F67] hover:bg-[#5F6F52]">
+								className="button py-4 px-6 text-base semibold w-fit tracking-wider rounded button text-white bg-[#46542f] hover:bg-[#FCF4EA] hover:text-[#46542f] lg:text-xl">
 								{REGISTRY_HERO.button}
 							</Link>
 						</div>

@@ -86,15 +86,15 @@ export default function Layout({
 						// bgGradient="linear-gradient(180deg, rgba(0, 0, 0, 0.00) 53.92%, rgba(0, 0, 0, 0.80) 100%)"
 					>
 						<div className=" mx-auto flex-col md:flex-col flex items-center justify-center text-white text-center fade-up">
-							<span className=" text-4xl lg:text-[3rem] leading-9 lg:leading-[64px] font-newsreader max-w-[309px] lg:max-w-none text-[#5F6F52]">
+							<h2 className="text-[#573319] font-playfair text-4xl lg:text-[3rem] leading-[100%] font-medium">
 								{constants.FOOTER.title}
-							</span>
-							<h4 className="lg:text-lg mt-10 mb-4 font-light text-[#BF8F67]">
+							</h2>
+							<h3 className="mt-10 mb-4 text-2xl lg:text-[2.125rem] text-[#46542f]">
 								{constants.HOME_HERO.subtitle}
-							</h4>
+							</h3>
 							<div className="flex flex-row gap-x-10">
 								<Link
-									className="button text-white bg-[#BF8F67] hover:bg-[#5F6F52] px-6 py-3"
+									className="button text-white bg-[#46542f] hover:bg-[#FCF4EA] px-6 py-3 hover:text-[#46542f] lg:text-xl"
 									href={constants.FOOTER.href2}
 									target="_blank">
 									{constants.FOOTER.button2}
@@ -102,7 +102,7 @@ export default function Layout({
 
 								<Link
 									href={constants.FOOTER.href}
-									className=" button mx-auto lg:mx-0 button py-3 px-6 text-base font-light border w-fit tracking-wider rounded hover:text-white text-[#BF8F67]  hover:bg-[#BF8F67] border-[#BF8F67]">
+									className=" button mx-auto lg:mx-0 button py-3 px-6 text-base border w-fit tracking-wider rounded hover:text-white text-[#46542f]  hover:bg-[#46542f] border-[#46542f] lg:text-xl">
 									{constants.FOOTER.button}
 								</Link>
 							</div>
@@ -117,7 +117,7 @@ export default function Layout({
 								fill={'#B99D37'}
 								className="mx-auto mb-[120px]"
 							/>
-							<span className="leading-[100%] text-3xl font-newsreader mb-2">
+							<span className="leading-[100%] text-3xl font-playfair mb-2">
 								Welcome
 							</span>
 

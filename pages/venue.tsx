@@ -31,7 +31,7 @@ export default function Venue() {
 				className="justify-start bg-center bg-cover bg-no-repeat">
 				<div className="flex w-full max-w-[1920px] mx-auto">
 					<div className="flex-col flex self-center w-full text-white mx-auto lg:m-20 fade-up">
-						<h1 className="font-newsreader text-[#5F6F52] text-5xl lg:text-6xl leading-[100%] text-center">
+						<h1 className="text-[#573319] font-playfair font-semibold text-5xl lg:text-7xl leading-[100%] text-center">
 							{VENUE_HERO.title}
 						</h1>
 					</div>
@@ -92,10 +92,10 @@ export default function Venue() {
 				className="justify-start bg-center bg-cover bg-no-repeat">
 				<div className="flex w-full max-w-[1920px] mx-auto fade-up">
 					<div className="flex-col flex self-center w-full text-white mx-auto lg:m-20 fade-up">
-						<h1 className="font-newsreader text-[#5F6F52] text-5xl lg:text-6xl leading-[100%] text-center mb-6">
+						<h2 className="font-playfair text-[#46542f] text-4xl lg:text-6xl leading-[100%] text-center mb-6">
 							{WHERE_TO_STAY.title}
-						</h1>
-						<h5 className="font-newsreader text-[#BF8F67] text-2xl lg:text-2xl leading-[100%] text-center">
+						</h2>
+						<h5 className=" text-[#46542f] text-2xl lg:text-2xl leading-[100%] text-center">
 							{WHERE_TO_STAY.subtitle}
 						</h5>
 					</div>
@@ -106,21 +106,21 @@ export default function Venue() {
 				<div
 					id="reception"
 					className="flex flex-col w-full max-w-[1920px] mx-auto gap-x-20 px-4 lg:px-32 py-10 lg:py-20">
-					<h5 className="font-newsreader text-[#BF8F67] text-2xl lg:text-2xl leading-[100%] text-center mx-auto max-w-[640px] mb-10 fade-up">
+					<h4 className="text-xl lg:text-2xl leading-[100%] text-center mx-auto max-w-[640px] mb-10 fade-up text-[#46542f]">
 						{WHERE_TO_STAY.body}
-					</h5>
+					</h4>
 
-					<div className="flex flex-col lg:flex-row w-full max-w-full lg:max-w-1/4 justify-around text-[#BF8F67] fade-up gap-y-6">
+					<div className="flex flex-col lg:flex-row w-full max-w-full lg:max-w-1/4 justify-around text-[#573319] fade-up gap-y-6">
 						{WHERE_TO_STAY.hotels.map((hotel) => {
 							return (
 								<div className="flex flex-col  w-full lg:w-1/4">
-									<h4 className="font-newsreader text-2xl lg:text-2xl leading-[100%] text-center mb-4">
+									<h3 className="leading-[100%] text-center mb-4 text-2xl lg:text-[2.125rem] text-[#46542f]">
 										{hotel.name}
-									</h4>
+									</h3>
 
-									<h5 className="font-newsreader text-lg lg:text-lg leading-[100%] text-center mx-auto max-w-[640px] whitespace-pre-wrap">
+									<span className="font-playfair text-xl lg:text-lg leading-[100%] text-center mx-auto max-w-[640px] whitespace-pre-wrap">
 										{hotel.info}
-									</h5>
+									</span>
 								</div>
 							);
 						})}

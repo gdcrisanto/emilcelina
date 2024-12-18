@@ -29,23 +29,23 @@ export default function Home() {
 				priority
 				className="justify-start bg-center bg-cover bg-no-repeat">
 				<div className="flex w-full max-w-[1920px] mx-auto justify-end">
-					<div className="flex-col flex self-center w-full text-white max-w-[624px] mx-10 lg:m-20 fade-up text-right">
-						<h1 className="text-[#5F6F52] font-newsreader text-6xl lg:text-6xl leading-[100%]">
+					<div className="flex-col flex self-center w-full text-white max-w-[700px] mx-10 lg:mr-20 fade-up text-right">
+						<h1 className="text-[#573319] font-playfair font-semibold text-5xl lg:text-7xl leading-[100%]">
 							{HOME_HERO.title}
 						</h1>
-						<h4 className="lg:text-xl my-10 font-light text-[#BF8F67]">
+						<h3 className="text-2xl lg:text-[2.125rem] my-10 text-[#46542f]">
 							{HOME_HERO.subtitle}
-						</h4>
+						</h3>
 						<div className="flex flex-row gap-x-10 justify-end">
 							<Link
-								className="button text-white bg-[#BF8F67] hover:bg-[#5F6F52] px-6 py-3"
+								className="button text-white bg-[#46542f] hover:bg-[#FCF4EA] px-6 py-3 hover:text-[#46542f] lg:text-xl"
 								href={FOOTER.href2}
 								target="_blank">
 								{FOOTER.button2}
 							</Link>
 							<Link
 								href={HOME_HERO.href}
-								className="button mx-auto lg:mx-0 button py-3 px-6 text-base font-light border w-fit tracking-wider rounded hover:text-white text-[#BF8F67]  hover:bg-[#BF8F67] border-[#BF8F67]">
+								className="button mx-auto lg:mx-0 button py-3 px-6 text-base border w-fit tracking-wider rounded hover:text-white text-[#46542f]  hover:bg-[#46542f] border-[#46542f] lg:text-xl">
 								{HOME_HERO.button}
 							</Link>
 						</div>
@@ -57,14 +57,9 @@ export default function Home() {
 				<div className="flex flex-col lg:flex-row w-full py-14 px-6 lg:px-20 max-w-[1920px] justify-between mx-auto lg:gap-x-12">
 					<div className="flex-col text-center lg:text-left flex self-center max-w-[450px] mb-10 lg:mb-0 fade-up">
 						<CountDownTimer />
-						<h1 className="text-[#5F6F52] font-newsreader text-4xl lg:text-6xl leading-[100%] mb-10">
+						<h2 className="text-[#573319] font-playfair text-4xl lg:text-[3rem] leading-[100%] font-medium">
 							{OUR_SPECIAL_DAY.title}
-						</h1>
-						<Link
-							href={OUR_SPECIAL_DAY.href}
-							className="button mx-auto lg:mx-0 button py-3 px-6 text-base font-light border w-fit tracking-wider rounded hover:text-white text-[#BF8F67]  hover:bg-[#BF8F67] border-[#BF8F67]">
-							{OUR_SPECIAL_DAY.button}
-						</Link>
+						</h2>
 					</div>
 
 					<div className="flex flex-col lg:max-w-[950px] lg:min-w-[450px] w-full mx-auto lg:mx-none ">
@@ -91,42 +86,44 @@ export default function Home() {
 				</div>
 
 				<div className="flex flex-col lg:flex-row w-full max-w-[1920px] mx-auto gap-x-20 px-10 lg:px-32 py-10">
-					<div className="flex flex-col w-full lg:w-[48%] mb-20 lg:mb-0 lg:justify-center lg:pr-36 text-[#5F6F52]">
+					<div className="flex flex-col w-full lg:w-[48%] mb-20 lg:mb-0 lg:justify-center lg:pr-20 text-[#5F6F52]">
 						<div className="flex flex-col fade-up">
-							<h3 className="text-3xl">
+							<h3 className="text-2xl lg:text-[2.125rem] text-[#46542f]">
 								Our Lady of Lourdes Parish
 							</h3>
-							<h4 className="text-xl font-light text-[#BF8F67]">
+							<h4 className="text-xl lg:text-2xl text-[#46542f]">
 								Tagaytay, Cavite
 							</h4>
 						</div>
 						<hr className="w-full border-t self-center max-w-full border-[#5F6F52] my-10" />
 						<div className="flex flex-col fade-up">
-							<h3 className="text-3xl">Arocarrìa</h3>
-							<h4 className="text-xl font-light text-[#BF8F67]">
+							<h3 className="text-2xl lg:text-[2.125rem] text-[#46542f]">
+								Arocarrìa
+							</h3>
+							<h4 className="text-xl lg:text-2xl text-[#46542f]">
 								Alfonso, Cavite
 							</h4>
 						</div>
 					</div>
 					<div className="flex flex-col lg:max-w-[400px] w-full text-[#5F6F52] fade-up">
-						<h3 className="text-4xl mb-8">
+						<h2 className="text-[#573319] font-playfair text-4xl lg:text-[3rem] leading-[100%] mb-8 font-medium">
 							{ORDER_OF_EVENTS.title}
-						</h3>
+						</h2>
 						{ORDER_OF_EVENTS?.events.map((item) => {
 							return (
 								<div className="flex flex-row mb-6 justify-between">
 									<div className="flex flex-col">
-										<h3 className="text-3xl">
+										<h3 className="text-2xl lg:text-[2.125rem] text-[#46542f]">
 											{item.event}
 										</h3>
-										<span className="text-sm italic font-light text-[#BF8F67]">
+										<span className="text-xl italic text-[#573319]">
 											{item.description}
 										</span>
 									</div>
 									<div>
-										<span className="font-light">
+										<h4 className="text-xl lg:text-2xl text-[#46542f]">
 											{item.time}
-										</span>
+										</h4>
 									</div>
 								</div>
 							);
@@ -157,22 +154,22 @@ const CountDownTimer = () => {
 		}, 1000);
 	}, []);
 	return (
-		<div className="flex flex-row gap-x-4 mt-4 mb-6 lg:my-10 capitalize text-[#BF8F67]">
-			<h2 className="flex flex-row lg:text-[18px] font-normal gap-x-2">
+		<div className="flex flex-row gap-x-4 mt-4 mb-6 lg:my-10 capitalize text-4xl lg:text-[2.125rem] my-10 text-[#46542f] flex-wrap">
+			<h2 className="flex flex-row font-normal gap-x-2">
 				<p className="font-semibold ">{countDownTimer.countdownDays}</p>
 				days
 			</h2>
-			<h2 className="flex flex-row lg:text-[18px] font-normal gap-x-2">
+			<h2 className="flex flex-row font-normal gap-x-2">
 				<p className="font-semibold">{countDownTimer.countdownHours}</p>
 				hours{' '}
 			</h2>
-			<h2 className="flex flex-row lg:text-[18px] font-normal gap-x-2">
+			<h2 className="flex flex-row font-normal gap-x-2">
 				<p className="font-semibold">
 					{countDownTimer.countdownMinutes}
 				</p>
 				minutes{' '}
 			</h2>
-			<h2 className="flex flex-row lg:text-[18px] font-normal gap-x-2">
+			<h2 className="flex flex-row font-normal gap-x-2">
 				<p className="font-semibold">
 					{countDownTimer.countdownSeconds}
 				</p>

@@ -28,30 +28,30 @@ const ImageInformation = ({
 						textCenter ? 'justify-center' : 'justify-start'
 					}`}>
 					{hasDivider && <Divider type={'top'} />}
-					<h1
-						className={`text-[#5F6F52] font-newsreader text-4xl ${
-							size === 'normal' ? 'lg:text-4xl' : 'lg:text-6xl'
+					<h2
+						className={`text-[#573319] font-playfair text-4xl font-medium ${
+							size === 'normal' ? 'lg:text-4xl' : 'lg:text-5xl'
 						} leading-9 lg:leading-[100%] ${
 							textCenter ? 'text-center' : ''
 						}`}>
 						{data?.title}
-					</h1>
-					<h2
-						className={`text-[#BF8F67] text-lg font-light ${
+					</h2>
+					<h4
+						className={` text-xl lg:text-2xl text-[#46542f] ${
 							textCenter ? 'text-center' : ''
 						}`}>
 						{data?.subtitle}
-					</h2>
+					</h4>
 					{data?.button && (
 						<Link
 							href={data?.href}
-							className={`button py-2 px-10 text-xs font-light border w-fit tracking-wider rounded ${
+							className={`button py-2 px-10 lg:text-xl border w-fit tracking-wider rounded ${
 								textWhite
-									? 'border-[#BF8F67]'
+									? 'border-[#46542f]'
 									: 'border-[#121212]'
 							} ${
 								textWhite
-									? 'hover:text-white text-[#BF8F67]  hover:bg-[#BF8F67]'
+									? 'hover:text-white text-[#46542f]  hover:bg-[#46542f]'
 									: 'text-white bg-[#BF8F67] hover:bg-[#5F6F52]'
 							} mx-auto`}>
 							{data?.button}

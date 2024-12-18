@@ -36,7 +36,7 @@ export default function TheWedding() {
 				className="justify-start bg-center bg-cover bg-no-repeat">
 				<div className="flex w-full max-w-[1920px] mx-auto">
 					<div className="flex-col flex self-center w-full text-white mx-auto lg:m-20 fade-up">
-						<h1 className="font-newsreader text-[#5F6F52] text-5xl lg:text-6xl leading-[100%] text-center">
+						<h1 className="text-[#573319] font-playfair font-semibold text-5xl lg:text-7xl leading-[100%] text-center">
 							{WEDDING_HERO.title}
 						</h1>
 					</div>
@@ -44,11 +44,11 @@ export default function TheWedding() {
 			</PageHero>
 
 			<ColoredBgWrapper bgColor="nata">
-				<div className="flex flex-row my-6 w-full text-[#5F6F52] fade-up px-4 justify-around">
+				<div className="flex flex-row my-6 w-full text-[2.125rem] text-[#46542f] fade-up px-4 justify-around">
 					{WEDDING_ANCHORS.map((anchor) => {
 						return (
 							<a
-								className="w-1/3 text-center text-2xl cursor-pointer"
+								className="w-1/3 text-center cursor-pointer"
 								onClick={() => {
 									scrolltoHash(anchor.id);
 								}}>
@@ -62,26 +62,26 @@ export default function TheWedding() {
 					id="schedule"
 					className="flex flex-col lg:flex-row w-full max-w-[1920px] mx-auto gap-x-20 px-10 lg:px-32 py-10">
 					<div className="flex flex-col w-full lg:w-[48%] mb-20 lg:mb-0 justify-center ">
-						<h1 className="font-newsreader text-5xl lg:text-6xl leading-[100%] text-center text-[#5F6F52] fade-up">
+						<h2 className="font-playfair text-4xl text-center fade-up text-[#573319] font-playfair lg:text-[3rem] leading-[100%] font-medium">
 							{SCHEDULE_OF_EVENTS.title}
-						</h1>
+						</h2>
 					</div>
 					<div className="flex flex-col lg:max-w-[400px] w-full text-[#5F6F52] fade-up">
 						{SCHEDULE_OF_EVENTS?.events.map((item) => {
 							return (
 								<div className="flex flex-row mb-6 justify-between">
 									<div className="flex flex-col">
-										<h3 className="text-3xl">
+										<h3 className="text-2xl lg:text-[2.125rem] text-[#46542f]">
 											{item.event}
 										</h3>
-										<span className="text-sm italic font-light text-[#BF8F67]">
+										<span className="text-xl italic text-[#573319]">
 											{item.description}
 										</span>
 									</div>
 									<div>
-										<span className="font-light">
+										<h4 className="text-xl lg:text-2xl text-[#46542f]">
 											{item.time}
-										</span>
+										</h4>
 									</div>
 								</div>
 							);
@@ -94,23 +94,23 @@ export default function TheWedding() {
 				<div
 					id="attire"
 					className="flex flex-col-reverse lg:flex-row w-full max-w-[1920px] mx-auto gap-x-20 px-10 lg:px-32 py-10 lg:py-20 fade-up">
-					<div className="flex flex-col w-full lg:w-1/2 mb-20 lg:mb-0 justify-center ">
+					<div className="flex flex-col w-full lg:w-[55%] mb-20 lg:mb-0 justify-center ">
 						<div className="flex flex-col-reverse lg:flex-row w-full">
 							<div className="flex flex-col w-full lg:w-1/2 mb-10 lg:mb-0 justify-center ">
-								<h1 className="font-newsreader text-4xl lg:text-4xl leading-[100%] text-center mb-6 text-[#5F6F52]">
+								<h3 className="leading-[100%] text-center mb-6 text-2xl lg:text-[2.125rem] text-[#46542f]">
 									{ATTIRE_FOR_GUESTS.ladies.title}
-								</h1>
-								<span className="text-lg  font-light text-center text-[#5F6F52]">
+								</h3>
+								<h4 className="text-center text-xl lg:text-2xl text-[#46542f]">
 									{ATTIRE_FOR_GUESTS.ladies.description}
-								</span>
+								</h4>
 							</div>
 							<div className="flex flex-col w-full lg:w-1/2 mb-10 lg:mb-0 justify-center ">
-								<h1 className="font-newsreader text-4xl lg:text-4xl leading-[100%] text-center mb-6 text-[#5F6F52]">
+								<h3 className="leading-[100%] text-center mb-6 text-2xl lg:text-[2.125rem] text-[#46542f]">
 									{ATTIRE_FOR_GUESTS.gentlemen.title}
-								</h1>
-								<span className="text-lg  font-light text-center text-[#5F6F52]">
+								</h3>
+								<h4 className="text-center text-xl lg:text-2xl text-[#46542f]">
 									{ATTIRE_FOR_GUESTS.gentlemen.description}
-								</span>
+								</h4>
 							</div>
 						</div>
 						<div className="flex flex-row w-full justify-around my-6">
@@ -124,14 +124,14 @@ export default function TheWedding() {
 								return <div className={className} />;
 							})}
 						</div>
-						<span className="text-sm italic font-light text-center text-[#BF8F67]">
+						<span className="text-xl italic text-center text-[#573319]">
 							{ATTIRE_FOR_GUESTS.note}
 						</span>
 					</div>
-					<div className="flex flex-col w-full lg:w-1/2 mb-20 lg:mb-0 justify-center ">
-						<h1 className="font-newsreader text-5xl lg:text-6xl leading-[100%] text-center text-[#5F6F52]">
+					<div className="flex flex-col w-full lg:w-[45%] mb-20 lg:mb-0 justify-center ">
+						<h2 className="font-playfair text-center fade-up text-[#573319] font-playfair text-4xl lg:text-[3rem] leading-[100%]">
 							{ATTIRE_FOR_GUESTS.title}
-						</h1>
+						</h2>
 					</div>
 				</div>
 			</ColoredBgWrapper>
@@ -141,7 +141,7 @@ export default function TheWedding() {
 					id="entourage"
 					className="flex flex-col lg:flex-row w-full max-w-[1920px] mx-auto gap-x-20 px-4 lg:px-32 py-10 lg:py-10 fade-up">
 					<div className="flex flex-col w-full lg:w-[48%] mb-20 justify-start lg:my-40 relative">
-						<h1 className="sticky top-[40vh] font-newsreader text-5xl lg:text-6xl leading-[100%] text-center text-[#5F6F52]">
+						<h1 className="sticky top-[40vh] font-playfair text-5xl lg:text-6xl leading-[100%] text-center text-[#5F6F52]">
 							{ENTOURAGE.title}
 						</h1>
 					</div>

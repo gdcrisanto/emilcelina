@@ -137,7 +137,7 @@ body {
 	color: white;
 	margin-top: 72px;
 	height: calc(100vh - 72px);
-	background-color: #BF8F67;
+	background-color: #bf8f67;
 }
 
 .site-header-open {
@@ -197,8 +197,11 @@ body {
 	border-bottom: 2px solid #121212;
 }
 
-.font-newsreader {
-	font-family: 'Newsreader', serif;
+.font-playfair {
+	font-family: 'Playfair Display', serif;
+}
+.font-montserrat {
+	font-family: 'Montserrat', serif;
 }
 
 .address-container {

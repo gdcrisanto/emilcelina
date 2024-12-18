@@ -59,7 +59,7 @@ export const DividerHeader = ({ children }) => {
 	return (
 		<div className="hidden lg:flex flex-row w-full">
 			<Divider type="left" />
-			<h1 className="font-newsreader lg:text-[3rem] color-[#121212] w-full text-nowrap text-center px-10">
+			<h1 className="font-playfair lg:text-[3rem] color-[#121212] w-full text-nowrap text-center px-10">
 				{children}
 			</h1>
 			<Divider type="right" />
@@ -94,7 +94,7 @@ export const HeaderDescription = ({
 		<div className={`flex flex-col gap-y-4 ${className}`}>
 			{hasDivider && <Divider type={'top'} />}
 			<span
-				className={`text-4xl lg:text-[3rem] leading-[100%] font-newsreader ${
+				className={`text-4xl lg:text-[3rem] leading-[100%] font-playfair ${
 					hasDivider && 'mt-10'
 				}`}>
 				{data.title}
