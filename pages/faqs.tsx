@@ -43,7 +43,7 @@ export default function FAQs() {
 								}`}>
 								<Collapsible
 									trigger={
-										<div className="font-playfair flex flex-row w-full justify-between py-8 cursor-pointer font-playfair text-5xl text-center fade-up text-[#573319] font-playfair text-4xl lg:text-[3rem] leading-[100%] font-medium">
+										<div className="font-playfair flex flex-row w-full justify-between py-8 cursor-pointer font-playfair text-5xl text-left fade-up text-[#573319] font-playfair text-4xl lg:text-[3rem] leading-[100%] font-medium">
 											{faq.question}
 											<ChevronLeft className="transition-all ease-in-out duration-300 -rotate-90" />
 										</div>

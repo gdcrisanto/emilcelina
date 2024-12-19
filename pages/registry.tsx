@@ -17,7 +17,7 @@ export default function Registry() {
 			<ColoredBgWrapper bgColor="nata">
 				<div className="flex flex-col-reverse lg:flex-row w-full max-w-[1920px] mx-auto gap-x-20 px-4 lg:px-0 py-0 gap-y-10 lg:gap-y-12 pt-[72px] lg:pt-[127px] pb-8 lg:pb-0">
 					<div className="flex flex-col w-full lg:w-1/2">
-						<div className="flex-col flex px-10 w-full my-auto fade-up">
+						<div className="flex-col flex lg:px-10 w-full my-auto fade-up">
 							<h1 className="font-playfair leading-[100%] text-[#573319] font-playfair font-semibold text-5xl lg:text-7xl ">
 								{REGISTRY_HERO.title}
 							</h1>
@@ -35,7 +35,7 @@ export default function Registry() {
 						image={REGISTRY_HERO.image}
 						alt=""
 						size="custom"
-						customSize=" h-[590px] lg:h-[570px]"
+						customSize=" h-[750px] lg:h-[750px]"
 						bgGradient="none"
 						priority
 						className="justify-start bg-center bg-cover bg-no-repeat w-full lg:w-1/2"
