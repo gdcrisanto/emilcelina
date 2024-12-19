@@ -1,8 +1,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import { SliderProps } from '../../lib/types/sections';
-import { SlArrowLeft, SlArrowRight } from 'react-icons/sl';
-import { GoChevronRight, GoChevronLeft } from 'react-icons/go';
+import Link from 'next/link';
 
 const Slider = ({ quotes, images, textWhite }: SliderProps) => {
 	const [index, setIndex] = useState(0);
@@ -69,22 +68,29 @@ const Slider = ({ quotes, images, textWhite }: SliderProps) => {
 								<div className="flex flex-row overflow-hidden w-full mx-auto lg:mx-0">
 									{images.map((image, i) => {
 										return (
-											<Image
-												placeholder="blur"
-												key={i}
-												src={image.image}
-												alt=""
-												width={1465}
-												height={873}
-												className="fade-up w-full shrink-0"
+											<div
+												className="flex fade-up w-full shrink-0"
 												style={{
 													translate: `${
 														-100 * index
 													}%`,
 													transition:
 														'translate 300ms ease-in-out',
-												}}
-											/>
+												}}>
+												<Link
+													className="flex text-[#FCF4EA] capitalize z-20 absolute w-full h-full self-end p-2 text-2xl items-end"
+													href={image.href}>
+													{image.text}
+												</Link>
+												<Image
+													placeholder="blur"
+													key={i}
+													src={image.image}
+													alt=""
+													width={1465}
+													height={873}
+												/>
+											</div>
 										);
 									})}
 								</div>

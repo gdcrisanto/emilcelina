@@ -22,12 +22,18 @@ const OUR_SPECIAL_DAY = {
 const HOME_PORTRAITS: Array<any> = [
 	{
 		image: homeSegment1,
+		text: 'venue',
+		href: '/venue',
 	},
 	{
 		image: homeSegment2,
+		text: 'registry',
+		href: '/registry',
 	},
 	{
 		image: homeSegment3,
+		text: 'FAQs',
+		href: '/faqs',
 	},
 ];
 

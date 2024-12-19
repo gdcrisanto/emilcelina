@@ -70,14 +70,26 @@ export default function Home() {
 								return (
 									<div
 										className={`flex-col items-center w-full relative fade-up flex-grow max-w-[156px] xl:max-w-[422px]`}>
-										<div className="relative w-full h-[287px] lg:h-[400px] ">
+										<div className="image-container flex relative w-full h-[287px] lg:h-[400px] max-w-[230px] overflow-clip">
+											<Link
+												className="flex text-[#FCF4EA] capitalize z-20 absolute w-full h-full items-end p-2 text-2xl"
+												href={portrait.href}>
+												{portrait.text}
+											</Link>
 											<Image
 												src={portrait.image}
 												alt=""
 												width={422}
 												height={492}
 												placeholder="blur"
-												className="absolute object-cover object-bottom w-full h-[287px] lg:h-[400px]"
+												className="absolute object-cover object-bottom w-full h-[287px] lg:h-[400px] max-w-[230px] max-h-[400px] segmentation z-[1]"
+											/>
+											<div
+												className="absolute w-full h-full z-10 overlay"
+												style={{
+													background:
+														'linear-gradient(black,black)',
+												}}
 											/>
 										</div>
 									</div>

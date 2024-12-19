@@ -135,7 +135,7 @@ body {
 	top: 72px;
 	left: 0;
 	color: white;
-	/* margin-top: 172px; */
+	margin-top: 72px;
 	height: calc(100dvh - 72px);
 	background-color: #bf8f67;
 	
@@ -149,6 +149,23 @@ body {
 	transform: translateY(0);
 	transition: transform 0.6s ease;
 	/* animation: header-animation-2 0.5s; */
+}
+
+.overlay{
+	opacity: 0;
+	transition: opacity .2s; /* Animation */
+}
+
+.image-container:hover .overlay{
+	opacity: 0.2;
+}
+
+.segmentation{
+	transition: transform .4s; /* Animation */
+}
+
+.image-container:hover .segmentation{
+	transform: scale(1.1); 
 }
 
 .site-header-scroll {
