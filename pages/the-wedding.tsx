@@ -30,20 +30,21 @@ export default function TheWedding() {
 			<PageHero
 				image={WEDDING_HERO.image}
 				alt=""
-				size="sm"
+				size="md"
 				bgGradient="none"
 				priority
-				className="justify-start bg-center bg-cover bg-no-repeat">
+				className="justify-start bg-center bg-cover bg-no-repeat"
+			/>
+
+			<ColoredBgWrapper bgColor="nata">
 				<div className="flex w-full max-w-[1920px] mx-auto">
-					<div className="flex-col flex self-center w-full text-white mx-auto lg:m-20 fade-up">
+					<div className="flex-col flex self-center w-full text-white mx-auto m-10 fade-up">
 						<h1 className="text-[#573319] font-playfair font-semibold text-5xl lg:text-7xl leading-[100%] text-center">
 							{WEDDING_HERO.title}
 						</h1>
 					</div>
 				</div>
-			</PageHero>
 
-			<ColoredBgWrapper bgColor="nata">
 				<div className="flex flex-row my-6 w-full text-[2.125rem] text-[#46542f] fade-up px-4 justify-around">
 					{WEDDING_ANCHORS.map((anchor) => {
 						return (
@@ -95,8 +96,8 @@ export default function TheWedding() {
 					id="attire"
 					className="flex flex-col-reverse lg:flex-row w-full max-w-[1920px] mx-auto gap-x-20 px-10 lg:px-32 py-10 lg:py-20 fade-up">
 					<div className="flex flex-col w-full lg:w-[55%] mb-20 lg:mb-0 justify-center ">
-						<div className="flex flex-col-reverse lg:flex-row w-full">
-							<div className="flex flex-col w-full lg:w-1/2 mb-10 lg:mb-0 justify-center ">
+						<div className="flex flex-col-reverse w-full">
+							<div className="flex flex-col w-full  mb-10 lg:mb-0 justify-center ">
 								<h3 className="leading-[100%] text-center mb-6 text-2xl lg:text-[2.125rem] text-[#46542f]">
 									{ATTIRE_FOR_GUESTS.ladies.title}
 								</h3>
@@ -104,7 +105,7 @@ export default function TheWedding() {
 									{ATTIRE_FOR_GUESTS.ladies.description}
 								</h4>
 							</div>
-							<div className="flex flex-col w-full lg:w-1/2 mb-10 lg:mb-0 justify-center ">
+							<div className="flex flex-col w-full mb-10 justify-center ">
 								<h3 className="leading-[100%] text-center mb-6 text-2xl lg:text-[2.125rem] text-[#46542f]">
 									{ATTIRE_FOR_GUESTS.gentlemen.title}
 								</h3>
@@ -120,7 +121,7 @@ export default function TheWedding() {
 									'bg-[#E2D4C5]',
 									'bg-[#D8C9BA]',
 								];
-								const className = `${colors[i]} w-1/4 h-[100px]`;
+								const className = `${colors[i]} w-1/4 pt-[25%]`;
 								return <div className={className} />;
 							})}
 						</div>

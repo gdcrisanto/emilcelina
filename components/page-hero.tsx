@@ -18,7 +18,7 @@ export default function PageHero({
 	const heroBreakpoints = {
 		xs: ' h-[350px] lg:h-[400px]',
 		sm: ' h-[590px] lg:h-[600px]',
-		md: ' h-[590px] lg:h-[680px]',
+		md: ' h-[680px] lg:h-[660px]',
 		lg: ' h-[667px] lg:h-[840px]',
 		xl: ' h-[375px] lg:h-[1080px]',
 		custom: customSize,
