@@ -27,7 +27,7 @@ const SiteHeader = ({ textBlack }: SiteHeaderProps) => {
 							textBlack ? ' text-black ' : ' text-[#46542f] '
 					  } `) +
 				(!isOpen ? (navBg ? '' : ' fade-out ') : '') +
-				(isOpen ? ' top-[0] ' : '')
+				(isOpen ? ' top-[0] bg-[#FCF4EA] ' : '')
 			}>
 			<div className="flex z-50 flex-row container mx-auto h-full px-6 justify-between capitalize font-normal items-center">
 				<Link

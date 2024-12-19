@@ -60,8 +60,8 @@ export default function HeaderMenu({
 				)}
 			</div>
 			{isOpen && (
-				<div className="site-header-dropdown w-full flex flex-col tracking-widest just py-20 lg:hidden ">
-					<div className="flex flex-col items-center h-full w-full mb-40 justify-between">
+				<div className="site-header-dropdown w-full flex flex-col just py-20 lg:hidden text-xl">
+					<div className="flex flex-col items-center h-full w-full mb-40 justify-between font-medium">
 						{Constants.MENU_ITEMS.map((item) => {
 							return (
 								<Link

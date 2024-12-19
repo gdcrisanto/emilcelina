@@ -134,10 +134,10 @@ body {
 	position: fixed;
 	top: 72px;
 	left: 0;
-	color: white;
+	color: #46542f;
 	/* margin-top: 72px; */
 	height: calc(100dvh - 72px);
-	background-color: #bf8f67;
+	background-color: #FCF4EA;
 	
 }
 

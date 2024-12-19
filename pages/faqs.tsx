@@ -42,7 +42,12 @@ export default function FAQs() {
 									i > 0 ? 'border-b' : 'border-y'
 								}`}>
 								<Collapsible
-									trigger={faq.question}
+									trigger={
+										<div className="font-playfair flex flex-row w-full justify-between py-8 cursor-pointer font-playfair text-5xl text-center fade-up text-[#573319] font-playfair text-4xl lg:text-[3rem] leading-[100%] font-medium">
+											{faq.question}
+											<ChevronLeft className="transition-all ease-in-out duration-300 -rotate-90" />
+										</div>
+									}
 									triggerClassName={className}
 									triggerOpenedClassName={className}
 									transitionTime={200}
@@ -60,3 +65,23 @@ export default function FAQs() {
 		</Layout>
 	);
 }
+
+const ChevronLeft = ({ ...props }) => {
+	return (
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			width="48"
+			height="48"
+			viewBox="0 0 48 48"
+			fill="none"
+			{...props}>
+			<path
+				d="M14 29L24 19L34 29"
+				stroke="#573319"
+				strokeWidth="2"
+				strokeLinecap="square"
+				strokeLinejoin="round"
+			/>
+		</svg>
+	);
+};
