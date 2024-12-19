@@ -135,7 +135,7 @@ body {
 	top: 72px;
 	left: 0;
 	color: white;
-	margin-top: 72px;
+	/* margin-top: 72px; */
 	height: calc(100dvh - 72px);
 	background-color: #bf8f67;
 	
@@ -175,6 +175,13 @@ body {
 	animation: header-fade-out 0.6s ease-in-out;
 }
 
+.site-header-scroll-mobile {
+	/* top: -172px; */
+	transform: translateY(0);
+	transition: transform 0.6s ease-in-out;
+	animation: header-fade-out-mobile 0.6s ease-in-out;
+}
+
 .address-filter-dropdown {
 	z-index: 9999;
 	min-height: 65dvh;
@@ -198,6 +205,22 @@ body {
 		top: -172px;
 	}
 }
+
+@keyframes header-fade-out-mobile {
+	0% {
+		color: transparent;
+		opacity: 0;
+		top: 0;
+		
+	}
+	0% {
+		color: transparent;
+		opacity: 0;
+		top: 0;
+		
+	}
+}
+
 @keyframes header-animation-1 {
 	0% {
 		background-color: transparent;

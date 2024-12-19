@@ -22,11 +22,12 @@ const SiteHeader = ({ textBlack }: SiteHeaderProps) => {
 			className={
 				'site-header mx-auto w-full ' +
 				(navBg || isOpen
-					? `site-header-scroll fixed top-[-72px] lg:top-[-172px] `
-					: `site-header-top absolute ${
-							textBlack ? 'text-black' : 'text-[#46542f]'
+					? ` site-header-scroll-mobile md:site-header-scroll fixed top-[-72px] lg:top-[-172px] `
+					: ` site-header-top absolute ${
+							textBlack ? ' text-black ' : ' text-[#46542f] '
 					  } `) +
-				(!isOpen ? (navBg ? '' : 'fade-out ') : '')
+				(!isOpen ? (navBg ? '' : ' fade-out ') : '') +
+				(isOpen ? ' top-[0] ' : '')
 			}>
 			<div className="flex z-50 flex-row container mx-auto h-full px-6 justify-between capitalize font-normal items-center">
 				<Link
