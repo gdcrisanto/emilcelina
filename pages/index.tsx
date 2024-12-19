@@ -104,7 +104,8 @@ export default function Home() {
 						</div>
 					</div>
 				</div>
-
+			</ColoredBgWrapper>
+			<ColoredBgWrapper bgColor="white">
 				<div className="flex flex-col lg:flex-row w-full max-w-[1920px] mx-auto gap-x-20 px-10 lg:px-32 py-10">
 					<div className="flex flex-col w-full lg:w-[48%] mb-20 lg:mb-0 lg:justify-center lg:pr-20 text-[#5F6F52]">
 						<div className="flex flex-col fade-up">
