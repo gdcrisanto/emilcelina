@@ -62,7 +62,7 @@ export type Quote = {
 
 export type SliderProps = {
 	quotes?: Array<Quote>;
-	images?: Array<string>;
+	images?: Array<any>;
 	textWhite?: Boolean;
 };
 

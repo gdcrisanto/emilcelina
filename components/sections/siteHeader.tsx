@@ -7,22 +7,22 @@ import { SiteHeaderProps } from '../../lib/types/sections';
 const SiteHeader = ({ textBlack }: SiteHeaderProps) => {
 	const [navBg, setNavBg] = useState(false);
 	const [isOpen, setIsOpen] = useState(false);
-	// const changeNavBg = () => {
-	// 	window.scrollY >= 1 ? setNavBg(true) : setNavBg(false);
-	// };
-	// useEffect(() => {
-	// 	window.addEventListener('scroll', changeNavBg);
-	// 	return () => {
-	// 		window.removeEventListener('scroll', changeNavBg);
-	// 	};
-	// }, []);
+	const changeNavBg = () => {
+		window.scrollY >= 1 ? setNavBg(true) : setNavBg(false);
+	};
+	useEffect(() => {
+		window.addEventListener('scroll', changeNavBg);
+		return () => {
+			window.removeEventListener('scroll', changeNavBg);
+		};
+	}, []);
 	return (
 		<div
-			// onScroll={changeNavBg}
+			onScroll={changeNavBg}
 			className={
 				'site-header mx-auto w-full ' +
 				(navBg || isOpen
-					? `site-header-scroll fixed text-white `
+					? `site-header-scroll fixed `
 					: `site-header-top absolute ${
 							textBlack ? 'text-black' : 'text-[#46542f]'
 					  } `) +

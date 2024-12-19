@@ -6,6 +6,7 @@ import { ColoredBgWrapper } from '../components/page-sections';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
+import Sections from '../components/sections';
 
 export default function Home() {
 	const {
@@ -57,14 +58,14 @@ export default function Home() {
 			<ColoredBgWrapper bgColor="nata">
 				<div className="flex flex-col lg:flex-row w-full py-14 px-6 lg:px-20 max-w-[1920px] justify-between mx-auto lg:gap-x-12">
 					<div className="flex-col text-center lg:text-left flex self-center max-w-[450px] mb-10 lg:mb-0 fade-up">
-						<CountDownTimer />
 						<h2 className="text-[#573319] font-playfair text-4xl lg:text-[3rem] leading-[100%] font-medium">
 							{OUR_SPECIAL_DAY.title}
 						</h2>
+						<CountDownTimer />
 					</div>
 
 					<div className="flex flex-col lg:max-w-[950px] lg:min-w-[450px] w-full mx-auto lg:mx-none ">
-						<div className="flex flex-row sm:justify-center lg:justify-start gap-x-6 lg:gap-x-16 fade-up">
+						<div className="hidden lg:flex flex-row sm:justify-center lg:justify-start gap-x-6 lg:gap-x-16 fade-up">
 							{HOME_PORTRAITS.map((portrait) => {
 								return (
 									<div
@@ -82,6 +83,12 @@ export default function Home() {
 									</div>
 								);
 							})}
+						</div>
+						<div className="flex lg:hidden flex-row sm:justify-center lg:justify-start gap-x-6 lg:gap-x-16 fade-up">
+							<Sections.Slider
+								images={HOME_PORTRAITS}
+								textWhite
+							/>
 						</div>
 					</div>
 				</div>

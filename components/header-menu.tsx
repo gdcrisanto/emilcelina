@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 import Constants from '../lib/constants';
 import Vectors from './vectors';
 import { HeaderMenuProps } from '../lib/types/sections';
+import { useEffect } from 'react';
 
 export default function HeaderMenu({
 	isOpen,
@@ -11,6 +12,14 @@ export default function HeaderMenu({
 	textBlack,
 }: HeaderMenuProps) {
 	const { pathname } = useRouter();
+
+	useEffect(() => {
+		if (isOpen) {
+			document.body.classList.add('overflow-y-hidden');
+		} else {
+			document.body.classList.remove('overflow-y-hidden');
+		}
+	}, [isOpen]);
 	return (
 		<>
 			{/* DESKTOP HEADER */}
@@ -40,7 +49,7 @@ export default function HeaderMenu({
 
 			{/* MOBILE HEADER */}
 			<div
-				className="tracking-wide flex lg:hidden justify-between flex-row text-left mt-auto h-full capitalize items-center"
+				className="tracking-wide flex lg:hidden justify-between flex-row text-left mt-auto h-full capitalize items-center "
 				onClick={() => {
 					setIsOpen(!isOpen);
 				}}>
@@ -51,8 +60,8 @@ export default function HeaderMenu({
 				)}
 			</div>
 			{isOpen && (
-				<div className="site-header-dropdown w-full flex flex-col tracking-widest just py-20 lg:hidden">
-					<div className="flex flex-col items-center justify-between h-full w-full">
+				<div className="site-header-dropdown w-full flex flex-col tracking-widest just py-20 lg:hidden lg:top-[-172px] ">
+					<div className="flex flex-col items-center h-full w-full mb-40 justify-between">
 						{Constants.MENU_ITEMS.map((item) => {
 							return (
 								<Link
