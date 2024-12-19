@@ -22,7 +22,7 @@ const SiteHeader = ({ textBlack }: SiteHeaderProps) => {
 			className={
 				'site-header mx-auto w-full ' +
 				(navBg || isOpen
-					? `site-header-scroll fixed `
+					? `site-header-scroll fixed top-[-72px] lg:top-[-172px] `
 					: `site-header-top absolute ${
 							textBlack ? 'text-black' : 'text-[#46542f]'
 					  } `) +
