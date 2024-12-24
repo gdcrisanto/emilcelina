@@ -1,7 +1,6 @@
 import venueHero from '../../public/assets/venue_hero.jpeg';
 import venueChurch from '../../public/assets/church.jpg';
 import venueReception from '../../public/assets/reception.jpeg';
-import venueWhereTo from '../../public/assets/placeholder_venue_where_to_stay.jpg';
 import anya from '../../public/assets/anya.jpg';
 import twinLakes from '../../public/assets/twin_lakes.jpg';
 import escala from '../../public/assets/escala.jpg';
@@ -44,7 +43,6 @@ const VENUE_MAPS = [
 ];
 
 const WHERE_TO_STAY = {
-	image: venueWhereTo,
 	title: 'Where to Stay',
 	subtitle: 'Nearby Hotels',
 	body: 'We have rooms blocked off for wedding guests at Anya Resorts Tagaytay. Mention the Crisanto–Cano wedding when you book to get the group discount.',
