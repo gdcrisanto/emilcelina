@@ -175,7 +175,7 @@ const CountDownTimer = () => {
 		}, 1000);
 	}, []);
 	return (
-		<div className="flex flex-row gap-x-4 mt-4 mb-6 lg:my-10 capitalize text-3xl lg:text-[2.125rem] my-10 text-[#46542f] flex-wrap justify-evenly">
+		<div className="flex flex-row gap-x-4 mt-4 mb-6 lg:my-10 capitalize text-2xl lg:text-[2.125rem] my-10 text-[#46542f] flex-wrap justify-evenly">
 			<h2 className="flex flex-row font-normal gap-x-2">
 				<p className="font-semibold ">{countDownTimer.countdownDays}</p>
 				days
