@@ -27,7 +27,7 @@ export default function Home() {
 				alt=""
 				size="md"
 				bgGradient="none"
-				customPosition=" object-[left_-5rem_top_0rem] lg:object-center"
+				customPosition=" object-[left_-10rem_top_0rem] lg:object-center"
 				priority
 				className="justify-start bg-left bg-cover bg-no-repeat">
 				<div className="flex w-full max-w-[1920px] mx-auto justify-end">

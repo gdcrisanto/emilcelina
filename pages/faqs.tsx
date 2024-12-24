@@ -20,6 +20,7 @@ export default function FAQs() {
 				size="sm"
 				bgGradient="none"
 				priority
+				customPosition=" object-[right_-1rem_top_0rem] lg:object-center "
 				className="justify-start bg-center bg-cover bg-no-repeat"></PageHero>
 
 			<ColoredBgWrapper bgColor="nata">
