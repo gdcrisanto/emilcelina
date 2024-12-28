@@ -26,6 +26,7 @@ export default function Registry() {
 							</h3>
 							<Link
 								href={REGISTRY_HERO.href}
+								target='_blank'
 								className="button py-4 px-6 text-base semibold w-fit tracking-wider rounded button text-white bg-[#46542f] hover:bg-[#FCF4EA] hover:text-[#46542f] lg:text-xl">
 								{REGISTRY_HERO.button}
 							</Link>

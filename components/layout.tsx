@@ -82,30 +82,35 @@ export default function Layout({
 					<PageHero
 						image={constants.FOOTER.image}
 						alt=""
-						size="sm"
+						size="custom"
+						customSize=" h-[470px] lg:h-[500px]"
+						// customPosition=" object-[bottom_10rem] lg:object-[center_-20rem]"
 						// bgGradient="linear-gradient(180deg, rgba(0, 0, 0, 0.00) 53.92%, rgba(0, 0, 0, 0.80) 100%)"
 					>
 						<div className=" mx-auto flex-col md:flex-col flex items-center justify-center text-white text-center fade-up">
-							<h2 className="text-[#573319] font-playfair text-4xl lg:text-[3rem] leading-[100%] font-medium">
-								{constants.FOOTER.title}
-							</h2>
-							<h3 className="mt-10 mb-4 text-2xl lg:text-[2.125rem] text-[#46542f]">
-								{constants.HOME_HERO.subtitle}
-							</h3>
-							<div className="flex flex-row gap-x-10">
-								<Link
-									className="button text-white bg-[#46542f] hover:bg-[#FCF4EA] px-6 py-3 hover:text-[#46542f] lg:text-xl"
-									href={constants.FOOTER.href2}
-									target="_blank">
-									{constants.FOOTER.button2}
-								</Link>
-
-								<Link
-									href={constants.FOOTER.href}
-									className=" button mx-auto lg:mx-0 button py-3 px-6 text-base border w-fit tracking-wider rounded hover:text-white text-[#46542f]  hover:bg-[#46542f] border-[#46542f] lg:text-xl">
-									{constants.FOOTER.button}
-								</Link>
+							<div className='flex flex-col'>
+								<h2 className="text-[#FCF4EA] font-playfair text-4xl lg:text-[3rem] leading-[100%] font-medium z-20">
+									{constants.FOOTER.title}
+								</h2>
+								<h3 className="mt-4 mb-4 text-2xl lg:text-[2.125rem] text-[#FCF4EA] z-20 whitespace-pre-wrap">
+									{constants.HOME_HERO.subtitle}
+								</h3>
+								<div className="flex flex-row gap-x-10 z-20 justify-center">
+									<Link
+										className="button text-white bg-[#46542f] hover:bg-[#FCF4EA] px-6 py-3 hover:text-[#46542f] lg:text-xl"
+										href={constants.FOOTER.href2}
+										target="_blank">
+										{constants.FOOTER.button2}
+									</Link>
+									</div>
 							</div>
+							<div
+								className="absolute w-full h-full z-10 opacity-20"
+								style={{
+									background:
+										'linear-gradient(black,black)',
+								}}
+							/>
 						</div>
 					</PageHero>
 					<BackToTop />

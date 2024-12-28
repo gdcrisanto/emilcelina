@@ -6,9 +6,14 @@ import { ColoredBgWrapper } from '../components/page-sections';
 import Sections from '../components/sections';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useState } from 'react';
 
 export default function Venue() {
 	const { VENUE_HERO, VENUE_ANCHORS, VENUE_MAPS, WHERE_TO_STAY } = Constants;
+	const [isAnchor, setIsAnchor] = useState<any>('church')
+		const handleAnchorClick = (anchor: any) => {
+			setIsAnchor(anchor)
+		}
 
 	const scrolltoHash = function (element_id: string) {
 		const element = document.getElementById(element_id);
@@ -27,11 +32,12 @@ export default function Venue() {
 			<PageHero
 				image={VENUE_HERO.image}
 				alt=""
-				size="md"
+				size="custom"
 				bgGradient="none"
 				priority
 				customPosition=" object-[right_-26rem_top_0rem] lg:object-center "
-				className="justify-start bg-center bg-cover bg-no-repeat"
+				className="justify-start bg-center bg-cover bg-no-repeat mt-[72px] lg:mt-[127px]"
+				customSize=" h-[calc(80svh-72px)] lg:h-[calc(100svh-127px)]"
 			/>
 
 			<ColoredBgWrapper bgColor="nata">
@@ -42,20 +48,24 @@ export default function Venue() {
 						</h1>
 					</div>
 				</div>
+				</ColoredBgWrapper>
 
-				<div className="flex flex-row my-6 w-full fade-up">
+				<div className="flex flex-row pb-4 pt-2 w-full text-base lg:text-2xl text-[#46542f] px-4 justify-around sticky z-30 top-0 bg-[#FCF4EA]">
 					{VENUE_ANCHORS.map((anchor) => {
 						return (
 							<a
-								className="w-1/3 text-center text-2xl cursor-pointer text-[#5F6F52]"
+								className={`w-1/4 text-center cursor-pointer ${isAnchor === anchor.id ? 'border-b border-[#46542f]' : ''}`}
 								onClick={() => {
 									scrolltoHash(anchor.id);
+									handleAnchorClick(anchor.id)
 								}}>
 								{anchor.title}
 							</a>
 						);
 					})}
-				</div>
+			</div>
+			
+			<ColoredBgWrapper bgColor="nata">
 
 				<div className="flex flex-col w-full max-w-[1920px] mx-auto gap-x-20 px-4 lg:px-32 py-10 gap-y-10 lg:gap-y-12">
 					{VENUE_MAPS.map((venue, i) => {

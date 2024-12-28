@@ -53,7 +53,7 @@ export default function Home() {
 						image={HOME_HERO.image}
 						alt=""
 						size="custom"
-						customSize=" h-[calc(70svh-122px)] lg:h-[calc(100svh-122px)]"
+						customSize=" h-[calc(70svh-127px)] lg:h-[calc(100svh-127px)]"
 						customPosition=" object-[left_-10rem_top_0rem] lg:object-[left_-13rem_top_0rem]"
 						bgGradient="none"
 						priority
@@ -68,10 +68,10 @@ export default function Home() {
 				customPosition=" object-center lg:object-[center_-20rem]"
 				priority
 				size="custom"
-				customSize=" h-[250px] lg:h-[250px]"
+				customSize=" h-[250px]"
 				className="justify-start bg-left bg-cover bg-no-repeat">
 				<div className="flex w-full max-w-[1920px] mx-auto justify-start">
-					<div className="flex-col flex self-end lg:self-center w-full text-white p-10 lg:mr-20 fade-up z-20">
+					<div className="flex-col flex self-end lg:self-center w-full text-white p-8 lg:mr-20 fade-up z-20">
 						<h2 className="text-[#FCF4EA] font-playfair text-4xl lg:text-[3rem] leading-[100%] font-medium max-w-[700px]">
 							{OUR_SPECIAL_DAY.title}
 						</h2>
@@ -162,7 +162,7 @@ export default function Home() {
 										<h3 className="text-2xl lg:text-[2.125rem] text-[#46542f]">
 											{item.event}
 										</h3>
-										<span className="text-xl italic text-[#573319]">
+										<span className="text-base italic text-[#573319]">
 											{item.description}
 										</span>
 									</div>
@@ -200,7 +200,7 @@ const CountDownTimer = () => {
 		}, 1000);
 	}, []);
 	return (
-		<div className="flex flex-row mt-2 mb-0 lg:my-6 capitalize my-10 text-[#FCF4EA] gap-x-12 max-w-[700px]">
+		<div className="flex flex-row mt-2 mb-0 lg:my-6 capitalize my-10 text-[#FCF4EA] gap-x-8 lg:gap-x-12 max-w-[700px]">
 			<h2 className="flex flex-col font-normal gap-y-2 ">
 				<p className="font-semibold text-2xl lg:text-[2.125rem]">{countDownTimer.countdownDays}</p>
 				days

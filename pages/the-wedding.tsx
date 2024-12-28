@@ -3,8 +3,13 @@ import Layout from '../components/layout';
 import Constants from '../lib/constants';
 import PageHero from '../components/page-hero';
 import { ColoredBgWrapper } from '../components/page-sections';
+import { useState } from 'react';
 
 export default function TheWedding() {
+	const [isAnchor, setIsAnchor] = useState<any>('schedule')
+	const handleAnchorClick = (anchor: any) => {
+		setIsAnchor(anchor)
+	}
 	const {
 		WEDDING_HERO,
 		WEDDING_ANCHORS,
@@ -22,6 +27,7 @@ export default function TheWedding() {
 		});
 	};
 
+
 	return (
 		<Layout>
 			<Head>
@@ -30,13 +36,15 @@ export default function TheWedding() {
 			<PageHero
 				image={WEDDING_HERO.image}
 				alt=""
-				size="md"
+				size="custom"
 				bgGradient="none"
 				priority
-				className="justify-start bg-center bg-cover bg-no-repeat"
+				className="justify-start bg-center bg-cover bg-no-repeat mt-[72px] lg:mt-[127px]"
+				customSize=" h-[calc(80svh-72px)] lg:h-[calc(100svh-127px)]"
 			/>
 
-			<ColoredBgWrapper bgColor="nata">
+			<ColoredBgWrapper bgColor="nata"> 
+				
 				<div className="flex w-full max-w-[1920px] mx-auto">
 					<div className="flex-col flex self-center w-full text-white mx-auto m-10 fade-up">
 						<h1 className="text-[#573319] font-playfair font-semibold text-5xl lg:text-7xl leading-[100%] text-center">
@@ -44,20 +52,24 @@ export default function TheWedding() {
 						</h1>
 					</div>
 				</div>
+				</ColoredBgWrapper>
 
-				<div className="flex flex-row my-6 w-full text-[2.125rem] text-[#46542f] fade-up px-4 justify-around">
+
+				<div className="flex flex-row pb-4 pt-2 w-full text-base lg:text-2xl z-30 text-[#46542f] px-4 justify-around sticky top-0 bg-[#FCF4EA]">
 					{WEDDING_ANCHORS.map((anchor) => {
 						return (
 							<a
-								className="w-1/3 text-center cursor-pointer"
+								className={`w-1/4 text-center cursor-pointer ${isAnchor === anchor.id ? 'border-b border-[#46542f]' : ''}`}
 								onClick={() => {
 									scrolltoHash(anchor.id);
+									handleAnchorClick(anchor.id)
 								}}>
 								{anchor.title}
 							</a>
 						);
 					})}
 				</div>
+				<ColoredBgWrapper bgColor="nata"> 
 
 				<div
 					id="schedule"
@@ -75,7 +87,7 @@ export default function TheWedding() {
 										<h3 className="text-2xl lg:text-[2.125rem] text-[#46542f]">
 											{item.event}
 										</h3>
-										<span className="text-xl italic text-[#573319]">
+										<span className="text-base italic text-[#573319]">
 											{item.description}
 										</span>
 									</div>
