@@ -99,7 +99,7 @@ export default function Venue() {
 
 			<ColoredBgWrapper bgColor="white">
 				<div
-					id="reception"
+					id="hotels"
 					className="flex flex-col w-full max-w-[1920px] mx-auto gap-x-20 px-4 lg:px-32 py-10 lg:py-20">
 					<div className="flex w-full max-w-[1920px] mx-auto fade-up">
 						<div className="flex-col flex self-center w-full text-white mx-auto lg:mb-20 fade-up">

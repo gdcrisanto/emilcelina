@@ -21,7 +21,7 @@ export default function Registry() {
 							<h1 className="font-playfair leading-[100%] text-[#573319] font-playfair font-semibold text-5xl lg:text-7xl ">
 								{REGISTRY_HERO.title}
 							</h1>
-							<h3 className=" my-10 text-2xl lg:text-[2.125rem] text-[#46542f] whitespace-pre-wrap">
+							<h3 className=" my-10 text-xl lg:text-3xl text-[#46542f] whitespace-pre-wrap">
 								{REGISTRY_HERO.subtitle}
 							</h3>
 							<Link

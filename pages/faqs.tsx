@@ -28,7 +28,7 @@ export default function FAQs() {
 			false,
 			false,
 		]
-		items[i] = !items[i]
+		items[i] = isOpenFAQ[i] === true ? false : !items[i]
 		setIsOpenFAQ(items)
 	}
 
@@ -70,7 +70,7 @@ export default function FAQs() {
 									open={isOpenFAQ[i]}
 									handleTriggerClick={() => handleOnClick(i)}
 									trigger={
-										<div className="font-playfair flex flex-row w-full justify-between py-8 cursor-pointer font-playfair text-5xl text-left fade-up text-[#573319] font-playfair text-4xl lg:text-[3rem] leading-[100%] font-medium">
+										<div className="font-playfair flex flex-row w-full justify-between py-4 cursor-pointer font-playfair text-2xl text-left fade-up text-[#573319] font-playfair lg:text-5xl leading-[100%] font-medium">
 											{faq.question}
 											<ChevronLeft className={`transition-all ease-in-out duration-300 ${isOpenFAQ[i] ? `-rotate-180` : `-rotate-90`}`} />
 										</div>
@@ -80,7 +80,7 @@ export default function FAQs() {
 									transitionTime={200}
 									easing="ease-in-out">
 									<p
-										className={`w-4/5 pb-6 whitespace-pre-wrap text-2xl text-[#46542f]`}>
+										className={`w-4/5 pb-6 whitespace-pre-wrap text-base lg:text-xl text-[#46542f]`}>
 										{faq.answer}
 									</p>
 								</Collapsible>
