@@ -4,9 +4,33 @@ import Constants from '../lib/constants';
 import PageHero from '../components/page-hero';
 import { ColoredBgWrapper } from '../components/page-sections';
 import Collapsible from 'react-collapsible';
+import { useState } from 'react';
 
 export default function FAQs() {
 	const { FAQS_HERO, FAQS_INFO } = Constants;
+	const [isOpenFAQ, setIsOpenFAQ] = useState<any>([
+		false,
+		false,
+		false,
+		false,
+		false,
+		false,
+		false,
+	])
+
+	const handleOnClick = (i: any) => {
+		const items = [
+			false,
+			false,
+			false,
+			false,
+			false,
+			false,
+			false,
+		]
+		items[i] = true
+		setIsOpenFAQ(items)
+	}
 
 	return (
 		<Layout>
@@ -43,6 +67,8 @@ export default function FAQs() {
 									i > 0 ? 'border-b' : 'border-y'
 								}`}>
 								<Collapsible
+									open={isOpenFAQ[i]}
+									handleTriggerClick={() => handleOnClick(i)}
 									trigger={
 										<div className="font-playfair flex flex-row w-full justify-between py-8 cursor-pointer font-playfair text-5xl text-left fade-up text-[#573319] font-playfair text-4xl lg:text-[3rem] leading-[100%] font-medium">
 											{faq.question}
