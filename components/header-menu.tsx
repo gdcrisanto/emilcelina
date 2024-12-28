@@ -56,7 +56,7 @@ export default function HeaderMenu({
 				{isOpen ? (
 					<Vectors.Exit />
 				) : (
-					<Vectors.Burger stroke={'white'} />
+					<Vectors.Burger stroke={'#573319'} />
 				)}
 			</div>
 			{isOpen && (

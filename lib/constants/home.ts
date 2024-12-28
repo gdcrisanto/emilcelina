@@ -7,7 +7,7 @@ import footerImage from '../../public/assets/footer_banner.jpeg';
 const HOME_HERO = {
 	image: homeHero,
 	title: 'Loving is EC',
-	subtitle: 'May 10, 2025 · Saturday · Tagaytay City',
+	subtitle: '05 · 10 · 2025\nSaturday · Tagaytay City',
 	button: 'View Details',
 	href: '/the-wedding',
 };

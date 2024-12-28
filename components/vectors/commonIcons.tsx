@@ -233,14 +233,14 @@ const Exit = ({ ...props }) => {
 			{...props}>
 			<path
 				d="M18 6L6 18"
-				stroke="white"
+				stroke="#573319"
 				strokeWidth="2"
 				strokeLinecap="square"
 				strokeLinejoin="round"
 			/>
 			<path
 				d="M6 6L18 18"
-				stroke="white"
+				stroke="#573319"
 				strokeWidth="2"
 				strokeLinecap="square"
 				strokeLinejoin="round"

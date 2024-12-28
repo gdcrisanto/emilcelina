@@ -59,9 +59,9 @@ const Slider = ({ quotes, images, textWhite }: SliderProps) => {
 
 				{images && (
 					<div className="flex flex-col w-full justify-between shrink-0 ">
-						<div className="flex flex-row w-full justify-between lg:px-20 gap-x-6">
+						<div className="flex flex-row w-full justify-between lg:px-20 gap-x-1">
 							<ChevronLeft
-								className="self-center hidden lg:block w-full max-w-[79px]"
+								className="self-center w-full max-w-[79px]"
 								onClick={prevQuote}
 							/>
 							<div className="flex flex-col gap-y-6 max-w-[1465px]">
@@ -69,7 +69,7 @@ const Slider = ({ quotes, images, textWhite }: SliderProps) => {
 									{images.map((image, i) => {
 										return (
 											<div
-												className="flex fade-up w-full shrink-0"
+												className="flex fade-up w-full shrink-0 justify-center"
 												style={{
 													translate: `${
 														-100 * index
@@ -78,10 +78,10 @@ const Slider = ({ quotes, images, textWhite }: SliderProps) => {
 														'translate 300ms ease-in-out',
 												}}>
 												<Link
-													className="flex text-[#FCF4EA] capitalize z-20 absolute w-full h-full self-end p-2 text-2xl items-end"
-													href={image.href}>
-													{image.text}
-												</Link>
+												className="absolute self-end mb-10 bg-[#FCF4EA] mx-auto button uppercase button text-center py-3 px-6 text-base border tracking-wider rounded hover:text-white text-[#46542f]  hover:bg-[#46542f] border-[#46542f] lg:text-xl max-w-[190px] w-full text-nowrap z-20 h-fit"
+												href={image.href}>
+												{image.text}
+											</Link>
 												<Image
 													placeholder="blur"
 													key={i}
@@ -116,22 +116,12 @@ const Slider = ({ quotes, images, textWhite }: SliderProps) => {
 							<ChevronRight
 								height={40}
 								width={40}
-								className="self-center hidden lg:block w-full max-w-[79px]"
+								className="self-center w-full max-w-[79px]"
 								onClick={nextQuote}
 							/>
 						</div>
 					</div>
 				)}
-			</div>
-			<div className="flex flex-row justify-center gap-x-10 lg:hidden">
-				<ChevronLeft
-					className="self-center max-w-[55px]"
-					onClick={prevQuote}
-				/>
-				<ChevronRight
-					className="self-center max-w-[55px]"
-					onClick={nextQuote}
-				/>
 			</div>
 		</div>
 	);
