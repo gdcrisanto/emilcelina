@@ -28,7 +28,7 @@ export default function FAQs() {
 			false,
 			false,
 		]
-		items[i] = true
+		items[i] = !items[i]
 		setIsOpenFAQ(items)
 	}
 
@@ -72,7 +72,7 @@ export default function FAQs() {
 									trigger={
 										<div className="font-playfair flex flex-row w-full justify-between py-8 cursor-pointer font-playfair text-5xl text-left fade-up text-[#573319] font-playfair text-4xl lg:text-[3rem] leading-[100%] font-medium">
 											{faq.question}
-											<ChevronLeft className="transition-all ease-in-out duration-300 -rotate-90" />
+											<ChevronLeft className={`transition-all ease-in-out duration-300 ${isOpenFAQ[i] ? `-rotate-180` : `-rotate-90`}`} />
 										</div>
 									}
 									triggerClassName={className}
