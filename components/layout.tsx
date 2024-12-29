@@ -15,49 +15,6 @@ export default function Layout({
 	noSiteHeader,
 	textBlack,
 }: LayoutProps) {
-	// const [isError, setIsError] = useState<Boolean | undefined>(undefined);
-	// const [isOpen, setIsOpen] = useState<Boolean>(false);
-	// const [formState, setFormState] = useState<AgeForm>({
-	// 	birthYear: '',
-	// });
-
-	// useEffect(() => {
-	// 	if (localStorage.getItem('over18') === 'true') {
-	// 		setIsOpen(false);
-	// 	} else {
-	// 		setIsOpen(true);
-	// 	}
-	// }, []);
-
-	// const handleChange = ({ target }) => {
-	// 	setFormState({
-	// 		...formState,
-	// 		[target.name]: target.value.trim().replace(/[^0-9]/gi, ''),
-	// 	});
-	// };
-
-	// const handleFormSubmit = async (e) => {
-	// 	e.preventDefault();
-	// 	setFormState((prev) => ({
-	// 		...prev,
-	// 	}));
-	// 	if (validateBirthYear(formState.birthYear)) {
-	// 		localStorage.setItem('over18', 'true');
-	// 		setIsOpen(false);
-	// 		setIsError(false);
-	// 	} else {
-	// 		setIsOpen(true);
-	// 		setIsError(true);
-	// 	}
-	// };
-
-	// useEffect(() => {
-	// 	if (isOpen) {
-	// 		document.body.classList.add('overflow-y-hidden');
-	// 	} else {
-	// 		document.body.classList.remove('overflow-y-hidden');
-	// 	}
-	// }, [isOpen]);
 
 	useEffect(() => {
 		const observer = new IntersectionObserver((entries) => {
@@ -84,8 +41,6 @@ export default function Layout({
 						alt=""
 						size="custom"
 						customSize=" h-[470px] lg:h-[500px]"
-						// customPosition=" object-[bottom_10rem] lg:object-[center_-20rem]"
-						// bgGradient="linear-gradient(180deg, rgba(0, 0, 0, 0.00) 53.92%, rgba(0, 0, 0, 0.80) 100%)"
 					>
 						<div className=" mx-auto flex-col md:flex-col flex items-center justify-center text-white text-center fade-up">
 							<div className='flex flex-col'>

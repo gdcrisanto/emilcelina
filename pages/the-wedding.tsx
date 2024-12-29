@@ -3,7 +3,7 @@ import Layout from '../components/layout';
 import Constants from '../lib/constants';
 import PageHero from '../components/page-hero';
 import { ColoredBgWrapper } from '../components/page-sections';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function TheWedding() {
 	const [isAnchor, setIsAnchor] = useState<any>('schedule')
@@ -26,6 +26,37 @@ export default function TheWedding() {
 			inline: 'nearest',
 		});
 	};
+
+	const [isScrollUp, setIsScrollUp] = useState(true);
+	
+		useEffect(() => {
+		const threshold = 0;
+		let lastScrollY = window.scrollY;
+		let ticking = false;
+	
+		const updateScrollDir = () => {
+			const scrollY = window.scrollY;
+	
+			if (Math.abs(scrollY - lastScrollY) < threshold) {
+			ticking = false;
+			return;
+			}
+			setIsScrollUp(scrollY > lastScrollY ? false : true);
+			lastScrollY = scrollY > 0 ? scrollY : 0;
+			ticking = false;
+		};
+	
+		const onScroll = () => {
+			if (!ticking) {
+			window.requestAnimationFrame(updateScrollDir);
+			ticking = true;
+			}
+		};
+	
+		window.addEventListener("scroll", onScroll);
+	
+		return () => window.removeEventListener("scroll", onScroll);
+		}, [isScrollUp]);
 
 
 	return (
@@ -55,7 +86,7 @@ export default function TheWedding() {
 				</ColoredBgWrapper>
 
 
-				<div className="flex flex-row pb-4 pt-2 w-full text-base lg:text-2xl z-30 text-[#46542f] px-4 justify-around sticky top-0 bg-[#FCF4EA]">
+				<div className={`flex flex-row pb-4 pt-2 w-full text-base lg:text-2xl z-30 text-[#46542f] px-4 justify-around sticky transition-all ease-in-out duration-300 ${!isScrollUp ? 'top-0' : 'top-[72px] lg:top-[127px]' } bg-[#FCF4EA]`}>
 					{WEDDING_ANCHORS.map((anchor) => {
 						return (
 							<a
@@ -69,6 +100,7 @@ export default function TheWedding() {
 						);
 					})}
 				</div>
+			
 				<ColoredBgWrapper bgColor="nata"> 
 
 				<div

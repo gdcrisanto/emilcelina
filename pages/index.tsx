@@ -64,7 +64,7 @@ export default function Home() {
 
 			<ColoredBgWrapper bgColor="nata">
 				<div className="flex w-full max-w-[1920px] mx-auto justify-center">
-					<div className="flex-col flex self-end lg:self-center w-full lg:p-20 lg:pb-10 fade-up z-20">
+					<div className="flex-col flex self-end lg:self-center w-full lg:p-20 lg:pb-2 fade-up z-20">
 						<h2 className="text-[#573319] font-playfair text-4xl lg:text-[3rem] leading-[100%] font-medium max-w-[700px] text-center mx-auto">
 							{OUR_SPECIAL_DAY.title}
 						</h2>

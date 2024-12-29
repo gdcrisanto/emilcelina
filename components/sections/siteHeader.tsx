@@ -16,19 +16,47 @@ const SiteHeader = ({ textBlack }: SiteHeaderProps) => {
 			window.removeEventListener('scroll', changeNavBg);
 		};
 	}, []);
+
+
+	const [isScrollUp, setIsScrollUp] = useState(true);
+
+	useEffect(() => {
+	const threshold = 0;
+	let lastScrollY = window.scrollY;
+	let ticking = false;
+
+	const updateScrollDir = () => {
+		const scrollY = window.scrollY;
+
+		if (Math.abs(scrollY - lastScrollY) < threshold) {
+		ticking = false;
+		return;
+		}
+		setIsScrollUp(scrollY > lastScrollY ? false : true);
+		lastScrollY = scrollY > 0 ? scrollY : 0;
+		ticking = false;
+	};
+
+	const onScroll = () => {
+		if (!ticking) {
+		window.requestAnimationFrame(updateScrollDir);
+		ticking = true;
+		}
+	};
+
+	window.addEventListener("scroll", onScroll);
+
+	return () => window.removeEventListener("scroll", onScroll);
+	}, [isScrollUp]);
+	
+	
 	return (
 		<div
 			onScroll={changeNavBg}
 			className={
-				'site-header mx-auto w-full ' +
-				(navBg || isOpen
-					? ` site-header-scroll-mobile md:site-header-scroll fixed top-[-72px] lg:top-[-172px] `
-					: ` site-header-top absolute ${
-							textBlack ? ' text-black ' : ' text-[#46542f] '
-					  } `) +
-				(!isOpen ? (navBg ? '' : ' fade-out ') : '') +
-				(isOpen ? ' top-[0] bg-[#FCF4EA] ' : '')
-			}>
+				`z-50 h-[72px] lg:h-[127px] w-full mx-auto fixed bg-[#FCF4EA] transition-all ease-in-out duration-300 ${!isScrollUp ? 'top-[-72px] lg:top-[-172px]' : 'top-0'} ${isOpen ? 'site-header-scroll' : ''}`
+			}
+		>
 			<div className="flex z-50 flex-row container mx-auto h-full px-6 justify-between capitalize font-normal items-center">
 				<Link
 					href="/"
