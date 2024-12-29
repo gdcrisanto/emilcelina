@@ -37,7 +37,7 @@ export default function Venue() {
 				priority
 				customPosition=" object-[right_-26rem_top_0rem] lg:object-center "
 				className="justify-start bg-center bg-cover bg-no-repeat mt-[72px] lg:mt-[127px]"
-				customSize=" h-[calc(80svh-72px)] lg:h-[calc(100svh-127px)]"
+				customSize=" h-[calc(80svh-72px)] lg:h-[calc(78svh-127px)]"
 			/>
 
 			<ColoredBgWrapper bgColor="nata">
