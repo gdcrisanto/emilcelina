@@ -61,33 +61,16 @@ export default function Home() {
 					/>
 				</div>
 			</ColoredBgWrapper>
-			<PageHero
-				image={FAQS_HERO.image}
-				alt=""
-				bgGradient="none"
-				customPosition=" object-center lg:object-[center_-20rem]"
-				priority
-				size="custom"
-				customSize=" h-[250px]"
-				className="justify-start bg-left bg-cover bg-no-repeat">
-				<div className="flex w-full max-w-[1920px] mx-auto justify-start">
-					<div className="flex-col flex self-end lg:self-center w-full text-white p-8 lg:mr-20 fade-up z-20">
-						<h2 className="text-[#FCF4EA] font-playfair text-4xl lg:text-[3rem] leading-[100%] font-medium max-w-[700px]">
+
+			<ColoredBgWrapper bgColor="nata">
+				<div className="flex w-full max-w-[1920px] mx-auto justify-center">
+					<div className="flex-col flex self-end lg:self-center w-full lg:p-20 lg:pb-10 fade-up z-20">
+						<h2 className="text-[#573319] font-playfair text-4xl lg:text-[3rem] leading-[100%] font-medium max-w-[700px] text-center mx-auto">
 							{OUR_SPECIAL_DAY.title}
 						</h2>
 						<CountDownTimer />
 					</div>
 				</div>
-				<div
-					className="absolute w-full h-full z-10 opacity-20"
-					style={{
-						background:
-							'linear-gradient(black,black)',
-					}}
-				/>
-			</PageHero>
-
-			<ColoredBgWrapper bgColor="nata">
 				<div className="flex flex-col lg:flex-row w-full py-14 px-1 lg:px-20 max-w-[1920px] justify-between mx-auto lg:gap-x-12">
 					<div className="flex flex-col lg:max-w-[950px] lg:min-w-[450px] w-full mx-auto lg:mx-none ">
 						<div className="hidden lg:flex flex-row sm:justify-center lg:justify-start gap-x-6 lg:gap-x-16 fade-up">
@@ -137,7 +120,7 @@ export default function Home() {
 							<h3 className="text-2xl lg:text-[2.125rem] text-[#46542f]">
 								Our Lady of Lourdes Parish
 							</h3>
-							<h4 className="text-xl lg:text-2xl text-[#46542f]">
+							<h4 className="text-xl lg:text-2xl text-[#573319]">
 								Tagaytay, Cavite
 							</h4>
 						</div>
@@ -146,7 +129,7 @@ export default function Home() {
 							<h3 className="text-2xl lg:text-[2.125rem] text-[#46542f]">
 								Arocarrìa
 							</h3>
-							<h4 className="text-xl lg:text-2xl text-[#46542f]">
+							<h4 className="text-xl lg:text-2xl text-[#573319]">
 								Alfonso, Cavite
 							</h4>
 						</div>
@@ -200,7 +183,7 @@ const CountDownTimer = () => {
 		}, 1000);
 	}, []);
 	return (
-		<div className="flex flex-row mt-2 mb-0 lg:my-6 capitalize my-10 text-[#FCF4EA] gap-x-8 lg:gap-x-12 max-w-[700px]">
+		<div className="flex flex-row mt-2 mb-0 lg:my-6 capitalize my-10 text-[#573319] gap-x-8 lg:gap-x-12 max-w-[700px] mx-auto">
 			<h2 className="flex flex-col font-normal gap-y-2 ">
 				<p className="font-semibold text-2xl lg:text-[2.125rem]">{countDownTimer.countdownDays}</p>
 				days

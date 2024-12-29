@@ -72,7 +72,7 @@ export default function FAQs() {
 									trigger={
 										<div className="font-playfair flex flex-row w-full justify-between py-4 cursor-pointer font-playfair text-2xl text-left fade-up text-[#573319] font-playfair lg:text-5xl leading-[100%] font-medium">
 											{faq.question}
-											<ChevronLeft className={`transition-all ease-in-out duration-300 ${isOpenFAQ[i] ? `-rotate-180` : `-rotate-90`}`} />
+											<ChevronLeft className={`transition-all ease-in-out duration-300 ${isOpenFAQ[i] ? `` : `-rotate-180`}`} />
 										</div>
 									}
 									triggerClassName={className}
