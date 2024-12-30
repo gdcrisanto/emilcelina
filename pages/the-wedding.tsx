@@ -105,7 +105,7 @@ export default function TheWedding() {
 
 				<div
 					id="schedule"
-					className="flex flex-col lg:flex-row w-full max-w-[1920px] mx-auto gap-x-20 px-10 lg:px-32 py-10">
+					className="flex flex-col lg:flex-row w-full max-w-[1920px] mx-auto gap-x-20 px-10 lg:px-32 py-14">
 					<div className="flex flex-col w-full lg:w-[48%] mb-20 lg:mb-0 justify-center ">
 						<h2 className="font-playfair text-4xl text-center fade-up text-[#573319] font-playfair lg:text-[3rem] leading-[100%] font-medium">
 							{SCHEDULE_OF_EVENTS.title}
@@ -114,7 +114,7 @@ export default function TheWedding() {
 					<div className="flex flex-col lg:max-w-[400px] w-full text-[#5F6F52] fade-up">
 						{SCHEDULE_OF_EVENTS?.events.map((item) => {
 							return (
-								<div className="flex flex-row mb-6 justify-between">
+								<div className="flex flex-row mb-10 justify-between">
 									<div className="flex flex-col">
 										<h3 className="text-2xl lg:text-[2.125rem] text-[#46542f]">
 											{item.event}
@@ -145,17 +145,23 @@ export default function TheWedding() {
 								<h3 className="leading-[100%] text-center mb-6 text-2xl lg:text-[2.125rem] text-[#46542f]">
 									{ATTIRE_FOR_GUESTS.ladies.title}
 								</h3>
-								<h4 className="text-center text-xl lg:text-2xl text-[#46542f]">
+								<h4 className="text-center text-xl text-[#573319] mb-6">
 									{ATTIRE_FOR_GUESTS.ladies.description}
 								</h4>
+								<span className="text-base italic text-center text-[#573319]">
+									{ATTIRE_FOR_GUESTS.ladies.subDescription}
+								</span>
 							</div>
 							<div className="flex flex-col w-full mb-10 justify-center ">
 								<h3 className="leading-[100%] text-center mb-6 text-2xl lg:text-[2.125rem] text-[#46542f]">
 									{ATTIRE_FOR_GUESTS.gentlemen.title}
 								</h3>
-								<h4 className="text-center text-xl lg:text-2xl text-[#46542f]">
+								<h4 className="text-center text-xl text-[#573319] mb-6">
 									{ATTIRE_FOR_GUESTS.gentlemen.description}
 								</h4>
+								<span className="text-base italic text-center text-[#573319]">
+									{ATTIRE_FOR_GUESTS.gentlemen.subDescription}
+								</span>
 							</div>
 						</div>
 						<div className="flex flex-row w-full justify-around my-6">
@@ -169,7 +175,7 @@ export default function TheWedding() {
 								return <div className={className} />;
 							})}
 						</div>
-						<span className="text-xl italic text-center text-[#573319]">
+						<span className="text-base italic text-center text-[#573319]">
 							{ATTIRE_FOR_GUESTS.note}
 						</span>
 					</div>

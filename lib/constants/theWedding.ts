@@ -56,13 +56,15 @@ const ATTIRE_FOR_GUESTS = {
 	ladies: {
 		title: 'Ladies',
 		description: 'Floor-length gown in beige, ecru or taupe',
+		subDescription: 'please reserve white for the bride',
 	},
 	gentlemen: {
 		title: 'Gentlemen',
 		description: 'Long-sleeved Barong Tagalog with black trousers',
+		subDescription: 'we kindly request classic beige for your Barong Tagalog',
 	},
 	colors: ['bg-[#F0E8DB]', 'bg-[#E2D4C5]', 'bg-[#D8C9BA]'],
-	note: 'Dress code is strictly formal. Ladies, please reserve white for the bride. Gentlemen, we kindly request classic beige for your Barong Tagalog.',
+	note: 'Dress code is strictly formal.',
 };
 
 const ENTOURAGE = {

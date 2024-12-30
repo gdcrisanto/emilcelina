@@ -54,6 +54,16 @@ export default function Venue() {
 		
 			return () => window.removeEventListener("scroll", onScroll);
 			}, [isScrollUp]);
+	
+			const _renderDesc = () => {
+				let _ele = document.getElementById('where_to_stay_body');
+				_ele.innerHTML = WHERE_TO_STAY.body;
+			}
+			
+			useEffect(() => {
+				_renderDesc();
+			}, []);
+
 
 	return (
 		<Layout>
@@ -98,7 +108,7 @@ export default function Venue() {
 			
 			<ColoredBgWrapper bgColor="nata">
 
-				<div className="flex flex-col w-full max-w-[1920px] mx-auto gap-x-20 px-4 lg:px-32 py-10 gap-y-10 lg:gap-y-12">
+				<div className="flex flex-col w-full max-w-[1920px] mx-auto gap-x-20 px-4 lg:px-32 py-20 gap-y-10 lg:gap-y-12">
 					{VENUE_MAPS.map((venue, i) => {
 						return (
 							<Sections.ImageInformation
@@ -140,9 +150,9 @@ export default function Venue() {
 						</div>
 					</div>
 
-					<h4 className="text-xl lg:text-2xl leading-[100%] text-center mx-auto max-w-[640px] mb-10 fade-up text-[#46542f]">
+					<p id="where_to_stay_body" className="whitespace-pre-line text-xl lg:text-2xl leading-[100%] text-center mx-auto max-w-[640px] mb-10 fade-up text-[#46542f]">
 						{WHERE_TO_STAY.body}
-					</h4>
+					</p>
 
 					<div className="flex flex-col lg:flex-row w-full max-w-full lg:max-w-1/4 justify-around text-[#573319] fade-up gap-y-6">
 						{WHERE_TO_STAY.hotels.map((hotel) => {
