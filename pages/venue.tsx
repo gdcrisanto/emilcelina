@@ -140,7 +140,6 @@ export default function Venue() {
 
 			<ColoredBgWrapper bgColor="white">
 				<div
-					id="hotels"
 					className="flex flex-col w-full max-w-[1920px] mx-auto gap-x-20 px-4 lg:px-32 py-10 lg:py-20">
 					<div className="flex w-full max-w-[1920px] mx-auto fade-up">
 						<div className="flex-col flex self-center w-full text-white mx-auto mb-10 lg:mb-20 fade-up">
@@ -149,7 +148,7 @@ export default function Venue() {
 							</h2>
 						</div>
 					</div>
-
+					<div id="hotels"/>
 					<p id="where_to_stay_body" className="whitespace-pre-line text-xl lg:text-2xl leading-[100%] text-center mx-auto max-w-[640px] mb-10 fade-up text-[#46542f]">
 						{WHERE_TO_STAY.body}
 					</p>

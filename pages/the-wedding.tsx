@@ -137,7 +137,6 @@ export default function TheWedding() {
 
 			<ColoredBgWrapper bgColor="white">
 				<div
-					id="attire"
 					className="flex flex-col-reverse lg:flex-row w-full max-w-[1920px] mx-auto gap-x-20 px-10 lg:px-32 py-10 pt-20 lg:py-20 fade-up">
 					<div className="flex flex-col w-full lg:w-[55%] mb-20 lg:mb-0 justify-center ">
 						<div className="flex flex-col-reverse w-full">
@@ -183,6 +182,7 @@ export default function TheWedding() {
 						<h2 className="font-playfair text-center fade-up text-[#573319] font-playfair text-4xl lg:text-[3rem] leading-[100%]">
 							{ATTIRE_FOR_GUESTS.title}
 						</h2>
+						<div id="attire"/>
 					</div>
 				</div>
 			</ColoredBgWrapper>
