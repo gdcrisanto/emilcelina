@@ -91,7 +91,7 @@ export default function Venue() {
 				</div>
 				</ColoredBgWrapper>
 
-				<div className={`flex flex-row pb-4 pt-2 w-full text-base lg:text-2xl z-30 text-[#46542f] px-4 justify-around sticky transition-all ease-in-out duration-300 ${!isScrollUp ? 'top-0' : 'top-[72px] lg:top-[127px]' } bg-[#FCF4EA]`}>
+				<div className={`flex flex-row py-4 w-full text-base lg:text-2xl z-30 text-[#46542f] px-4 justify-around sticky transition-all ease-in-out duration-300 ${!isScrollUp ? 'top-0' : 'top-[72px] lg:top-[127px]' } bg-[#FCF4EA]`}>
 					{VENUE_ANCHORS.map((anchor) => {
 						return (
 							<a

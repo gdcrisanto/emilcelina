@@ -65,7 +65,7 @@ export default function Home() {
 			<ColoredBgWrapper bgColor="nata">
 				<div className="flex w-full max-w-[1920px] mx-auto justify-center">
 					<div className="flex-col flex self-end lg:self-center w-full lg:p-20 lg:pb-2 fade-up z-20">
-						<h2 className="text-[#573319] font-playfair text-4xl lg:text-[3rem] leading-[100%] font-medium max-w-[700px] text-center mx-auto">
+						<h2 className="text-[#573319] py-6 lg:py-0 font-playfair text-4xl lg:text-[3rem] leading-[100%] font-medium max-w-[700px] text-center mx-auto">
 							{OUR_SPECIAL_DAY.title}
 						</h2>
 						<CountDownTimer />
@@ -115,7 +115,7 @@ export default function Home() {
 			</ColoredBgWrapper>
 			<ColoredBgWrapper bgColor="white">
 				<div className="flex flex-col lg:flex-row w-full max-w-[1920px] mx-auto gap-x-20 px-10 lg:px-32 py-10">
-					<div className="flex flex-col w-full lg:w-[48%] mb-20 lg:mb-0 lg:justify-center lg:pr-20 text-[#5F6F52]">
+					<div className="flex flex-col text-center lg:text-left w-full lg:w-[48%] mb-20 lg:mb-0 lg:justify-center lg:pr-20 text-[#5F6F52]">
 						<div className="flex flex-col fade-up">
 							<h3 className="text-2xl lg:text-[2.125rem] text-[#46542f]">
 								Our Lady of Lourdes Parish
@@ -183,7 +183,7 @@ const CountDownTimer = () => {
 		}, 1000);
 	}, []);
 	return (
-		<div className="flex flex-row mt-2 mb-0 lg:my-6 capitalize my-10 text-[#573319] gap-x-8 lg:gap-x-12 max-w-[700px] mx-auto">
+		<div className="flex flex-row text-center mt-2 mb-0 lg:my-6 capitalize my-10 text-[#573319] gap-x-8 lg:gap-x-12 max-w-[700px] mx-auto">
 			<h2 className="flex flex-col font-normal gap-y-2 ">
 				<p className="font-semibold text-2xl lg:text-[2.125rem]">{countDownTimer.countdownDays}</p>
 				days

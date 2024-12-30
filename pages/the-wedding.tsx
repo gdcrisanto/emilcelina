@@ -86,7 +86,7 @@ export default function TheWedding() {
 				</ColoredBgWrapper>
 
 
-				<div className={`flex flex-row pb-4 pt-2 w-full text-base lg:text-2xl z-30 text-[#46542f] px-4 justify-around sticky transition-all ease-in-out duration-300 ${!isScrollUp ? 'top-0' : 'top-[72px] lg:top-[127px]' } bg-[#FCF4EA]`}>
+				<div className={`flex flex-row py-4 w-full text-base lg:text-2xl z-30 text-[#46542f] px-4 justify-around sticky transition-all ease-in-out duration-300 ${!isScrollUp ? 'top-0' : 'top-[72px] lg:top-[127px]' } bg-[#FCF4EA]`}>
 					{WEDDING_ANCHORS.map((anchor) => {
 						return (
 							<a
@@ -138,7 +138,7 @@ export default function TheWedding() {
 			<ColoredBgWrapper bgColor="white">
 				<div
 					id="attire"
-					className="flex flex-col-reverse lg:flex-row w-full max-w-[1920px] mx-auto gap-x-20 px-10 lg:px-32 py-10 lg:py-20 fade-up">
+					className="flex flex-col-reverse lg:flex-row w-full max-w-[1920px] mx-auto gap-x-20 px-10 lg:px-32 py-10 pt-20 lg:py-20 fade-up">
 					<div className="flex flex-col w-full lg:w-[55%] mb-20 lg:mb-0 justify-center ">
 						<div className="flex flex-col-reverse w-full">
 							<div className="flex flex-col w-full  mb-10 lg:mb-0 justify-center ">
