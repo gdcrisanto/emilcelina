@@ -22,7 +22,7 @@ export default function TheWedding() {
 		const element = document.getElementById(element_id);
 		element?.scrollIntoView({
 			behavior: 'smooth',
-			block: 'start',
+			block: 'center',
 			inline: 'nearest',
 		});
 	};

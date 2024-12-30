@@ -44,6 +44,7 @@ const ImageInformation = ({
 					</h4>
 					{data?.button && (
 						<Link
+							target='blank'
 							href={data?.href}
 							className={`button py-2 px-10 lg:text-xl border w-fit tracking-wider rounded ${
 								textWhite

@@ -19,7 +19,7 @@ export default function Venue() {
 		const element = document.getElementById(element_id);
 		element?.scrollIntoView({
 			behavior: 'smooth',
-			block: 'start',
+			block: 'center',
 			inline: 'nearest',
 		});
 	};
