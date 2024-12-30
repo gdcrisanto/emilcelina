@@ -69,12 +69,13 @@ export default function HeaderMenu({
 										setIsOpen(false);
 									}}
 									className={
-										item.title === 'Find Us'
-											? 'button border-white hover:bg-white hover:text-[#121212] px-6 py-3 '
-											: 'px-6 py-3'
+										item.title === 'RSVP'
+									? `button text-white bg-[#46542f] hover:bg-[#FCF4EA] hover:text-[#46542f] px-6 py-3`
+									: 'py-1 hover:border-b-2 hover:border-[#46542f] hover:border-solid'
 									}
 									key={item.href}
-									href={item.href}>
+									href={item.href}
+									target={item.title === 'RSVP' ? '_blank' : '_self'}>
 									{item.title}
 								</Link>
 							);
