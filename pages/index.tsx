@@ -54,7 +54,7 @@ export default function Home() {
 						alt=""
 						size="custom"
 						customSize=" h-[calc(70svh-127px)] lg:h-[calc(100svh-127px)]"
-						customPosition=" object-[left_-4rem_top_0rem] lg:object-[left_-13rem_top_0rem]"
+						customPosition=" object-[left_-2.5rem_top_0rem] lg:object-[left_-13rem_top_0rem]"
 						bgGradient="none"
 						priority
 						className="justify-start bg-center bg-cover bg-no-repeat w-full"
