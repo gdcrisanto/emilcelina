@@ -54,7 +54,7 @@ const SiteHeader = ({ textBlack }: SiteHeaderProps) => {
 		<div
 			onScroll={changeNavBg}
 			className={
-				`z-50 h-[72px] lg:h-[127px] w-full mx-auto fixed bg-[#FCF4EA] transition-all ease-in-out duration-300 lg:duration-200 ${!isScrollUp ? 'top-[-72px] lg:top-[-172px]' : 'top-0'} ${isOpen ? 'site-header-scroll' : ''}`
+				`z-50 h-[72px] lg:h-[127px] w-full mx-auto fixed bg-[#FCF4EA] transition-all ease-in-out duration-300 lg:duration-200 ${(isScrollUp || isOpen) ? 'top-0' : 'top-[-72px] lg:top-[-172px]'} ${isOpen ? 'site-header-scroll' : ''}`
 			}
 		>
 			<div className="flex z-50 flex-row container mx-auto h-full px-6 justify-between capitalize font-normal items-center">
