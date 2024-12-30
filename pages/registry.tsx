@@ -15,19 +15,19 @@ export default function Registry() {
 			</Head>
 
 			<ColoredBgWrapper bgColor="nata">
-				<div className="flex flex-col-reverse lg:flex-row w-full max-w-[1920px] mx-auto gap-x-20 px-4 lg:px-0 py-0 gap-y-10 lg:gap-y-12 pt-[72px] lg:pt-[127px] pb-8 lg:pb-0">
-					<div className="flex flex-col w-full lg:w-1/2">
+				<div className="flex flex-col-reverse lg:flex-row text-center lg:text-left w-full max-w-[1920px] mx-auto gap-x-20 px-0 py-0 gap-y-10 lg:gap-y-12 pt-[72px] lg:pt-[127px] pb-8 lg:pb-0">
+					<div className="flex flex-col w-full lg:w-1/2 px-4 lg:px-0">
 						<div className="flex-col flex lg:px-10 w-full my-auto fade-up">
 							<h1 className="font-playfair leading-[100%] text-[#573319] font-playfair font-semibold text-5xl lg:text-7xl ">
 								{REGISTRY_HERO.title}
 							</h1>
-							<h3 className=" my-10 text-xl lg:text-3xl text-[#46542f] whitespace-pre-wrap">
+							<h3 className=" my-10 text-xl lg:text-xl text-[#573319] whitespace-pre-wrap">
 								{REGISTRY_HERO.subtitle}
 							</h3>
 							<Link
 								href={REGISTRY_HERO.href}
 								target='_blank'
-								className="button py-4 px-6 text-base semibold w-fit tracking-wider rounded button text-white bg-[#46542f] hover:bg-[#FCF4EA] hover:text-[#46542f] lg:text-xl">
+								className="button mx-auto lg:mx-0 py-4 px-6 text-base semibold w-fit tracking-wider rounded button text-white bg-[#46542f] hover:bg-[#FCF4EA] hover:text-[#46542f] lg:text-xl">
 								{REGISTRY_HERO.button}
 							</Link>
 						</div>
@@ -36,7 +36,7 @@ export default function Registry() {
 						image={REGISTRY_HERO.image}
 						alt=""
 						size="custom"
-						customSize=" h-[750px] lg:h-[750px]"
+						customSize=" h-[43svh] lg:h-[750px]"
 						bgGradient="none"
 						priority
 						className="justify-start bg-center bg-cover bg-no-repeat w-full lg:w-1/2"
