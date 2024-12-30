@@ -47,7 +47,7 @@ const WHERE_TO_STAY = {
 	subtitle: 'Nearby Hotels',
 	body: `We have rooms blocked off for wedding guests at <b style="color:#573319;">Anya Resorts Tagaytay</b>. 
 	
-	Please send an email for room reservations to gemalyne@ahg.com.ph / jhen@ahg.com.ph / events@ahg.com.ph and mention the Cano-Crisanto wedding when you book to get the group discount.`,
+	<p style="color:#573319;font-size:1rem">Please send an email for room reservations to gemalyne@ahg.com.ph / jhen@ahg.com.ph / events@ahg.com.ph and mention the Cano-Crisanto wedding when you book to get the group discount.</p>`,
 	hotels: [
 		{
 			name: 'Anya Resorts',
