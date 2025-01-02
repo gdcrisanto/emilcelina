@@ -58,19 +58,7 @@ const SiteHeader = ({ textBlack }: SiteHeaderProps) => {
 			}
 		>
 			<div className="flex z-50 flex-row container mx-auto h-full px-6 justify-between capitalize font-normal items-center">
-				<Link
-					href="/"
-					className="w-80 text-2xl md:text-4xl font-bold ">
-					<Vectors.Logo
-						className={
-							navBg || isOpen
-								? 'fill-white'
-								: textBlack
-								? 'fill-black'
-								: 'fill-white'
-						}
-					/>
-				</Link>
+				
 				<HeaderMenu
 					isOpen={isOpen}
 					setIsOpen={setIsOpen}
