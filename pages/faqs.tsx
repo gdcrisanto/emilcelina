@@ -4,7 +4,7 @@ import Constants from '../lib/constants';
 import PageHero from '../components/page-hero';
 import { ColoredBgWrapper } from '../components/page-sections';
 import Collapsible from 'react-collapsible';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function FAQs() {
 	const { FAQS_HERO, FAQS_INFO } = Constants;
@@ -31,6 +31,18 @@ export default function FAQs() {
 		items[i] = isOpenFAQ[i] === true ? false : !items[i]
 		setIsOpenFAQ(items)
 	}
+
+	const _renderDesc = () => {
+		FAQS_INFO.map((item) => {
+			
+			let _ele = document.getElementById(item.id);
+			_ele.innerHTML = item.answer;
+		})
+		}
+		
+		useEffect(() => {
+			_renderDesc();
+		}, []);
 
 	return (
 		<Layout>
@@ -80,6 +92,7 @@ export default function FAQs() {
 									transitionTime={200}
 									easing="ease-in-out">
 									<p
+										id={faq.id}
 										className={`w-4/5 pb-6 whitespace-pre-wrap text-base lg:text-xl text-[#46542f]`}>
 										{faq.answer}
 									</p>

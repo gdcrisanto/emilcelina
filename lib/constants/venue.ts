@@ -45,9 +45,12 @@ const VENUE_MAPS = [
 const WHERE_TO_STAY = {
 	title: 'Where to Stay',
 	subtitle: 'Nearby Hotels',
-	body: `We have rooms blocked off for wedding guests at <b style="color:#573319;">Anya Resorts Tagaytay</b>. 
+	body: `We have available rooms for wedding guests at 
+	<b style="color:#573319;">Anya Resorts Tagaytay</b>. 
 	
-	<p style="color:#573319;font-size:1rem">Please send an email for room reservations to gemalyne@ahg.com.ph / jhen@ahg.com.ph / events@ahg.com.ph and mention the Cano-Crisanto wedding when you book to get the group discount.</p>`,
+	For room reservations at Anya, send an email directly to
+	gemalyne@ahg.com.ph / jhen@ahg.com.ph / events@ahg.com.ph
+	and mention the <i><b style="color:#573319;">Cano–Crisanto Wedding</b><i/> when booking to enjoy discounted room rates.`,
 	hotels: [
 		{
 			name: 'Anya Resorts',

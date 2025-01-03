@@ -55,14 +55,14 @@ export default function Venue() {
 			return () => window.removeEventListener("scroll", onScroll);
 			}, [isScrollUp]);
 	
-			const _renderDesc = () => {
-				let _ele = document.getElementById('where_to_stay_body');
-				_ele.innerHTML = WHERE_TO_STAY.body;
-			}
-			
-			useEffect(() => {
-				_renderDesc();
-			}, []);
+	const _renderDesc = () => {
+		let _ele = document.getElementById('where_to_stay_body');
+		_ele.innerHTML = WHERE_TO_STAY.body;
+	}
+	
+	useEffect(() => {
+		_renderDesc();
+	}, []);
 
 
 	return (
@@ -149,7 +149,7 @@ export default function Venue() {
 						</div>
 					</div>
 					<div id="hotels"/>
-					<p id="where_to_stay_body" className="whitespace-pre-line text-xl lg:text-2xl leading-[100%] text-center mx-auto max-w-[640px] mb-10 fade-up text-[#46542f]">
+					<p id="where_to_stay_body" className="whitespace-pre-line text-xl lg:text-2xl leading-[100%] text-center mx-auto max-w-[1200px] mb-14 fade-up text-[#46542f]">
 						{WHERE_TO_STAY.body}
 					</p>
 
