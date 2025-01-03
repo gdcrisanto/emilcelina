@@ -42,8 +42,8 @@ export default function Layout({
 						size="custom"
 						customSize=" h-[470px] lg:h-[500px]"
 					>
-						<div className=" mx-auto flex-col md:flex-col flex items-center justify-center text-white text-center fade-up">
-							<div className='flex flex-col'>
+						<div className=" mx-auto flex-col md:flex-col flex items-center justify-center text-white text-center">
+							<div className='flex flex-col fade-up'>
 								<h2 className="text-[#FCF4EA] font-playfair text-4xl lg:text-[3rem] leading-[100%] font-medium z-20">
 									{constants.FOOTER.title}
 								</h2>
