@@ -15,7 +15,6 @@ export default function Home() {
 		HOME_PORTRAITS,
 		ORDER_OF_EVENTS,
 		FOOTER,
-		FAQS_HERO,
 
 	} = Constants;
 

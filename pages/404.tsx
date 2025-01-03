@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { ColoredBgWrapper } from '../components/page-sections';
-import Vectors from '../components/vectors';
 import Layout from '../components/layout';
 
 export default function notFound() {

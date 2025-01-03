@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import HeaderMenu from '../header-menu';
-import Vectors from '../vectors';
 import { useEffect, useState } from 'react';
 import { SiteHeaderProps } from '../../lib/types/sections';
 
