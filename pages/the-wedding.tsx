@@ -20,11 +20,18 @@ export default function TheWedding() {
 
 	const scrolltoHash = function (element_id: string) {
 		const element = document.getElementById(element_id);
-		element?.scrollIntoView({
-			behavior: 'smooth',
-			block: 'center',
-			inline: 'nearest',
-		});
+		// element?.scrollIntoView({
+		// 	behavior: 'smooth',
+		// 	block: 'start',
+		// 	inline: 'nearest',
+		// });
+		const yOffset = element_id === 'schedule' ? -190 : -150;
+		const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
+		// element?.scrollTo({
+		// 	behavior: 'smooth',
+		// 	top: y
+		// });
+		window.scrollTo({top: y, behavior: 'smooth'});
 	};
 
 	const [isScrollUp, setIsScrollUp] = useState(true);
@@ -99,22 +106,21 @@ export default function TheWedding() {
 							</a>
 						);
 					})}
-				</div>
-			
+			</div>
 				<ColoredBgWrapper bgColor="nata"> 
-
+				<div id="schedule"/>
 				<div
-					id="schedule"
 					className="flex flex-col lg:flex-row w-full max-w-[1920px] mx-auto gap-x-20 px-10 lg:px-32 py-14">
 					<div className="flex flex-col w-full lg:w-[48%] mb-20 lg:mb-0 justify-center ">
 						<h2 className="font-playfair text-4xl text-center fade-up text-[#573319] font-playfair lg:text-[3rem] leading-[100%] font-medium">
 							{SCHEDULE_OF_EVENTS.title}
 						</h2>
+						
 					</div>
 					<div className="flex flex-col lg:max-w-[400px] w-full text-[#5F6F52] fade-up">
 						{SCHEDULE_OF_EVENTS?.events.map((item) => {
 							return (
-								<div className="flex flex-row mb-10 justify-between">
+								<div className="flex flex-row mb-16 justify-between">
 									<div className="flex flex-col">
 										<h3 className="text-2xl lg:text-[2.125rem] text-[#46542f]">
 											{item.event}
@@ -136,26 +142,27 @@ export default function TheWedding() {
 			</ColoredBgWrapper>
 
 			<ColoredBgWrapper bgColor="white">
+				<div id="attire"/>
 				<div
 					className="flex flex-col-reverse lg:flex-row w-full max-w-[1920px] mx-auto gap-x-20 px-10 lg:px-32 py-10 pt-20 lg:py-20 fade-up">
 					<div className="flex flex-col w-full lg:w-[55%] mb-20 lg:mb-0 justify-center ">
 						<div className="flex flex-col-reverse w-full">
-							<div className="flex flex-col w-full  mb-10 lg:mb-0 justify-center ">
+							<div className="flex flex-col w-full  mb-10 lg:mb-10 justify-center ">
 								<h3 className="leading-[100%] text-center mb-6 text-2xl lg:text-[2.125rem] text-[#46542f]">
 									{ATTIRE_FOR_GUESTS.ladies.title}
 								</h3>
-								<h4 className="text-center text-xl text-[#573319] mb-6">
+								<h4 className="text-center text-xl text-[#573319] mb-1">
 									{ATTIRE_FOR_GUESTS.ladies.description}
 								</h4>
 								<span className="text-base italic text-center text-[#573319]">
 									{ATTIRE_FOR_GUESTS.ladies.subDescription}
 								</span>
 							</div>
-							<div className="flex flex-col w-full mb-10 justify-center ">
+							<div className="flex flex-col w-full mb-10 lg:mb-20 justify-center ">
 								<h3 className="leading-[100%] text-center mb-6 text-2xl lg:text-[2.125rem] text-[#46542f]">
 									{ATTIRE_FOR_GUESTS.gentlemen.title}
 								</h3>
-								<h4 className="text-center text-xl text-[#573319] mb-6">
+								<h4 className="text-center text-xl text-[#573319] mb-1">
 									{ATTIRE_FOR_GUESTS.gentlemen.description}
 								</h4>
 								<span className="text-base italic text-center text-[#573319]">
@@ -182,7 +189,6 @@ export default function TheWedding() {
 						<h2 className="font-playfair text-center fade-up text-[#573319] font-playfair text-4xl lg:text-[3rem] leading-[100%]">
 							{ATTIRE_FOR_GUESTS.title}
 						</h2>
-						<div id="attire"/>
 					</div>
 				</div>
 			</ColoredBgWrapper>

@@ -139,7 +139,7 @@ export default function Home() {
 						</h2>
 						{ORDER_OF_EVENTS?.events.map((item) => {
 							return (
-								<div className="flex flex-row mb-10 justify-between">
+								<div className="flex flex-row mb-16 justify-between">
 									<div className="flex flex-col">
 										<h3 className="text-2xl lg:text-[2.125rem] text-[#46542f]">
 											{item.event}
