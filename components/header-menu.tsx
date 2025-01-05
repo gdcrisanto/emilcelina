@@ -23,7 +23,7 @@ export default function HeaderMenu({
 	return (
 		<>
 			{/* DESKTOP HEADER */}
-			<div className="tracking-wide hidden lg:flex header-menu gap-x-8 flex-row text-left mt-auto h-full capitalize items-center text-xl font-semibold">
+			<div className="tracking-wide hidden lg:flex header-menu gap-x-8 flex-row text-left mt-auto h-full capitalize items-center text-xl">
 				{Constants.MENU_ITEMS.map((item) => {
 					return (
 						<Link

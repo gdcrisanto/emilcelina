@@ -44,7 +44,7 @@ export default function Layout({
 								<h2 className="text-[#FCF4EA] font-playfair text-4xl lg:text-[3rem] leading-[100%] font-medium z-20">
 									{constants.FOOTER.title}
 								</h2>
-								<h3 className="mt-4 mb-4 text-2xl lg:text-[2.125rem] text-[#FCF4EA] z-20 whitespace-pre-wrap">
+								<h3 className="mt-4 mb-4 text-xl text-[#FCF4EA] z-20 whitespace-pre-wrap">
 									{constants.HOME_HERO.subtitle}
 								</h3>
 								<div className="flex flex-row gap-x-10 z-20 justify-center">

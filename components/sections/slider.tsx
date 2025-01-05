@@ -78,7 +78,7 @@ const Slider = ({ quotes, images, textWhite }: SliderProps) => {
 														'translate 300ms ease-in-out',
 												}}>
 												<Link
-												className="absolute self-end mb-10 bg-[#FCF4EA] mx-auto button uppercase button text-center py-3 px-6 text-base border tracking-wider rounded hover:text-white text-[#46542f]  hover:bg-[#46542f] border-[#46542f] lg:text-xl max-w-[190px] w-full text-nowrap z-20 h-fit"
+												className="absolute self-end mb-10 bg-[#FCF4EA] mx-auto button capitalize button text-center py-3 px-6 text-base border tracking-wider rounded hover:text-white text-[#46542f]  hover:bg-[#46542f] border-[#46542f] lg:text-xl max-w-[190px] w-full text-nowrap z-20 h-fit"
 												href={image.href}>
 												{image.text}
 											</Link>

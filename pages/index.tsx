@@ -27,10 +27,10 @@ export default function Home() {
 				<div className="flex flex-col-reverse lg:flex-row w-full max-w-[1920px] mx-auto gap-x-10 px-4 lg:px-0 py-0 gap-y-10 lg:gap-y-12 pt-[72px] lg:pt-[127px] pb-8 lg:pb-0">
 					<div className="flex flex-col w-full lg:w-1/2">
 						<div className="flex-col flex lg:px-10 w-full my-auto fade-up text-center">
-							<h1 className="font-playfair leading-[100%] text-[#573319] font-playfair font-normal text-5xl lg:text-7xl ">
-								Loving is <span className='font-pinyon text-9xl'>EC </span>
+							<h1 className="font-pinyon leading-[100%] text-[#573319] font-normal text-5xl lg:text-7xl ">
+								Loving is <span className='text-9xl'>EC </span>
 							</h1>
-							<h3 className=" my-10 text-2xl lg:text-3xl text-[#46542f] whitespace-pre-wrap">
+							<h3 className=" my-10 text-xl text-[#46542f] whitespace-pre-wrap">
 								{HOME_HERO.subtitle}
 							</h3>
 							<div className="flex flex-row gap-x-4 justify-center">
@@ -64,7 +64,7 @@ export default function Home() {
 			<ColoredBgWrapper bgColor="nata">
 				<div className="flex w-full max-w-[1920px] mx-auto justify-center">
 					<div className="flex-col flex self-end lg:self-center w-full lg:p-20 lg:pb-2 fade-up z-20">
-						<h2 className="text-[#573319] py-6 lg:py-0 font-playfair text-4xl lg:text-[3rem] leading-[100%] font-medium max-w-[700px] text-center mx-auto">
+						<h2 className="text-[#573319] py-6 lg:py-0 font-playfair text-4xl lg:text-[3rem] leading-[100%] font-medium max-w-[1300px] text-center mx-auto">
 							{OUR_SPECIAL_DAY.title}
 						</h2>
 						<CountDownTimer />
@@ -79,7 +79,7 @@ export default function Home() {
 										className={`flex-col items-center w-full relative fade-up flex-grow max-w-[156px] xl:max-w-[422px]`}>
 										<div className="image-container flex relative w-full h-[287px] lg:h-[400px] max-w-[300px] overflow-clip">
 											<Link
-												className="self-end mb-10 bg-[#FCF4EA] mx-auto button uppercase button text-center py-3 px-6 text-base border tracking-wider rounded hover:text-white text-[#46542f]  hover:bg-[#46542f] border-[#46542f] lg:text-xl max-w-[190px] w-full text-nowrap z-20 h-fit"
+												className="self-end mb-10 bg-[#FCF4EA] mx-auto button capitalize button text-center py-3 px-6 text-base border tracking-wider rounded hover:text-white text-[#46542f]  hover:bg-[#46542f] border-[#46542f] lg:text-xl max-w-[190px] w-full text-nowrap z-20 h-fit"
 												href={portrait.href}>
 												{portrait.text}
 											</Link>
