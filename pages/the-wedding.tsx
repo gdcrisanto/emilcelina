@@ -20,17 +20,8 @@ export default function TheWedding() {
 
 	const scrolltoHash = function (element_id: string) {
 		const element = document.getElementById(element_id);
-		// element?.scrollIntoView({
-		// 	behavior: 'smooth',
-		// 	block: 'start',
-		// 	inline: 'nearest',
-		// });
 		const yOffset = element_id === 'schedule' ? -190 : -150;
 		const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
-		// element?.scrollTo({
-		// 	behavior: 'smooth',
-		// 	top: y
-		// });
 		window.scrollTo({top: y, behavior: 'smooth'});
 	};
 

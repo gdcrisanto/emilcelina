@@ -94,7 +94,7 @@ export default function FAQs() {
 									easing="ease-in-out">
 									<p
 										id={faq.id}
-										className={`w-4/5 pb-6 whitespace-pre-wrap text-base lg:text-xl text-[#46542f]`}>
+										className={`w-full lg:pr-5 pb-6 whitespace-pre-wrap text-base lg:text-xl text-[#46542f]`}>
 										{faq.answer}
 									</p>
 								</Collapsible>

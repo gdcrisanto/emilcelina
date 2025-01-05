@@ -148,11 +148,11 @@ export default function Venue() {
 							</h2>
 						</div>
 					</div>
-					<div id="hotels"/>
+					
 					<p id="where_to_stay_body" className="whitespace-pre-line text-xl lg:text-2xl leading-[100%] text-center mx-auto max-w-[1200px] mb-14 fade-up text-[#46542f]">
 						{WHERE_TO_STAY.body}
 					</p>
-
+					<div id="hotels"/>
 					<div className="flex flex-col lg:flex-row w-full max-w-full lg:max-w-1/4 justify-around text-[#573319] fade-up gap-y-6">
 						{WHERE_TO_STAY.hotels.map((hotel) => {
 							return (
