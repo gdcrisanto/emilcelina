@@ -51,6 +51,14 @@ const WHERE_TO_STAY = {
 	<p style="font-size:1rem;">For room reservations at Anya, send an email directly to
 	gemalyne@ahg.com.ph / jhen@ahg.com.ph / events@ahg.com.ph
 	and mention the <i><b style="color:#573319;">Cano–Crisanto Wedding</b></i> when booking to enjoy discounted room rates.</p`,
+	body2: `We have available rooms for wedding guests at 
+	<b style="color:#573319;">Anya Resorts Tagaytay</b>. 
+	
+	<p style="font-size:1rem;">For room reservations at Anya, send an email
+	directly to gemalyne@ahg.com.ph /
+	jhen@ahg.com.ph / events@ahg.com.ph
+	and mention the <i><b style="color:#573319;">Cano–Crisanto Wedding</b></i>
+	when booking to enjoy discounted room rates.</p`,
 	hotels: [
 		{
 			name: 'Anya Resorts',

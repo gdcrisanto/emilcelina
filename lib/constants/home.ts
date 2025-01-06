@@ -1,4 +1,4 @@
-import homeHero from '../../public/assets/home_hero.jpeg';
+import homeHero from '../../public/assets/home_hero2.jpg';
 import homeSegment1 from '../../public/assets/segment1.jpeg';
 import homeSegment2 from '../../public/assets/segment2.jpeg';
 import homeSegment3 from '../../public/assets/segment3.jpeg';

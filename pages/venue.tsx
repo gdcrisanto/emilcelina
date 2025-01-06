@@ -57,7 +57,9 @@ export default function Venue() {
 	
 	const _renderDesc = () => {
 		let _ele = document.getElementById('where_to_stay_body');
+		let _ele2 = document.getElementById('where_to_stay_body2');
 		_ele.innerHTML = WHERE_TO_STAY.body;
+		_ele2.innerHTML = WHERE_TO_STAY.body2;
 	}
 	
 	useEffect(() => {
@@ -149,8 +151,11 @@ export default function Venue() {
 						</div>
 					</div>
 					
-					<p id="where_to_stay_body" className="whitespace-pre-line text-xl lg:text-2xl leading-[100%] text-center mx-auto max-w-[1200px] mb-14 fade-up text-[#46542f]">
+					<p id="where_to_stay_body" className="hidden lg:block whitespace-pre-line text-xl lg:text-2xl leading-[100%] text-center mx-auto max-w-[1200px] mb-14 fade-up text-[#46542f]">
 						{WHERE_TO_STAY.body}
+					</p>
+					<p id="where_to_stay_body2" className="lg:hidden whitespace-pre-line text-xl lg:text-2xl leading-[100%] text-center mx-auto max-w-[1200px] mb-14 fade-up text-[#46542f]">
+						{WHERE_TO_STAY.body2}
 					</p>
 					<div id="hotels"/>
 					<div className="flex flex-col lg:flex-row w-full max-w-full lg:max-w-1/4 justify-around text-[#573319] fade-up gap-y-6">

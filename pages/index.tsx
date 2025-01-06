@@ -27,7 +27,7 @@ export default function Home() {
 				<div className="flex flex-col-reverse lg:flex-row w-full max-w-[1920px] mx-auto gap-x-10 px-4 lg:px-0 py-0 gap-y-10 lg:gap-y-12 pt-[72px] lg:pt-[127px] pb-8 lg:pb-0">
 					<div className="flex flex-col w-full lg:w-1/2">
 						<div className="flex-col flex lg:px-10 w-full my-auto fade-up text-center">
-							<h1 className="font-pinyon leading-[100%] text-[#573319] font-normal text-5xl lg:text-7xl ">
+							<h1 className="font-pinyon leading-[100%] text-[#573319] font-normal text-8xl lg:text-[5.25rem] ">
 								Loving is <span className='text-9xl'>EC </span>
 							</h1>
 							<h3 className=" my-10 text-xl text-[#46542f] whitespace-pre-wrap">
@@ -53,7 +53,7 @@ export default function Home() {
 						alt=""
 						size="custom"
 						customSize=" h-[calc(70svh-127px)] lg:h-[calc(100svh-127px)]"
-						customPosition=" object-[left_-2.5rem_top_0rem] lg:object-[left_-13rem_top_0rem]"
+						customPosition=" object-[left_-2.5rem_top_0rem] lg:object-[left_-6rem_top_0rem]"
 						bgGradient="none"
 						priority
 						className="justify-start bg-center bg-cover bg-no-repeat w-full"

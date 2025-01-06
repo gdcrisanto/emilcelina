@@ -52,7 +52,7 @@ export default function FAQs() {
 
 			<PageHero
 				image={FAQS_HERO.image}
-				customSize=' h-[590px] lg:h-[660px]'
+				customSize=' h-[calc(80svh-72px)] lg:h-[calc(78svh-127px)]'
 				alt=""
 				size="custom"
 				bgGradient="none"
