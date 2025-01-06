@@ -28,7 +28,7 @@ export default function Home() {
 					<div className="flex flex-col w-full lg:w-1/2">
 						<div className="flex-col flex lg:px-10 w-full my-auto fade-up text-center">
 							<h1 className="font-pinyon leading-[100%] text-[#573319] font-normal text-8xl lg:text-[5.25rem] ">
-								Loving is <span className='text-9xl'>EC </span>
+								Loving is <span className='text-[5rem] lg:text-9xl'>EC </span>
 							</h1>
 							<h3 className=" my-10 text-xl text-[#46542f] whitespace-pre-wrap">
 								{HOME_HERO.subtitle}
