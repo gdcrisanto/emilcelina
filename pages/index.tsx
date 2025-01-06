@@ -25,12 +25,12 @@ export default function Home() {
 			</Head>
 			<ColoredBgWrapper bgColor="nata">
 				<div className="flex flex-col-reverse lg:flex-row w-full max-w-[1920px] mx-auto gap-x-10 px-4 lg:px-0 py-0 gap-y-10 lg:gap-y-12 pt-[72px] lg:pt-[127px] pb-8 lg:pb-0">
-					<div className="flex flex-col w-full lg:w-1/2">
+					<div className="flex flex-col w-full lg:max-w-1/2">
 						<div className="flex-col flex lg:px-10 w-full my-auto fade-up text-center">
 							<h1 className="font-pinyon leading-[100%] text-[#573319] font-normal text-8xl lg:text-[5.25rem] ">
 								Loving is <span className='text-[5rem] lg:text-9xl'>EC </span>
 							</h1>
-							<h3 className=" my-10 text-xl text-[#46542f] whitespace-pre-wrap">
+							<h3 className=" my-20 text-2xl text-[#46542f] whitespace-pre-wrap">
 								{HOME_HERO.subtitle}
 							</h3>
 							<div className="flex flex-row gap-x-4 justify-center">
@@ -53,7 +53,7 @@ export default function Home() {
 						alt=""
 						size="custom"
 						customSize=" h-[calc(70svh-127px)] lg:h-[calc(100svh-127px)]"
-						customPosition=" object-[left_-1rem_top_0rem] lg:object-[left_-6rem_top_0rem]"
+						customPosition=" object-[left_-1rem_top_0rem] lg:object-[left_0rem_top_0rem]"
 						bgGradient="none"
 						priority
 						className="justify-start bg-center bg-cover bg-no-repeat w-full"
