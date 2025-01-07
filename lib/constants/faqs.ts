@@ -14,6 +14,8 @@ const FAQS_INFO = [
 Submit your response by <b style="color:#573319;">February 28, 2025</b>. Any RSVPs received after this date will be considered a <i><b style="color:#573319;">no</b><i/>.
 
 If you are unable to attend, kindly let us know as soon as possible.
+
+For inquiries regarding our wedding day, you may contact our coordinator, Maine Events, at +639618041109.
 `,
 	},
 	{
@@ -33,9 +35,9 @@ We appreciate your understanding and hope you can make arrangements to celebrate
 		question: 'Is there a dress code?',
 		answer: `Yes, we would love to see our family and friends dressed elegantly for our special day. The dress code is strictly formal in beige, ecru or taupe.
 
-Ladies: Floor-length evening gown
-
 Gentlemen: Long-sleeved, classic beige Barong Tagalog with black trousers
+
+Ladies: Floor-length evening gown
 
 For more details, visit <b style="color:#573319;">The Wedding</b> page.`,
 	},

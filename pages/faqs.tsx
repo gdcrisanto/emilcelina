@@ -52,13 +52,13 @@ export default function FAQs() {
 
 			<PageHero
 				image={FAQS_HERO.image}
-				customSize=' h-[calc(80svh-72px)] lg:h-[calc(78svh-127px)]'
+				customSize=" h-[calc(80svh-72px)] lg:h-[calc(78svh-127px)]"
 				alt=""
 				size="custom"
 				bgGradient="none"
 				priority
 				customPosition=" object-[right_-1rem_top_0rem] lg:object-[right_0rem_top_-10rem] "
-				className="justify-start bg-center bg-cover bg-no-repeat"></PageHero>
+				className="justify-start bg-center bg-cover bg-no-repeat mt-[72px] lg:mt-[127px]" />
 
 			<ColoredBgWrapper bgColor="nata">
 				<div className="flex w-full max-w-[1920px] mx-auto my-8">
