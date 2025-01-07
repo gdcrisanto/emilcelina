@@ -57,7 +57,7 @@ export default function Home() {
 							customPosition=" object-[left_-1rem_top_0rem] lg:object-[left_0rem_top_0rem]"
 							bgGradient="none"
 							priority
-							className="justify-start bg-center bg-cover bg-no-repeat w-full scale-125"
+							className="justify-start bg-center bg-cover bg-no-repeat w-full scale-150 lg:scale-100"
 						/>
 					</div>
 				</div>
