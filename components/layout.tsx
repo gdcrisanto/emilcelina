@@ -115,7 +115,7 @@ export default function Layout({
 					<BackToTop />
 				</main>
 				{isOpen && (
-					<div className="flex fixed w-full z-[1000] h-screen justify-center items-center bg-[rgba(0,0,0,0.5)] p-6">
+					<div className="flex fixed w-full z-[1000] h-screen justify-center items-center bg-[rgba(0,0,0,0.8)] p-6 py-32">
 						<div className="flex flex-col py-10 w-full max-w-[1166px] z-[1001] bg-[#FCF4EA] justify-center text-center text-[#573319] h-full lg:h-fit p-6 rounded-2xl">
 							{/* <Vectors.Logo
 								fill={'#B99D37'}
@@ -142,7 +142,7 @@ export default function Layout({
 								/>
 								<div
 									onClick={(e) => handleFormSubmit(e)}
-									className="button text-white bg-[#46542f] px-6 py-3 lg:text-xl max-w-[190px] w-full text-nowrap text-center mx-auto">
+									className="button text-white bg-[#46542f] px-6 py-3 lg:text-xl max-w-[190px] w-full text-nowrap text-center mx-auto capitalize">
 									Unlock
 								</div>
 							</div>
