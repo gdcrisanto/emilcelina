@@ -30,7 +30,7 @@ export default function Home() {
 							<h1 className="font-pinyon leading-[100%] text-[#573319] font-normal text-8xl lg:text-[5.25rem] ">
 								Loving is <span className='text-[5rem] lg:text-9xl'>EC </span>
 							</h1>
-							<h3 className=" my-20 text-2xl text-[#46542f] whitespace-pre-wrap">
+							<h3 className=" my-10 text-2xl text-[#46542f] whitespace-pre-wrap">
 								{HOME_HERO.subtitle}
 							</h3>
 							<div className="flex flex-row gap-x-4 justify-center">
@@ -48,16 +48,18 @@ export default function Home() {
 						</div>
 						</div>
 					</div>
-					<PageHero
-						image={HOME_HERO.image}
-						alt=""
-						size="custom"
-						customSize=" h-[calc(70svh-127px)] lg:h-[calc(100svh-127px)]"
-						customPosition=" object-[left_-1rem_top_0rem] lg:object-[left_0rem_top_0rem]"
-						bgGradient="none"
-						priority
-						className="justify-start bg-center bg-cover bg-no-repeat w-full"
-					/>
+					<div className='justify-start bg-center bg-cover bg-no-repeat w-full overflow-clip'>
+						<PageHero
+							image={HOME_HERO.image}
+							alt=""
+							size="custom"
+							customSize=" h-[calc(70svh-127px)] lg:h-[calc(100svh-127px)]"
+							customPosition=" object-[left_-1rem_top_0rem] lg:object-[left_0rem_top_0rem]"
+							bgGradient="none"
+							priority
+							className="justify-start bg-center bg-cover bg-no-repeat w-full scale-125"
+						/>
+					</div>
 				</div>
 			</ColoredBgWrapper>
 
