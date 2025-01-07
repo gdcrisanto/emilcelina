@@ -6,12 +6,51 @@ import { LayoutProps } from '../lib/types/sections';
 import PageHero from './page-hero';
 import constants from '../lib/constants';
 import Link from 'next/link';
+import { InputFieldType } from '../lib/types/form';
 
 export default function Layout({
 	children,
 	noSiteHeader,
 	textBlack,
 }: LayoutProps) {
+
+	const [isError, setIsError] = useState<Boolean | undefined>(undefined);
+	const [isOpen, setIsOpen] = useState<Boolean>(false);
+	const [formState, setFormState] = useState<any>({
+		password: '',
+	});
+
+	useEffect(() => {
+		if (localStorage.getItem('ourloveisEC') === 'true') {
+			setIsOpen(false);
+		} else {
+			setIsOpen(true);
+		}
+	}, []);
+
+	const handleChange = ({ target }) => {
+		setFormState({
+			...formState,
+			[target.name]: target.value,
+		});
+	};
+
+	const handleFormSubmit = async (e) => {
+		console.log(e)
+		e.preventDefault();
+		setFormState((prev) => ({
+			...prev,
+		}));
+		if (validatePassword(formState.password)) {
+			localStorage.setItem('ourloveisEC', 'true');
+			setIsOpen(false);
+			setIsError(false);
+		} else {
+			setIsOpen(true);
+			setIsError(true);
+		}
+	};
+
 
 	useEffect(() => {
 		const observer = new IntersectionObserver((entries) => {
@@ -67,8 +106,89 @@ export default function Layout({
 					</PageHero>
 					<BackToTop />
 				</main>
+				{isOpen && (
+					<div className="flex fixed w-full z-[1000] h-screen justify-center items-center bg-[rgba(0,0,0,0.5)] p-6">
+						<div className="flex flex-col py-10 w-full max-w-[1166px] z-[1001] bg-[#FCF4EA] justify-center text-center text-[#573319] h-full lg:h-fit p-6 rounded-2xl">
+							{/* <Vectors.Logo
+								fill={'#B99D37'}
+								className="mx-auto mb-[120px]"
+							/> */}
+							<span className="leading-[100%] text-xl font-garamond mb-2 font-semibold mt-[100px]">
+								This event is protected 
+							</span>
+
+							<span className="leading-[140%] text-base mb-8">
+								Please enter the password
+							</span>
+
+							<div
+								className="uppercase flex flex-col w-full max-w-[271px] mb-[100px] relative mx-auto text-left"
+								onSubmit={(e) => handleFormSubmit(e)}>
+								<InputField
+									field={formState.birthYear}
+									handleChange={(e) => handleChange(e)}
+									label={''}
+									placeholder={'Password'}
+									name="password"
+									isError={isError}
+								/>
+								<div
+									onClick={(e) => handleFormSubmit(e)}
+									className="button text-white bg-[#46542f] px-6 py-3 lg:text-xl max-w-[190px] w-full text-nowrap text-center mx-auto">
+									Unlock
+								</div>
+							</div>
+
+						</div>
+					</div>
+				)}
 			</div>
 		</>
 	);
 }
 
+const InputField = ({
+	field,
+	handleChange,
+	placeholder,
+	label,
+	name,
+	isError,
+}: InputFieldType) => {
+	const inputClassName =
+		'input-field-dark mt-3 rounded ' +
+		(!isError || isError == undefined ? ' mb-9 ' : ' mb-4 ');
+
+	const errorClassName =
+		!isError || isError == undefined
+			? 'hidden '
+			: 'text-[#FF7171] normal-case text-[14px] text-center';
+
+	return (
+		<div className="flex flex-col w-full mb-4">
+			<div className="tracking-widest">{label}</div>
+			<input
+				className={inputClassName}
+				name={name}
+				value={field}
+				onChange={(e) => handleChange(e)}
+				type="text"
+				placeholder={placeholder}
+			/>
+			<div className={errorClassName}>
+				Incorrect password.
+			</div>
+		</div>
+	);
+};
+
+const validatePassword = (password: string) => {
+	console.log(password)
+	if (
+		password === 'ourloveisEC'
+	) {
+		return true;
+	} else {
+		return false;
+	}
+};
