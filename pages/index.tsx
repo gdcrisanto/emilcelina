@@ -54,10 +54,10 @@ export default function Home() {
 							alt=""
 							size="custom"
 							customSize=" h-[calc(70svh-127px)] lg:h-[calc(100svh-127px)]"
-							customPosition=" object-[left_-1rem_top_0rem] lg:object-[left_0rem_top_0rem]"
+							customPosition=" object-[left_3rem_top_3rem] lg:object-[left_0rem_top_0rem]"
 							bgGradient="none"
 							priority
-							className="justify-start bg-center bg-cover bg-no-repeat w-full scale-150 lg:scale-100"
+							className="justify-start bg-center bg-cover bg-no-repeat w-full scale-150 lg:scale-110"
 						/>
 					</div>
 				</div>
