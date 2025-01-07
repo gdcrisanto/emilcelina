@@ -11,7 +11,7 @@ const FAQS_INFO = [
 		question: 'How do I RSVP and by when?',
 		answer: `To RSVP, click the RSVP button in the website header and complete the form.
 
-Submit your response by <b style="color:#573319;">February 28, 2025</b>. Any RSVPs received after this date will be considered a <i><b style="color:#573319;">no</b><i/>.
+Submit your response by <b style="color:#573319;">February 28, 2025</b>. Any RSVPs received after this date will be considered a <i><b style="color:#573319;">no</b></i>.
 
 If you are unable to attend, kindly let us know as soon as possible.
 

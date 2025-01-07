@@ -45,8 +45,7 @@ const VENUE_MAPS = [
 const WHERE_TO_STAY = {
 	title: 'Where to Stay',
 	subtitle: 'Nearby Hotels',
-	body: `We have available rooms for wedding guests at 
-	<b style="color:#573319;">Anya Resorts Tagaytay</b>. 
+	body: `We have available rooms for wedding guests at <b style="color:#573319;">Anya Resorts Tagaytay</b>. 
 	
 	<p style="font-size:1rem;">For room reservations at Anya, send an email directly to
 	gemalyne@ahg.com.ph / jhen@ahg.com.ph / events@ahg.com.ph
@@ -68,7 +67,7 @@ const WHERE_TO_STAY = {
 		},
 		{
 			name: 'Twin Lakes Hotel',
-			info: 'Tagaytay-Nasugbu Highway,\nLaurel,\nBatangas',
+			info: 'Tagaytay-Nasugbu Highway,\nBarangay Dayap Itaas,\nBatangas',
 			image: twinLakes,
 			href: 'https://www.twinlakeshotel.com.ph/en',
 		},
