@@ -51,6 +51,14 @@ export default function Layout({
 		}
 	};
 
+	useEffect(() => {
+		if (isOpen) {
+			document.body.style.overflow = 'hidden';
+		} else {
+			document.body.style.overflow = 'unset';
+		}
+	}, [isOpen]);
+
 
 	useEffect(() => {
 		const observer = new IntersectionObserver((entries) => {
