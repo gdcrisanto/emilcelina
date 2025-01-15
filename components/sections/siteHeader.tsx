@@ -60,7 +60,7 @@ const SiteHeader = ({ textBlack }: SiteHeaderProps) => {
 		>
 			<div className="flex z-50 flex-row container mx-auto h-full px-6 justify-between capitalize font-normal items-center">
 				<Link href='/'>
-				<Image src={SiteLogo} alt={''} className='h-[52px] w-[52px] lg:h-[120px] lg:w-[120px]' />
+				<Image src={SiteLogo} alt={''} className='h-[52px] w-[52px] lg:h-[80px] lg:w-[80px]' />
 				</Link>
 				
 				<HeaderMenu
