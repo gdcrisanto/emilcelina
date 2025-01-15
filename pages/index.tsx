@@ -78,7 +78,7 @@ export default function Home() {
 							{HOME_PORTRAITS.map((portrait) => {
 								return (
 									<div
-										className={`flex-col items-center w-full relative fade-up flex-grow max-w-[156px] xl:max-w-[422px]`}>
+										className={`flex-col items-center w-full relative fade-up flex-grow max-w-[156px] lg:max-w-[422px]`}>
 										<div className="image-container flex relative w-full h-[287px] lg:h-[400px] max-w-[300px] overflow-clip">
 											<Link
 												className="self-end mb-10 bg-[#FCF4EA] mx-auto button capitalize button text-center py-3 px-6 text-base border tracking-wider rounded hover:text-white text-[#46542f]  hover:bg-[#46542f] border-[#46542f] lg:text-xl max-w-[190px] w-full text-nowrap z-20 h-fit"
@@ -136,7 +136,7 @@ export default function Home() {
 						</div>
 					</div>
 					<div className="flex flex-col lg:max-w-[400px] w-full text-[#5F6F52] fade-up">
-						<h2 className="text-[#573319] font-playfair text-4xl lg:text-[3rem] leading-[100%] mb-8 font-medium">
+						<h2 className="text-center lg:text-left text-[#573319] font-playfair text-4xl lg:text-[3rem] leading-[100%] mb-8 font-medium">
 							{ORDER_OF_EVENTS.title}
 						</h2>
 						{ORDER_OF_EVENTS?.events.map((item) => {
