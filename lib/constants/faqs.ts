@@ -23,13 +23,13 @@ For inquiries regarding our wedding day, you may contact our coordinator, Maine 
 		question: 'Can I bring a plus one?',
 		answer: `Since we are keeping our wedding intimate, we can only accommodate guests who are formally invited. If your invitation includes a plus one, they will be listed when you RSVP.`,
 	},
-	{
-		id: 'FAQ3',
-		question: 'Can we bring our kids?',
-		answer: `While we adore your little ones, we have decided to keep our ceremony and reception adults-only, with the exception of our flower girls, who are part of the entourage.
+// 	{
+// 		id: 'FAQ3',
+// 		question: 'Can we bring our kids?',
+// 		answer: `While we adore your little ones, we have decided to keep our ceremony and reception adults-only, with the exception of our flower girls, who are part of the entourage.
 
-We appreciate your understanding and hope you can make arrangements to celebrate with us.`,
-	},
+// We appreciate your understanding and hope you can make arrangements to celebrate with us.`,
+// 	},
 	{
 		id: 'FAQ4',
 		question: 'Is there a dress code?',
