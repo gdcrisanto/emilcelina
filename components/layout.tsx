@@ -7,6 +7,9 @@ import PageHero from './page-hero';
 import constants from '../lib/constants';
 import Link from 'next/link';
 import { InputFieldType } from '../lib/types/form';
+import Image from 'next/image';
+import SiteLogo from '../public/assets/ec_logo.png';
+
 
 export default function Layout({
 	children,
@@ -121,7 +124,8 @@ export default function Layout({
 								fill={'#B99D37'}
 								className="mx-auto mb-[120px]"
 							/> */}
-							<span className="leading-[100%] text-xl font-garamond mb-2 font-semibold mt-[100px]">
+							<Image src={SiteLogo} alt={''} className='h-[70px] w-[70px] lg:h-[120px] lg:w-[120px] mx-auto mt-[100px] mb-10' />
+							<span className="leading-[100%] text-xl font-garamond mb-2 font-semibold ">
 								This event is protected 
 							</span>
 

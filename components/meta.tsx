@@ -7,19 +7,19 @@ export default function Meta() {
 			<link
 				rel="apple-touch-icon"
 				sizes="180x180"
-				href="/favicon/apple-touch-icon.png"
+				href="/assets/ec_logo_bg.jpg"
 			/>
 			<link
 				rel="icon"
 				type="image/png"
 				sizes="32x32"
-				href="/favicon/favicon-32x32.png"
+				href="/assets/ec_logo_bg.jpg"
 			/>
 			<link
 				rel="icon"
 				type="image/png"
 				sizes="16x16"
-				href="/favicon/favicon-16x16.png"
+				href="/assets/ec_logo_bg.jpg"
 			/>
 			<link
 				rel="manifest"
@@ -27,12 +27,12 @@ export default function Meta() {
 			/>
 			<link
 				rel="mask-icon"
-				href="/favicon/safari-pinned-tab.svg"
+				href="/assets/ec_logo_bg.jpg"
 				color="#000000"
 			/>
 			<link
 				rel="shortcut icon"
-				href="/favicon/favicon.ico"
+				href="/assets/ec_logo_bg.jpg"
 			/>
 			<meta
 				name="viewport"

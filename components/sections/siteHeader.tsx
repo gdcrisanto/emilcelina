@@ -1,5 +1,7 @@
 import Link from 'next/link';
+import SiteLogo from '../../public/assets/ec_logo.png';;
 import HeaderMenu from '../header-menu';
+import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { SiteHeaderProps } from '../../lib/types/sections';
 
@@ -56,7 +58,10 @@ const SiteHeader = ({ textBlack }: SiteHeaderProps) => {
 				`z-50 h-[72px] lg:h-[127px] w-full mx-auto fixed bg-[#FCF4EA] transition-all ease-in-out duration-300 lg:duration-200 ${(isScrollUp || isOpen) ? 'top-0' : 'top-[-72px] lg:top-[-172px]'} ${isOpen ? 'site-header-scroll' : ''}`
 			}
 		>
-			<div className="flex z-50 flex-row container mx-auto h-full px-6 justify-end capitalize font-normal items-center">
+			<div className="flex z-50 flex-row container mx-auto h-full px-6 justify-between capitalize font-normal items-center">
+				<Link href='/'>
+				<Image src={SiteLogo} alt={''} className='h-[70px] w-[70px] lg:h-[120px] lg:w-[120px]' />
+				</Link>
 				
 				<HeaderMenu
 					isOpen={isOpen}
