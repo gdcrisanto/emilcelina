@@ -136,7 +136,7 @@ export default function Home() {
 						</div>
 					</div>
 					<div className="flex flex-col lg:max-w-[400px] w-full text-[#5F6F52] fade-up">
-						<h2 className="text-center lg:text-left text-[#573319] font-playfair text-4xl lg:text-[3rem] leading-[100%] mb-8 font-medium">
+						<h2 className="text-center text-[#573319] font-playfair text-4xl lg:text-[3rem] leading-[100%] mb-8 font-medium">
 							{ORDER_OF_EVENTS.title}
 						</h2>
 						{ORDER_OF_EVENTS?.events.map((item) => {
