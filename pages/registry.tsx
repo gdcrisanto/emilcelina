@@ -21,8 +21,11 @@ export default function Registry() {
 							<h1 className="font-playfair leading-[100%] text-[#573319] font-playfair font-semibold text-5xl lg:text-7xl ">
 								{REGISTRY_HERO.title}
 							</h1>
-							<h3 className=" my-10 text-xl lg:text-xl text-[#573319] whitespace-pre-wrap">
-								{REGISTRY_HERO.subtitle}
+							<h3 className=" mt-10 text-xl lg:text-xl text-[#573319] whitespace-pre-wrap">
+								{'Your presence at our wedding is the greatest present.\n\n'}
+							</h3>
+							<h3 className=" mb-10 text-base text-[#46542f] whitespace-pre-wrap">
+								{'If you’d still like to give a gift, we would be deeply grateful for any contribution toward our future.'}
 							</h3>
 							<Link
 								href={REGISTRY_HERO.href}
