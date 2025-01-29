@@ -6,19 +6,19 @@ export default function Meta() {
 		<Head>
 			<link
 				rel="apple-touch-icon"
-				sizes="180x180"
+				sizes="3301x1930"
 				href="/assets/ec_logo_bg.jpg"
 			/>
 			<link
 				rel="icon"
 				type="image/png"
-				sizes="32x32"
+				sizes="3301x1930"
 				href="/assets/ec_logo_bg.jpg"
 			/>
 			<link
 				rel="icon"
 				type="image/png"
-				sizes="16x16"
+				sizes="3301x1930"
 				href="/assets/ec_logo_bg.jpg"
 			/>
 			<link
