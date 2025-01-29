@@ -124,7 +124,7 @@ export default function Layout({
 								fill={'#B99D37'}
 								className="mx-auto mb-[120px]"
 							/> */}
-							<Image src={SiteLogo} alt={''} className='h-[70px] w-[70px] lg:h-[120px] lg:w-[120px] mx-auto mt-[100px] mb-10' />
+							<Image src={SiteLogo} alt={''} className='h-auto w-[70px] lg:w-[120px] mx-auto mt-[100px] mb-10' />
 							<span className="leading-[100%] text-xl font-garamond mb-2 font-semibold ">
 								This event is protected 
 							</span>
