@@ -8,7 +8,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export default function TheWedding() {
-  const [isAnchor, setIsAnchor] = useState<any>('schedule');
+  const [isAnchor, setIsAnchor] = useState<any>('invitation');
   const handleAnchorClick = (anchor: any) => {
     setIsAnchor(anchor);
   };
@@ -107,7 +107,7 @@ export default function TheWedding() {
 
       <ColoredBgWrapper bgColor="white">
         <div id="invitation" />
-        <div className="flex flex-col w-full max-w-[1920px] mx-auto gap-x-20 px-5 md:px-60 lg:px-80 py-10 pt-20 lg:py-20 fade-up gap-4">
+        <div className="flex flex-col w-full max-w-[1920px] mx-auto gap-x-20 px-5 md:px-60 lg:px-96 py-10 pt-20 lg:py-20 fade-up gap-4">
           {INVITATION_IMAGES.map((image) => (
             <Link
               href="https://drive.google.com/file/d/1ppWEiowsGwemmhHKnolRVnA-lHsQulQc/view?usp=sharing"
