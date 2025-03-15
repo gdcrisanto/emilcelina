@@ -17,7 +17,8 @@ export default function TheWedding() {
     WEDDING_ANCHORS,
     SCHEDULE_OF_EVENTS,
     ATTIRE_FOR_GUESTS,
-    INVITATION_IMAGES,
+    INVITATION_IMAGES_DESKTOP,
+    INVITATION_IMAGES_MOBILE,
   } = Constants;
 
   const scrolltoHash = function (element_id: string) {
@@ -107,15 +108,32 @@ export default function TheWedding() {
 
       <ColoredBgWrapper bgColor="white">
         <div id="invitation" />
-        <div className="flex flex-col w-full max-w-[1920px] mx-auto gap-x-20 px-5 md:px-60 lg:px-96 py-10 pt-20 lg:py-20 fade-up gap-4">
-          {INVITATION_IMAGES.map((image) => (
+        <div className="flex flex-col md:flex-row gap-4 w-full px-5 md:px-40 py-10 lg:py-20 fade-up md:hidden">
+          {INVITATION_IMAGES_MOBILE.map((image) => (
             <Link
               href="https://drive.google.com/file/d/1ppWEiowsGwemmhHKnolRVnA-lHsQulQc/view?usp=sharing"
               target="_blank"
+              className=""
             >
               <Image
                 src={image}
                 alt="Invite Image"
+                className="w-full"
+              />
+            </Link>
+          ))}
+        </div>
+        <div className="md:flex flex-col md:flex-row gap-4 w-full px-5 md:px-20 py-10 lg:py-20 fade-up hidden">
+          {INVITATION_IMAGES_DESKTOP.map((image) => (
+            <Link
+              href="https://drive.google.com/file/d/1ppWEiowsGwemmhHKnolRVnA-lHsQulQc/view?usp=sharing"
+              target="_blank"
+              className=""
+            >
+              <Image
+                src={image}
+                alt="Invite Image"
+                className="w-full"
               />
             </Link>
           ))}

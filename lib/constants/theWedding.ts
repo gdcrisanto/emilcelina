@@ -193,7 +193,8 @@ const ENTOURAGE = {
   ],
 };
 
-const INVITATION_IMAGES = [invitation1, invitation2, invitation3];
+const INVITATION_IMAGES_DESKTOP = [invitation2, invitation1, invitation3];
+const INVITATION_IMAGES_MOBILE = [invitation1, invitation2, invitation3];
 
 export default {
   WEDDING_HERO,
@@ -201,5 +202,6 @@ export default {
   SCHEDULE_OF_EVENTS,
   ATTIRE_FOR_GUESTS,
   ENTOURAGE,
-  INVITATION_IMAGES,
+  INVITATION_IMAGES_MOBILE,
+  INVITATION_IMAGES_DESKTOP,
 };
