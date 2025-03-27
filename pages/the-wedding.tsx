@@ -126,7 +126,7 @@ export default function TheWedding() {
         <div className="md:flex flex-col md:flex-row gap-4 w-full px-5 md:px-20 py-10 lg:py-20 fade-up hidden">
           {INVITATION_IMAGES_DESKTOP.map((image) => (
             <Link
-              href="https://drive.google.com/file/d/1ppWEiowsGwemmhHKnolRVnA-lHsQulQc/view?usp=sharing"
+              href="https://drive.google.com/file/d/1MPPXXcPDZpf-5ZkcNrInAWM84SvNNBqr/view?usp=share_link"
               target="_blank"
               className=""
             >
